@@ -346,7 +346,22 @@
       if (q.length < 2) { hide(); return; }
       var words = q.split(/\s+/).filter(Boolean);
       var hits = [];
-      for (var i = 0; i < state.features.length; i++) {
+      // Category searches ("restrooms", "parks", "beach access") list that whole layer and nothing else.
+      var CATS = [
+        { re: /^(public )?(rest ?rooms?|bath ?rooms?|toilets?|porta[- ]?johns?|potties|potty)$/, kinds: ["restroom", "porta_john"] },
+        { re: /^(public )?(parks?|parks? (and|&) (fit )?trails?|fit ?trails?)$/, kinds: ["park", "trail"] },
+        { re: /^(beach )?(access(es)?|walkways?|beach accesses)$/, kinds: ["access"] },
+        { re: /^landmarks?$/, kinds: ["landmark"] }
+      ];
+      var cat = null;
+      for (var c = 0; c < CATS.length; c++) { if (CATS[c].re.test(q)) { cat = CATS[c]; break; } }
+      if (cat) {
+        for (var k = 0; k < state.features.length; k++) {
+          if (cat.kinds.indexOf(state.features[k].kind) !== -1) hits.push(state.features[k]);
+        }
+        words = [];
+      }
+      for (var i = 0; !cat && i < state.features.length; i++) {
         var item = state.features[i];
         var ok = true;
         for (var w = 0; w < words.length; w++) {
@@ -361,7 +376,7 @@
         var bp = bn.indexOf(q) === 0 ? 0 : 1;
         return ap - bp || an.localeCompare(bn);
       });
-      hits = hits.slice(0, 20);
+      hits = hits.slice(0, 40);
       if (!hits.length) {
         list._hits = [];
         list.innerHTML = '<li class="search-empty">No matches for “' + escapeHtml(q) + '”</li>';
