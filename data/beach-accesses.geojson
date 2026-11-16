@@ -1,0 +1,1163 @@
+{
+  "type": "FeatureCollection",
+  "name": "Holden Beach beach accesses",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "source": "Town of Holden Beach Public Accesses list; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access; OpenStreetMap walkovers (ODbL). Positions are DCM surveyed points. Decisions from Keith 2026-11-15 (see data/notes/beach-access-crosscheck.md).",
+  "credit": "Map data \u00a9 OpenStreetMap contributors",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.246488,
+          33.914856
+        ]
+      },
+      "properties": {
+        "id": "PW1",
+        "name": "Beach Access PW1",
+        "map_label": "PW1",
+        "category": "beach_access",
+        "address": "343.5 Ocean Blvd East",
+        "amenities": {
+          "parking": true,
+          "parking_count": 50,
+          "handicap_parking_count": 2,
+          "ada": false,
+          "restroom": true,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": true,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #1; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW1",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 1,
+        "town_list_location": "East End of McCray Street",
+        "town_mymaps_description": "Parking; Access; Handicap Parking",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.248395,
+          33.914845
+        ]
+      },
+      "properties": {
+        "id": "PW20",
+        "name": "Beach Access PW20",
+        "map_label": "PW20",
+        "category": "beach_access",
+        "address": "317 Ocean Blvd East: End of Ave D",
+        "amenities": {
+          "parking": true,
+          "parking_count": 14,
+          "handicap_parking_count": 2,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": true,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": true,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #2; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW20",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 2,
+        "town_list_location": "End of Avenue D (317 OBE)",
+        "town_mymaps_description": "Access; Parking; Shower",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.250198,
+          33.914503
+        ]
+      },
+      "properties": {
+        "id": "PW40",
+        "name": "Beach Access PW40",
+        "map_label": "PW40",
+        "category": "beach_access",
+        "address": "End of Dunescape Drive",
+        "amenities": {
+          "parking": false,
+          "parking_count": null,
+          "handicap_parking_count": null,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": false,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #3; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW40",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 3,
+        "town_list_location": "End of Dunescape Drive",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.252016,
+          33.91453
+        ]
+      },
+      "properties": {
+        "id": "PW60",
+        "name": "Beach Access PW60",
+        "map_label": "PW60",
+        "category": "beach_access",
+        "address": "End of Avenue B",
+        "amenities": {
+          "parking": true,
+          "parking_count": 12,
+          "handicap_parking_count": null,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #4; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW60",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 4,
+        "town_list_location": "End of Avenue B",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.253873,
+          33.914619
+        ]
+      },
+      "properties": {
+        "id": "PW80",
+        "name": "Beach Access PW80",
+        "map_label": "PW80",
+        "category": "beach_access",
+        "address": "End of Avenue A",
+        "amenities": {
+          "parking": true,
+          "parking_count": 15,
+          "handicap_parking_count": 2,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #5; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW80",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 5,
+        "town_list_location": "End of Avenue A",
+        "town_mymaps_description": "Access; Parking",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.25636,
+          33.914742
+        ]
+      },
+      "properties": {
+        "id": "PW100",
+        "name": "Beach Access PW100",
+        "map_label": "PW100",
+        "category": "beach_access",
+        "address": "220 Ocean Blvd East",
+        "amenities": {
+          "parking": true,
+          "parking_count": 15,
+          "handicap_parking_count": 2,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": true,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": true,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #7; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW100",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 7,
+        "town_list_location": "220 Ocean Boulevard East",
+        "town_mymaps_description": "Access; Parking; Shower",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.258673,
+          33.914496
+        ]
+      },
+      "properties": {
+        "id": "PW120",
+        "name": "Beach Access PW120",
+        "map_label": "PW120",
+        "category": "beach_access",
+        "address": "Ocean Blvd East & Ranger Street",
+        "amenities": {
+          "parking": true,
+          "parking_count": null,
+          "handicap_parking_count": null,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": true,
+          "bike_rack": true,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": true,
+        "bike_rack": true,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW120",
+        "decision_note": "2026-11-15 Keith confirmed: include PW120 (Ranger St & Ocean Blvd E) as a public access; town My Maps lists golf cart parking, bike rack, access.",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": null,
+        "town_list_location": null,
+        "town_mymaps_description": "Golf Cart Parking; Bike Rack; Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.260382,
+          33.914382
+        ]
+      },
+      "properties": {
+        "id": "PW140",
+        "name": "Beach Access PW140",
+        "map_label": "PW140",
+        "category": "beach_access",
+        "address": "End of Ferry Road",
+        "amenities": {
+          "parking": true,
+          "parking_count": 15,
+          "handicap_parking_count": 2,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": true,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": true,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #6; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW140; OSM way/1322352824",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position. OSM way/1322352824 walkway is 4.8 m from the DCM point (length 32 m) and was left unsnapped because the offset is below map resolution; DCM kept as the drawn position.",
+        "osm_walkover": {
+          "osm": "way/1322352824",
+          "note_dist_m": 18,
+          "closest_dist_m": 4.8,
+          "walkway_length_m": 32.1,
+          "closest_lon": -78.260433,
+          "closest_lat": 33.91438
+        },
+        "town_list_number": 6,
+        "town_list_location": "End of Ferry Road",
+        "town_mymaps_description": "Parking; Access; Shower",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.264958,
+          33.914194
+        ]
+      },
+      "properties": {
+        "id": "PW160",
+        "name": "Beach Access PW160",
+        "map_label": "PW160",
+        "category": "beach_access",
+        "address": "122.5 Ocean Blvd East",
+        "amenities": {
+          "parking": true,
+          "parking_count": null,
+          "handicap_parking_count": null,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #8; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW160",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 8,
+        "town_list_location": "Adjacent to 124 OBE",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.265824,
+          33.91411
+        ]
+      },
+      "properties": {
+        "id": "PW180",
+        "name": "Beach Access PW180",
+        "map_label": "PW180",
+        "category": "beach_access",
+        "address": "112/114 Ocean Blvd East (end of Quinton Street)",
+        "amenities": {
+          "parking": true,
+          "parking_count": null,
+          "handicap_parking_count": 8,
+          "ada": true,
+          "restroom": true,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": true,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": true,
+        "restroom": true,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": true,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #9; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access Quinton Street (PW180)",
+        "decision_note": "2026-11-15 Keith: the 112/114 Ocean Blvd East access at the end of Quinton Street has a restroom, an ADA ramp, and parking.",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 9,
+        "town_list_location": "Quinton Street Handicapped (112 OBE)",
+        "town_mymaps_description": "Handicap Parking & Access; Shower",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.26731,
+          33.914002
+        ]
+      },
+      "properties": {
+        "id": "PW200",
+        "name": "Beach Access PW200",
+        "map_label": "PW200",
+        "category": "beach_access",
+        "address": "End of Jordan Blvd",
+        "amenities": {
+          "parking": true,
+          "parking_count": 65,
+          "handicap_parking_count": 4,
+          "ada": true,
+          "restroom": true,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": true,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": true,
+        "restroom": true,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": true,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #10; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW200",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 10,
+        "town_list_location": "End of Jordan Boulevard",
+        "town_mymaps_description": "Parking; Shower; EV Charge Station",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.268218,
+          33.913914
+        ]
+      },
+      "properties": {
+        "id": "PW220",
+        "name": "Beach Access PW220",
+        "map_label": "PW220",
+        "category": "beach_access",
+        "address": "111 Ocean Blvd West",
+        "amenities": {
+          "parking": true,
+          "parking_count": 0,
+          "handicap_parking_count": 0,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": true,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": true,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #11; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW220",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 11,
+        "town_list_location": "Between Jordan Blvd. and the bridge",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.28339,
+          33.91273
+        ]
+      },
+      "properties": {
+        "id": "PW240",
+        "name": "Beach Access PW240",
+        "map_label": "PW240",
+        "category": "beach_access",
+        "address": "Adjacent to Neptune Drive & Ocean Blvd West (near 290 Ocean Blvd West)",
+        "amenities": {
+          "parking": false,
+          "parking_count": 0,
+          "handicap_parking_count": 0,
+          "ada": true,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": false,
+        "ada": true,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "NC DCM Beach & Waterfront Access PW240; OSM way/1106982168",
+        "decision_note": "2026-11-15 Keith confirmed via Google Street View: PW240 next to Neptune Dr (near 290 Ocean Blvd W) is a public beach access; ramp visible.",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position. OSM way/1106982168 walkway is 1.8 m from the DCM point (length 10 m) and was left unsnapped because the offset is below map resolution; DCM kept as the drawn position.",
+        "osm_walkover": {
+          "osm": "way/1106982168",
+          "note_dist_m": 4,
+          "closest_dist_m": 1.8,
+          "walkway_length_m": 9.7,
+          "closest_lon": -78.283409,
+          "closest_lat": 33.912728
+        },
+        "town_list_number": null,
+        "town_list_location": null,
+        "town_mymaps_description": null,
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.284569,
+          33.912615
+        ]
+      },
+      "properties": {
+        "id": "PW260",
+        "name": "Beach Access PW260",
+        "map_label": "PW260",
+        "category": "beach_access",
+        "address": "301.5 Ocean Blvd West",
+        "amenities": {
+          "parking": true,
+          "parking_count": 0,
+          "handicap_parking_count": 0,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #12; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW260; OSM way/1106982171",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position. OSM way/1106982171 walkway is 0.0 m from the DCM point (length 9 m) and was left unsnapped because the offset is below map resolution; DCM kept as the drawn position.",
+        "osm_walkover": {
+          "osm": "way/1106982171",
+          "note_dist_m": 4,
+          "closest_dist_m": 0.0,
+          "walkway_length_m": 9.3,
+          "closest_lon": -78.28457,
+          "closest_lat": 33.912615
+        },
+        "town_list_number": 12,
+        "town_list_location": "Adjacent to 301 Ocean Blvd. West",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.287271,
+          33.912388
+        ]
+      },
+      "properties": {
+        "id": "PW280",
+        "name": "Beach Access PW280",
+        "map_label": "PW280",
+        "category": "beach_access",
+        "address": "329.5 Ocean Blvd West",
+        "amenities": {
+          "parking": true,
+          "parking_count": 0,
+          "handicap_parking_count": 0,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #13; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW280",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 13,
+        "town_list_location": "Adjacent to 329 Ocean Blvd. West",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.289802,
+          33.912173
+        ]
+      },
+      "properties": {
+        "id": "PW300",
+        "name": "Beach Access PW300",
+        "map_label": "PW300",
+        "category": "beach_access",
+        "address": "357.5 Ocean Blvd West",
+        "amenities": {
+          "parking": true,
+          "parking_count": 0,
+          "handicap_parking_count": 0,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #14; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access Highpoint St (PW300); OSM way/1106982174",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position. OSM way/1106982174 walkway is 0.3 m from the DCM point (length 8 m) and was left unsnapped because the offset is below map resolution; DCM kept as the drawn position.",
+        "osm_walkover": {
+          "osm": "way/1106982174",
+          "note_dist_m": 2,
+          "closest_dist_m": 0.3,
+          "walkway_length_m": 8.2,
+          "closest_lon": -78.289799,
+          "closest_lat": 33.912173
+        },
+        "town_list_number": 14,
+        "town_list_location": "Adjacent to 357 Ocean Blvd. West",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.292332,
+          33.911938
+        ]
+      },
+      "properties": {
+        "id": "PW320",
+        "name": "Beach Access PW320",
+        "map_label": "PW320",
+        "category": "beach_access",
+        "address": "389.5 Ocean Blvd West",
+        "amenities": {
+          "parking": true,
+          "parking_count": 0,
+          "handicap_parking_count": 0,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #15; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW320; OSM way/1106982177",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position. OSM way/1106982177 walkway is 0.1 m from the DCM point (length 10 m) and was left unsnapped because the offset is below map resolution; DCM kept as the drawn position.",
+        "osm_walkover": {
+          "osm": "way/1106982177",
+          "note_dist_m": 3,
+          "closest_dist_m": 0.1,
+          "walkway_length_m": 9.6,
+          "closest_lon": -78.292331,
+          "closest_lat": 33.911938
+        },
+        "town_list_number": 15,
+        "town_list_location": "Adjacent to 389 Ocean Blvd. West",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.297508,
+          33.911114
+        ]
+      },
+      "properties": {
+        "id": "PW340",
+        "name": "Beach Access PW340",
+        "map_label": "PW340",
+        "category": "beach_access",
+        "address": "441 Ocean Blvd W",
+        "amenities": {
+          "parking": true,
+          "parking_count": 40,
+          "handicap_parking_count": 2,
+          "ada": true,
+          "restroom": true,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": true,
+          "beach_mat": true
+        },
+        "parking": true,
+        "ada": true,
+        "restroom": true,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": true,
+        "beach_mat": true,
+        "source": "Town of Holden Beach Public Accesses list #16; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW340",
+        "decision_note": "2026-11-15 Keith: two walkways exist at the pier area, but only PW340 is public; the other was never deemed public. Map a single public access, PW340.",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 16,
+        "town_list_location": "Pier Area (2)",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.307158,
+          33.910622
+        ]
+      },
+      "properties": {
+        "id": "PW360",
+        "name": "Beach Access PW360",
+        "map_label": "PW360",
+        "category": "beach_access",
+        "address": "567.5 Ocean Blvd West",
+        "amenities": {
+          "parking": true,
+          "parking_count": null,
+          "handicap_parking_count": null,
+          "ada": true,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": true,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": true,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": true,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #17; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW360; OSM way/1106982180",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position. OSM way/1106982180 walkway is 0.7 m from the DCM point (length 9 m) and was left unsnapped because the offset is below map resolution; DCM kept as the drawn position.",
+        "osm_walkover": {
+          "osm": "way/1106982180",
+          "note_dist_m": 3,
+          "closest_dist_m": 0.7,
+          "walkway_length_m": 9.4,
+          "closest_lon": -78.307151,
+          "closest_lat": 33.910622
+        },
+        "town_list_number": 17,
+        "town_list_location": "Adjacent to 567 Ocean Blvd. West",
+        "town_mymaps_description": "Access; Bike Rack",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.316032,
+          33.909788
+        ]
+      },
+      "properties": {
+        "id": "PW380",
+        "name": "Beach Access PW380",
+        "map_label": "PW380",
+        "category": "beach_access",
+        "address": "677.5 Ocean Blvd West",
+        "amenities": {
+          "parking": false,
+          "parking_count": null,
+          "handicap_parking_count": null,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": true,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": false,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": true,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #18; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW380",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 18,
+        "town_list_location": "Adjacent to 679 Ocean Blvd. West",
+        "town_mymaps_description": "Access; Bike Rack",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.326129,
+          33.908834
+        ]
+      },
+      "properties": {
+        "id": "PW400",
+        "name": "Beach Access PW400",
+        "map_label": "PW400",
+        "category": "beach_access",
+        "address": "800 Ocean Blvd West",
+        "amenities": {
+          "parking": true,
+          "parking_count": 12,
+          "handicap_parking_count": 1,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #19; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW400; OSM way/556341607",
+        "decision_note": "2026-11-15 Keith: PW400 is at 800 Ocean Blvd West (use town address; DCM 801 is superseded).",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position. OSM way/556341607 walkway is 5.1 m from the DCM point (length 66 m) and was left unsnapped because the offset is below map resolution; DCM kept as the drawn position. Keith 2026-11-15: address is 800 Ocean Blvd West (town address; DCM listed 801). The Town My Maps pin is 515 m west of the DCM point and was not used.",
+        "osm_walkover": {
+          "osm": "way/556341607",
+          "note_dist_m": 26,
+          "closest_dist_m": 5.1,
+          "walkway_length_m": 65.7,
+          "closest_lon": -78.326074,
+          "closest_lat": 33.908837
+        },
+        "town_list_number": 19,
+        "town_list_location": "Adjacent to 800 Ocean Blvd. West",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.332746,
+          33.908175
+        ]
+      },
+      "properties": {
+        "id": "PW420",
+        "name": "Beach Access PW420",
+        "map_label": "PW420",
+        "category": "beach_access",
+        "address": "885 Ocean Blvd West",
+        "amenities": {
+          "parking": true,
+          "parking_count": null,
+          "handicap_parking_count": null,
+          "ada": true,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": true,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #20; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW420",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position. Town list address 885 Ocean Blvd West used; DCM says 883 ('Blnd' typo).",
+        "osm_walkover": null,
+        "town_list_number": 20,
+        "town_list_location": "Adjacent to 885 Ocean Blvd. West",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.335361,
+          33.907803
+        ]
+      },
+      "properties": {
+        "id": "PW440",
+        "name": "Beach Access PW440",
+        "map_label": "PW440",
+        "category": "beach_access",
+        "address": "917 Ocean Blvd West",
+        "amenities": {
+          "parking": true,
+          "parking_count": null,
+          "handicap_parking_count": null,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": true,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": true,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": true,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #21; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW440",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 21,
+        "town_list_location": "Adjacent to 917 Ocean Blvd. West",
+        "town_mymaps_description": "Access; Bike Rack",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.343685,
+          33.906927
+        ]
+      },
+      "properties": {
+        "id": "PW460",
+        "name": "Beach Access PW460",
+        "map_label": "PW460",
+        "category": "beach_access",
+        "address": "1017 Ocean Blvd West",
+        "amenities": {
+          "parking": false,
+          "parking_count": null,
+          "handicap_parking_count": null,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": false,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #22; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW460",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 22,
+        "town_list_location": "Adjacent to 1017 Ocean Blvd. West",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.349266,
+          33.906339
+        ]
+      },
+      "properties": {
+        "id": "PW500",
+        "name": "Beach Access PW500",
+        "map_label": "PW500",
+        "category": "beach_access",
+        "address": "Adjacent to 1089 Ocean Blvd West",
+        "amenities": {
+          "parking": false,
+          "parking_count": null,
+          "handicap_parking_count": null,
+          "ada": false,
+          "restroom": false,
+          "golf_cart_parking": false,
+          "bike_rack": false,
+          "shower": false,
+          "beach_mat": false
+        },
+        "parking": false,
+        "ada": false,
+        "restroom": false,
+        "golf_cart_parking": false,
+        "bike_rack": false,
+        "shower": false,
+        "beach_mat": false,
+        "source": "Town of Holden Beach Public Accesses list #23; Town of Holden Beach My Maps; NC DCM Beach & Waterfront Access PW500",
+        "decision_note": "",
+        "coord_source": "DCM",
+        "coord_note": "DCM surveyed point used as the primary position.",
+        "osm_walkover": null,
+        "town_list_number": 23,
+        "town_list_location": "Adjacent to 1089 Ocean Blvd. West",
+        "town_mymaps_description": "Access",
+        "layer": "beach_access"
+      }
+    }
+  ]
+}

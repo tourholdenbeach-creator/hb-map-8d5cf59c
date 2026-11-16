@@ -1,0 +1,296 @@
+{
+  "type": "FeatureCollection",
+  "name": "Holden Beach official public parks",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "EPSG:4326"
+    }
+  },
+  "source": "Town of Holden Beach Parks & Recreation list and 2021 Comprehensive Parks and Recreation Master Plan. See data/notes/official-parks-inventory.json.",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.26677,
+          33.9159
+        ]
+      },
+      "properties": {
+        "id": "block_q_stage",
+        "name": "Block Q Pavilion (Stage & Picnic Shelter)",
+        "map_label": "Block Q Pavilion",
+        "website_list_name": "Picnic Shelter/Block Q Stage",
+        "address": "82 South Shore Drive (pavilion/stage); restrooms also listed as Block Q \u2014 101 Brunswick Avenue East",
+        "location_description": "Town-owned Block Q lot near the Holden Beach Bridge, bordered by Jordan Boulevard, South Shore Drive, Quinton Street, and Brunswick Avenue. Across from the Intracoastal boat ramp. Replaces the old Jordan Boulevard Pavilion, which was demolished in 2024. New venue opened July 2026; ribbon cutting 4 September 2026.",
+        "precision": "block_centroid_on_south_shore_frontage",
+        "precision_note": "Census missed 82 South Shore Dr. Point is the midpoint of Block Q's South Shore frontage (between Jordan Blvd at about -78.26729, 33.91582 and Quinton St at -78.26625, 33.91616), slightly south of the centerline onto the lot. 101 Brunswick Ave E census: -78.266083, 33.915235 (SE corner of the same block).",
+        "sources": [
+          "https://hbtownhall.com/parks-%26-recreation",
+          "https://hbtownhall.com/visitors",
+          "https://hbtownhall.com/project-info",
+          "Brunswick Beacon 2026-09-10 (82 South Shore Drive; bordered by Jordan, South Shore, Quinton, Brunswick)"
+        ],
+        "layer": "park",
+        "crs_note": "WGS84 lon,lat. Rendered in EPSG:32617.",
+        "aka": [
+          "Picnic Shelter / Block Q Stage",
+          "Holden Beach Pavilion",
+          "Block Q"
+        ],
+        "pavilion_note": "Per Keith 2026-11-15: the town pavilion is here now; the old pavilion at 131 Jordan Blvd is gone."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.270186,
+          33.915203
+        ]
+      },
+      "properties": {
+        "id": "bridgeview_park",
+        "name": "Bridgeview Park",
+        "map_label": "Bridgeview Park",
+        "website_list_name": "Bridgeview Park",
+        "address": "124 Davis Street (also cited as 125 Davis Street for the transient dock)",
+        "location_description": "Adjacent to Town Hall, on the sound / ICW side of the island. The Master Plan describes basketball/pickleball courts, splash pad, picnic shelter, playground with shade sails, bocce, open green space, canoe/kayak launches, and a transient boat dock. This is the same block as the water tower (OSM node 5366751196), at the Brunswick Avenue end, across Brunswick Avenue from Town Hall.",
+        "precision": "osm_park_polygon_centroid",
+        "precision_note": "way/221137958, tagged 'Holden Beach Park' \u2014 name is generic/outdated; geometry matches the Bridgeview Park block between Davis St, Rothschild St, and Brunswick Ave.",
+        "sources": [
+          "2021 Master Plan \u00a72.1 p.6",
+          "https://hbtownhall.com/parks-%26-recreation",
+          "https://www.hobbsrealty.com/blog/ocean-beach-information/public-parking-launches-services (124/125 Davis Street)"
+        ],
+        "layer": "park",
+        "crs_note": "WGS84 lon,lat. Rendered in EPSG:32617."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.307615,
+          33.910917
+        ]
+      },
+      "properties": {
+        "id": "butterfly_garden",
+        "name": "Butterfly Garden",
+        "map_label": "Butterfly Garden",
+        "website_list_name": "Butterfly Garden",
+        "address": "Along the back of the Holden Beach Fire Station (Tri-Beach VFD Station 8-2)",
+        "location_description": "Master Plan: town partnership with the Holden Beach Beautification Club; picnic table and seating behind the fire station. OSM places that station on the ocean side of mid-island, next to Starfish Drive / near Sand Dollar Drive.",
+        "precision": "osm_fire_station_polygon_centroid",
+        "precision_note": "way/556341605 Tri-Beach VFD Station 8-2. Garden is 'along the back' of this building \u2014 exact garden footprint not mapped; use the station as the anchor and offset slightly when drawing later.",
+        "sources": [
+          "2021 Master Plan \u00a72.1 p.9",
+          "https://hbtownhall.com/parks-%26-recreation",
+          "OSM way/556341605"
+        ],
+        "layer": "park",
+        "crs_note": "WGS84 lon,lat. Rendered in EPSG:32617."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.264337,
+          33.916665
+        ]
+      },
+      "properties": {
+        "id": "halstead_park",
+        "name": "Halstead Park",
+        "map_label": "Halstead Park",
+        "website_list_name": "Halstead Park",
+        "address": "Halstead Street and South Shore Drive, on the Intracoastal Waterway",
+        "location_description": "Small passive park east of the bridge on the sound side. Master Plan: fishing dock, picnic shelter, and seating; a destination on the Olden Holden Bike Route. Beautification Club: public fishing pier and gazebo; ADA work in 2023\u20132024.",
+        "precision": "street_intersection",
+        "precision_note": "OSM intersection of Halstead Street (way/16421726) and South Shore Drive (way/16434005). Place slightly onto the ICW side of the intersection when drawing later.",
+        "sources": [
+          "2021 Master Plan \u00a72.1 p.8",
+          "https://hbtownhall.com/parks-%26-recreation",
+          "https://holdenbeachbc.org/halstead-park/"
+        ],
+        "layer": "park",
+        "crs_note": "WGS84 lon,lat. Rendered in EPSG:32617."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.269,
+          33.91422
+        ]
+      },
+      "properties": {
+        "id": "padgett_garden",
+        "name": "Padgett Garden",
+        "map_label": "Padgett Garden",
+        "website_list_name": "Padgett Garden",
+        "address": "North (sound) side of Ocean Boulevard East at the NC-130 / Holden Beach Road bridge landing corner",
+        "location_description": "Master Plan: at the intersection of Ocean Boulevard and Holden Beach Road as you cross the bridge and enter Holden Beach. Short walking path, seating, shade structures, landscaping, statuary, and a water feature with memorial stones. Beautification Club describes it as 'at the base of the bridge and OBW.'",
+        "precision": "corner_estimate",
+        "precision_note": "Placed on the north (second-row, sound) side of Ocean Blvd East, in the corner east of where NC-130 / Holden Beach Road comes down onto Ocean Blvd (~32 m east of NC-130 and ~28 m north of Ocean Blvd E centerline; ~45 m NE of the OSM junction at -78.2693515, 33.9139318). Sources: Holden Beach Beautification Club 'Padgett Garden and Extension' page (holdenbeachbc.org/padgett-garden-and-extension/): 'NC130 and Ocean Blvd. On the left at the foot of the bridge as you drive onto the island'; HBBC posts 2017-12-18 and 2025-06-01 ('at the foot of the bridge and Ocean Blvd.'), HBBC 2024-10-23 ('at the base of the bridge and OBW'); 2021 Parks & Recreation Master Plan \u00a72.1 (intersection of Ocean Blvd and Holden Beach Rd). Location per user: north side of Ocean Blvd E at the bridge landing corner (not Jordan Blvd, not the ocean side). Exact parcel footprint not in OSM. Do not confuse with Block Q or the under-bridge Jordan Blvd beds.",
+        "sources": [
+          "2021 Master Plan \u00a72.1 p.9",
+          "https://hbtownhall.com/parks-%26-recreation",
+          "https://holdenbeachbc.org/padgett-garden-and-extension/",
+          "https://holdenbeachbc.org/2025/06/01/padgett-garden/",
+          "https://holdenbeachbc.org/2017/12/18/padgett-garden-gets-a-makeover/",
+          "https://holdenbeachbc.org/2024/10/23/fall-flowers-are-here/",
+          "Location per user (local): north/sound side of Ocean Blvd E at the bridge landing corner"
+        ],
+        "layer": "park",
+        "crs_note": "WGS84 lon,lat. Rendered in EPSG:32617."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.311641,
+          33.910326
+        ]
+      },
+      "properties": {
+        "id": "pocket_park",
+        "name": "Pocket Park",
+        "map_label": "Pocket Park",
+        "website_list_name": "Pocket Park",
+        "address": "628 Ocean Boulevard West",
+        "location_description": "Master Plan: small passive park located midway on the island along Ocean Boulevard; landscaped seating and nature observation; a rest stop on the Olden Holden Bike Route. HBBC (town's landscaping partner, named in the Master Plan) gives the street address as 628 Ocean Blvd West: a small donated lot with a viewing deck overlooking the marsh.",
+        "precision": "census_geocode_of_official_address",
+        "precision_note": "US Census geocoder match for 628 OCEAN BLVD W, HOLDEN BEACH, NC, 28462. Sits on Ocean Blvd West mid-island, west of the pier, consistent with the Master Plan map cluster of Pocket Park / Butterfly Garden / Sand Dollar Park / Fit Trail.",
+        "sources": [
+          "2021 Master Plan \u00a72.1 p.8",
+          "https://hbtownhall.com/parks-%26-recreation",
+          "https://holdenbeachbc.org/pocket-park/"
+        ],
+        "layer": "park",
+        "crs_note": "WGS84 lon,lat. Rendered in EPSG:32617."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.335802,
+          33.912825
+        ]
+      },
+      "properties": {
+        "id": "sailfish_park",
+        "name": "Sailfish Park",
+        "map_label": "Sailfish Park",
+        "website_list_name": "Sailfish Park",
+        "address": "188 Sailfish Drive (also cited as 197 Sailfish Drive / 188 Sailfish Street)",
+        "location_description": "Master Plan: small passive park on the western end of the island along the sound / ICWW. Open space, fishing dock, picnic tables, nature observation, and a sand beach with water access. OSM name is Sailfish Park (way/1106981444) at the north end of Sailfish Drive.",
+        "precision": "osm_park_polygon_centroid",
+        "precision_note": "way/1106981444",
+        "sources": [
+          "2021 Master Plan \u00a72.1 p.7",
+          "https://hbtownhall.com/parks-%26-recreation",
+          "OSM way/1106981444",
+          "Hobbs Realty / launch guides (188/197 Sailfish Dr)"
+        ],
+        "layer": "park",
+        "crs_note": "WGS84 lon,lat. Rendered in EPSG:32617."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.307277,
+          33.914807
+        ]
+      },
+      "properties": {
+        "id": "sand_dollar_park",
+        "name": "Sand Dollar Park",
+        "map_label": "Sand Dollar Park",
+        "website_list_name": "Sand Dollar Park",
+        "address": "End of Sand Dollar Drive, on the Intracoastal Waterway (one launch guide also uses 169 Sand Dollar Drive)",
+        "location_description": "Master Plan: passive park at the end of Sand Dollar Drive, predominantly coastal marshland along the ICWW; open space, nature observation, informal canoe/kayak launch.",
+        "precision": "north_end_of_osm_street",
+        "precision_note": "way/16421998 Sand Dollar Drive; the north/ICW end is (-78.3072773, 33.9148067). South end is at Ocean Blvd. Place at the ICW end.",
+        "sources": [
+          "2021 Master Plan \u00a72.1 p.7",
+          "https://hbtownhall.com/parks-%26-recreation"
+        ],
+        "layer": "park",
+        "crs_note": "WGS84 lon,lat. Rendered in EPSG:32617."
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -78.3051937,
+            33.9109408
+          ],
+          [
+            -78.3051085,
+            33.9109487
+          ],
+          [
+            -78.3022366,
+            33.9112277
+          ],
+          [
+            -78.2998924,
+            33.9114456
+          ],
+          [
+            -78.2998054,
+            33.9114557
+          ]
+        ]
+      },
+      "properties": {
+        "id": "fit_trail",
+        "name": "Holden Beach Fit Trail",
+        "map_label": "Holden Beach Fit Trail",
+        "website_list_name": "Holden Beach Fit Trail",
+        "address": "Along the sidewalk on Ocean Boulevard between Scotch Bonnet Drive and Greensboro Street",
+        "location_description": "Linear amenity: nine fitness stations along the Ocean Boulevard sidewalk between those two cross streets. Not a single parcel. When drawn later, treat as a line or a series of stations along Ocean Blvd West, not a point in the middle of a park.",
+        "precision": "midpoint_of_street_segment",
+        "extent": {
+          "west": {
+            "lon": -78.3051,
+            "lat": 33.91089,
+            "at": "Scotch Bonnet Drive & Ocean Blvd"
+          },
+          "east": {
+            "lon": -78.29988,
+            "lat": 33.91138,
+            "at": "Greensboro Street & Ocean Blvd"
+          }
+        },
+        "sources": [
+          "2021 Master Plan \u00a72.1 p.8",
+          "https://hbtownhall.com/parks-%26-recreation"
+        ],
+        "layer": "fit_trail",
+        "render": "dashed line along Ocean Boulevard West between Scotch Bonnet Drive and Greensboro Street. Individual fitness-station positions are not known, so station dots were not invented.",
+        "crs_note": "WGS84 lon,lat. Rendered in EPSG:32617."
+      }
+    }
+  ]
+}
