@@ -104,7 +104,9 @@
   /* Fallback coordinates if ad-slots.json has not loaded. The live overlay uses
      advertise/data/ad-slots.json so a business is shown in its category zone. */
   var FALLBACK_SLOTS = {
+    "standard-front": { img: "front", box: null, cap: "A standard space on the front map border." },
     standard: { img: "back", box: slotPct(38, 856, 702, 704), cap: "A standard space in a category zone on the back of the map." },
+    "standard-back": { img: "back", box: slotPct(38, 856, 702, 704), cap: "A standard space in a category zone on the back of the map." },
     double: { img: "back", box: slotPct(38, 132, 1424, 704), cap: "A double space: two adjacent standard cells in a category zone on the back of the map." },
     premium: { img: "front", box: slotPct(36, 36, 1150, 410), cap: "A premium corner on the front map border (highest-visibility corner)." },
     realty: { img: "back", box: slotPct(4500, 0, 1500, 2318), cap: "Insider Realty Partner: 5,000 personalized copies of the map with your logo on the cover, included in the 25,000 print run. The cover reads “Compliments of our Insider Realty Partner” above your logo. The Insider family and logo are resized beneath it. Only 4 available." }
@@ -137,7 +139,9 @@
     var zone = zoneOf(biz);
     var zname = ZONE_NAME[zone] || "this";
     var caps = {
+      "standard-front": "A standard space on the front map border.",
       standard: "A standard space in the " + zname + " section on the back of the map (about 2.6 × 2.6 inches).",
+      "standard-back": "A standard space in the " + zname + " section on the back of the map (about 2.6 × 2.6 inches).",
       double: "A double space in the " + zname + " section on the back of the map: two adjacent standard cells (about 5.2 × 2.6 inches).",
       premium: FALLBACK_SLOTS.premium.cap,
       realty: FALLBACK_SLOTS.realty.cap
@@ -147,6 +151,8 @@
       var ex = SLOTS_DATA.examples;
       if (kind === "premium") rec = ex.premium;
       else if (kind === "realty") rec = ex.realty;
+      else if (kind === "standard-front") rec = null;
+      else if (kind === "standard-back") rec = (ex.standard_by_zone || {})[zone] || (ex.standard_by_zone || {}).eat;
       else rec = (ex[kind + "_by_zone"] || {})[zone] || (ex[kind + "_by_zone"] || {}).eat;
     }
     if (rec) {
@@ -337,9 +343,10 @@
     var src = s.img === "front" ? "../assets/map-front.jpg" : "../assets/map-back.jpg";
     var alt = s.img === "front" ? "Front of the printed map, with this ad space highlighted" : "Back of the printed map, with this ad space highlighted";
     var b = s.box;
+    var mark = b ? '<div class="slot" style="left:' + b.left + ";top:" + b.top + ";width:" + b.width + ";height:" + b.height + '"></div>' : "";
     return '<figure class="place"><div class="map-wrap">'
       + '<img src="' + src + '" alt="' + alt + '">'
-      + '<div class="slot" style="left:' + b.left + ";top:" + b.top + ";width:" + b.width + ";height:" + b.height + '"></div>'
+      + mark
       + "</div><figcaption>" + HB.esc(s.cap) + "</figcaption></figure>";
   }
 
@@ -400,6 +407,7 @@
     document.getElementById("intro").textContent = intro;
 
     var st = HB.product("standard") || {};
+    var stb = HB.product("standard-back") || {};
     var pr = HB.product("premium") || {};
     var ry = HB.product("realty") || {};
     var ft = HB.product("featured") || {};
@@ -413,33 +421,38 @@
     var zname = ZONE_NAME[zoneOf(biz)] || "its category";
     parts.push(section({
       id: "fmt-standard",
-      title: "Small / standard print ad",
-      summary: "One standard space in the " + zname + " section on the back of the map, or on the front map border. About 2.6 × 2.6 inches on the back.",
+      title: "Standard space, front",
+      summary: "One standard space on the front map border.",
       ad: renderStandard(biz),
-      place: placementFig("standard", biz),
+      place: placementFig("standard-front", biz),
       price: moneyPair(st.season_price, st.prepaid_price),
       btn: chooseBtn(HB.buyUrl("../", "standard", "prepaid", name), "Choose this ad"),
-      fine: "Choose this ad continues to checkout for a Standard ad space (Stripe links are not connected yet)."
+      fine: "12 spaces on the front border. A deposit of half the season price holds a space."
+    }));
+    parts.push(section({
+      id: "fmt-standard-back",
+      title: "Standard space, back",
+      summary: "One standard space in the " + zname + " section on the back of the map. About 2.6 × 2.6 inches.",
+      ad: renderStandard(biz),
+      place: placementFig("standard-back", biz),
+      price: moneyPair(stb.season_price, stb.prepaid_price),
+      btn: chooseBtn(HB.buyUrl("../", "standard-back", "prepaid", name), "Choose this ad"),
+      fine: "20 spaces on the back, in the category sections. A deposit of half the season price holds a space."
     }));
     parts.push(section({
       id: "fmt-double",
-      title: "Medium / double print ad",
-      summary: "Two adjacent standard spaces in the " + zname + " section on the back of the map. About 5.2 × 2.6 inches. Priced as two standard spaces.",
+      title: "Double space, back",
+      summary: "Two adjacent standard spaces in the " + zname + " section on the back of the map. About 5.2 × 2.6 inches, and about 14% less than two standard spaces on the back.",
       ad: renderDouble(biz),
       place: placementFig("double", biz),
-      price: moneyPair(
-        typeof dbl.season_price === "number" ? dbl.season_price : (typeof st.season_price === "number" ? st.season_price * 2 : null),
-        typeof dbl.prepaid_price === "number" ? dbl.prepaid_price : (typeof st.prepaid_price === "number" ? st.prepaid_price * 2 : null)
-      ),
-      btn: chooseBtn(dbl.id ? HB.buyUrl("../", "double", "prepaid", name)
-                            : "../checkout/?product=standard&plan=prepaid&biz=" + encodeURIComponent(name) + "&unit=double",
-                     "Choose this ad"),
-      fine: "A double space is its own product on the rate card, at the two-standard-space rate."
+      price: moneyPair(dbl.season_price, dbl.prepaid_price),
+      btn: chooseBtn(HB.buyUrl("../", "double", "prepaid", name), "Choose this ad"),
+      fine: "A double space is its own product on the rate card. Eight are available on the back."
     }));
     parts.push(section({
       id: "fmt-premium",
       title: "Premium corner",
-      summary: "One of the four corners of the front map border, priced as two standard spaces.",
+      summary: "One of the four corners of the front map border, the most visible print spot.",
       ad: renderPremium(biz),
       place: placementFig("premium", biz),
       price: moneyPair(pr.season_price, pr.prepaid_price),

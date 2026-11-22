@@ -79,7 +79,7 @@
     var it = document.getElementById("item");
     it.hidden = false;
     it.innerHTML = "<b>" + HB.esc(pname) + "</b><br>" + HB.esc(itemText)
-      + "<br><span class=\"fine\">" + (isDouble || p.id === "double" ? "Priced as two standard spaces. " : "") + (p.total != null ? HB.left(p) + " of " + p.total + " available · first come, first served" : "") + "</span>";
+      + "<br><span class=\"fine\">" + (isDouble || p.id === "double" ? "A double space on the back of the map. " : "") + (p.total != null ? HB.left(p) + " of " + p.total + " available · first come, first served" : "") + "</span>";
     upd();
   });
 })();

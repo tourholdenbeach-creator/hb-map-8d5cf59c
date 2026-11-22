@@ -37,6 +37,7 @@
   var pin = HB.clean(HB.param("pin") || "").replace(/[^0-9A-Za-z]/g, "").slice(0, 6);
   var plan = (HB.param("plan") || HB.param("product") || "name").toLowerCase();
   if (plan === "ad" || plan === "standard-ad") plan = "standard";
+  if (plan === "standardback") plan = "standard-back";
   if (biz) {
     bizIn.value = biz;
     var t = document.getElementById("title");
@@ -54,13 +55,16 @@
     Array.prototype.forEach.call(box.querySelectorAll("label"), function (l, i) { l.classList.toggle("on", i === sel); });
   }
   HB.load("../").then(function () {
-    var nm = HB.product("name"), st = HB.product("standard");
+    var nm = HB.product("name"), st = HB.product("standard"), stb = HB.product("standard-back");
     opts = [];
     if (nm && HB.left(nm) > 0) opts.push({ id: "name", plan: "prepaid", t: "Name listing", d: "Your business name in the printed directory, plus an online name listing.", price: HB.money(nm.prepaid_price), left: HB.left(nm) + " of " + nm.total + " left" });
-    if (st && HB.left(st) > 0) {
-      opts.push({ id: "standard", plan: "prepaid", t: "Standard ad space, paid in full", d: "A full-color ad, a featured pin with your name, an online listing with Website, photo and Deal buttons, and the Insiders Club.", price: HB.money(st.prepaid_price), left: HB.left(st) + " of " + st.total + " left" });
-      if (st.deposit) opts.push({ id: "standard", plan: "deposit", t: "Standard ad space, 50% deposit", d: "Season rate " + HB.money(st.season_price) + ". The balance is due within 30 days or before the map goes to press, whichever comes first.", price: HB.money(st.deposit), left: "" });
+    function addStd(p, id, label, where) {
+      if (!p || HB.left(p) <= 0) return;
+      opts.push({ id: id, plan: "prepaid", t: label + ", paid in full", d: "A full-color ad " + where + ", a featured pin with your name, an online listing with Website, photo and Deal buttons, and the Insiders Club.", price: HB.money(p.prepaid_price), left: HB.left(p) + " of " + p.total + " left" });
+      if (p.deposit) opts.push({ id: id, plan: "deposit", t: label + ", 50% deposit", d: "Season rate " + HB.money(p.season_price) + ". The balance is due within 30 days or before the map goes to press, whichever comes first.", price: HB.money(p.deposit), left: "" });
     }
+    addStd(st, "standard", "Standard space, front", "on the front map border");
+    addStd(stb, "standard-back", "Standard space, back", "in a category zone on the back");
     if (!opts.length) { box.innerHTML = '<p class="notice">These listings are sold out. Email us to join the waitlist.</p>'; go.href = HB.mailto("Listing waitlist" + (biz ? ": " + biz : ""), "Business: " + biz + "\nPhone:\n"); go.textContent = "Join the waitlist"; return; }
     box.innerHTML = opts.map(function (o, i) {
       return '<label><input type="radio" name="opt" value="' + i + '"><span>' + HB.esc(o.t) + "<small>" + HB.esc(o.d) + (o.left ? " · " + HB.esc(o.left) : "") + '</small></span><span class="p">' + HB.esc(o.price) + "</span></label>";

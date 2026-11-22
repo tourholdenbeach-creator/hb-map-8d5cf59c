@@ -4,6 +4,10 @@
     "prepaid": "PASTE_STRIPE_PAYMENT_LINK",
     "deposit": "PASTE_STRIPE_PAYMENT_LINK"
   },
+  "standard-back": {
+    "prepaid": "PASTE_STRIPE_PAYMENT_LINK",
+    "deposit": "PASTE_STRIPE_PAYMENT_LINK"
+  },
   "double": {
     "prepaid": "PASTE_STRIPE_PAYMENT_LINK",
     "deposit": "PASTE_STRIPE_PAYMENT_LINK"

@@ -35,10 +35,12 @@ The Buy buttons read **`data/payment-links.json`**. Any value that doesn't start
 
    | Key in payment-links.json | Product name | Price |
    |---|---|---|
-   | `standard.prepaid` | Standard ad space, paid in full (2027) | $695 |
-   | `standard.deposit` | Standard ad space, 50% deposit (2027, season rate $750) | $375 |
-   | `double.prepaid` | Double space, paid in full (2027) | $1,195 |
-   | `double.deposit` | Double space, 50% deposit (2027, season rate $1,295) | $647.50 |
+   | `standard.prepaid` | Standard space, front, paid in full (2027) | $640 |
+   | `standard.deposit` | Standard space, front, 50% deposit (2027, season rate $690) | $345 |
+   | `standard-back.prepaid` | Standard space, back, paid in full (2027) | $535 |
+   | `standard-back.deposit` | Standard space, back, 50% deposit (2027, season rate $574) | $287 |
+   | `double.prepaid` | Double space, paid in full (2027) | $910 |
+   | `double.deposit` | Double space, 50% deposit (2027, season rate $980) | $490 |
    | `premium.prepaid` | Premium corner, paid in full (2027) | $1,595 |
    | `premium.deposit` | Premium corner, 50% deposit (2027, season rate $1,750) | $875 |
    | `half.prepaid` | Half space, paid in full (2027) | $365 |
@@ -53,7 +55,7 @@ The Buy buttons read **`data/payment-links.json`**. Any value that doesn't start
 3. **Payment Links** (Payment Links > New). For each price above:
    - Quantity: fixed at 1 (don't let customers adjust quantity).
    - **Collect business details:** turn on "Collect customers' phone numbers" and add custom fields: `Business name` (text, required), `Website` (text, optional). Stripe allows up to 3 custom fields. Email is always collected.
-   - **Limit the number of payments:** set it to the spaces left for that product (32 standard, 8 double, 4 premium corner, 6 half, 30 name, 4 realty, minus any sold). Premium Featured has no inventory limit. Stripe has no shared inventory, so the prepaid and deposit links each get their own limit; keep `sold` in `products.json` current and lower the limits as spaces sell.
+   - **Limit the number of payments:** set it to the spaces left for that product (12 standard front, 20 standard back, 8 double, 4 premium corner, 6 half, 30 name, 4 realty, minus any sold). Premium Featured has no inventory limit. Stripe has no shared inventory, so the prepaid and deposit links each get their own limit; keep `sold` in `products.json` current and lower the limits as spaces sell.
    - Optional: "Require customers to accept your terms of service" pointing to `…/advertise/#terms`.
    - **After payment:** choose "Don't show confirmation page, redirect customers to your website" and enter `https://tourholdenbeach-creator.github.io/hb-map-8d5cf59c/advertise/thanks/`.
    - Taxes: prices don't include tax. If tax applies, turn on Stripe Tax or add it to the price.

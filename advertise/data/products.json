@@ -27,27 +27,46 @@
   "products": [
     {
       "id": "standard",
-      "name": "Standard ad space",
-      "summary": "One full-color ad space on the front map border or in a category zone on the back of the map.",
+      "name": "Standard space, front",
+      "summary": "One full-color ad on the front map border.",
       "includes": [
-        "One full-color ad space (front border or a category zone on the back)",
+        "One full-color ad on the front map border",
         "A featured pin with your name at your location on the illustrated map",
         "An online listing with a link on the interactive map",
         "Your offers in the Holden Beach Insiders Club",
         "Complimentary ad layout, up to two hours"
       ],
-      "season_price": 750,
-      "prepaid_price": 695,
-      "deposit": 375,
-      "total": 32,
+      "season_price": 690,
+      "prepaid_price": 640,
+      "deposit": 345,
+      "total": 12,
       "sold": 0,
-      "inventory_note": "12 on the front border, 20 on the back",
+      "inventory_note": "12 on the front border",
+      "featured": false
+    },
+    {
+      "id": "standard-back",
+      "name": "Standard space, back",
+      "summary": "One full-color ad in a category zone on the back of the map.",
+      "includes": [
+        "One full-color ad in a category zone on the back of the map",
+        "A featured pin with your name at your location on the illustrated map",
+        "An online listing with a link on the interactive map",
+        "Your offers in the Holden Beach Insiders Club",
+        "Complimentary ad layout, up to two hours"
+      ],
+      "season_price": 574,
+      "prepaid_price": 535,
+      "deposit": 287,
+      "total": 20,
+      "sold": 0,
+      "inventory_note": "20 on the back, in the category sections",
       "featured": true
     },
     {
       "id": "double",
       "name": "Double space",
-      "summary": "Two adjacent standard spaces in a category zone on the back of the map, about 14% less than two standard spaces.",
+      "summary": "Two adjacent standard spaces in a category zone on the back of the map, about 14% less than two standard spaces on the back.",
       "includes": [
         "A two-space full-color ad on the back of the map, in the matching category zone",
         "A featured pin with your name at your location on the illustrated map",
@@ -55,9 +74,9 @@
         "Your offers in the Holden Beach Insiders Club",
         "Complimentary ad layout, up to two hours"
       ],
-      "season_price": 1295,
-      "prepaid_price": 1195,
-      "deposit": 647.5,
+      "season_price": 980,
+      "prepaid_price": 910,
+      "deposit": 490,
       "total": 8,
       "sold": 0,
       "inventory_note": "8 double spaces on the back",
