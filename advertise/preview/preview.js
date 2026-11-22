@@ -8,6 +8,85 @@
   var GENERIC_VISIT = "Visit us on Holden Beach";
   var GENERIC_OFFER = "Your offer here.";
   var LOGO_PH = "SAMPLE AD – your logo & photo here";
+  var LOGO_NOTE = "SAMPLE – logo from your website";
+  var SV_ATTR = "Street View © Google";
+  var LOGOS = {};
+  var SV = {};
+
+  function logoSrc(biz) {
+    var rel = (biz && biz.logo) || LOGOS[biz && biz.id] || "";
+    if (!rel) return "";
+    if (rel.indexOf("advertise/assets/") === 0) return "../" + rel.slice("advertise/".length);
+    if (rel.indexOf("assets/") === 0) return "../" + rel;
+    return "../assets/logos/" + rel.replace(/^.*\//, "");
+  }
+
+  function svRecord(biz) {
+    return (biz && SV[biz.id]) || null;
+  }
+
+  function svUrl(rec) {
+    var cfg = window.HB_STREETVIEW || {};
+    if (!cfg.key || !rec) return "";
+    if (rec.status === "ZERO_RESULTS") return "";
+    var loc = rec.query;
+    if (!loc && rec.lat != null && rec.lng != null) loc = rec.lat + "," + rec.lng;
+    if (!loc) return "";
+    var size = cfg.size || "640x400";
+    var fov = cfg.fov || 80;
+    return "https://maps.googleapis.com/maps/api/streetview?size=" + encodeURIComponent(size)
+      + "&location=" + encodeURIComponent(loc)
+      + "&fov=" + encodeURIComponent(fov)
+      + "&key=" + encodeURIComponent(cfg.key);
+  }
+
+  /* If the Street View image fails (no coverage, or the key is still propagating),
+     fall back to the logo or the name-only placeholder. */
+  function svFallback(img) {
+    var box = img && img.closest ? img.closest(".ph") : null;
+    if (!box) return;
+    img.style.display = "none";
+    box.classList.remove("has-photo");
+    var attr = box.querySelector(".sv-attr");
+    if (attr) attr.remove();
+    var logo = box.querySelector(".logo-overlay");
+    if (logo) {
+      box.classList.add("has-logo");
+      logo.classList.remove("logo-overlay");
+    } else {
+      box.innerHTML = "";
+      box.appendChild(document.createTextNode(LOGO_PH));
+    }
+  }
+  if (window.HB) window.HB.svFallback = svFallback;
+
+  function mediaBox(biz, extraClass, kind) {
+    var cls = "ph" + (extraClass ? " " + extraClass : "");
+    var style = (kind === "realty") ? ' style="width:88px;height:88px;flex:none"' : "";
+    var src = logoSrc(biz);
+    var rec = svRecord(biz);
+    var url = svUrl(rec);
+    /* Realty partner uses a small logo square, not a photo slot. */
+    var allowSv = kind !== "realty" && !!url;
+    if (allowSv) {
+      var h = '<div class="' + cls + ' has-photo"' + style + '>'
+        + '<img class="sv" src="' + HB.esc(url) + '" alt="Google Street View of the storefront" onerror="HB.svFallback(this)">'
+        + (src ? '<img class="logo-overlay" src="' + HB.esc(src) + '" alt="">' : "")
+        + '<span class="sv-attr">' + HB.esc(SV_ATTR) + "</span>"
+        + (src ? '<span class="logo-note">' + HB.esc(LOGO_NOTE) + "</span>" : "")
+        + "</div>";
+      return h;
+    }
+    if (src) {
+      return '<div class="' + cls + ' has-logo"' + style + '>'
+        + '<img src="' + HB.esc(src) + '" alt="">'
+        + '<span class="logo-note">' + HB.esc(LOGO_NOTE) + "</span>"
+        + "</div>";
+    }
+    var ph = kind === "realty" ? "Your logo here" : LOGO_PH;
+    return '<div class="' + cls + '"' + style + '>' + HB.esc(ph) + "</div>";
+  }
+
 
   /* Layout units from the 22x17 print back/front, mapped onto the bleed preview JPGs
      (6675 x 5175 px at 300 dpi, including a 1/8 in bleed). */
@@ -138,7 +217,7 @@
     return '<article class="ad standard" aria-label="Standard sample ad">'
       + '<div class="wm">SAMPLE</div>'
       + '<div class="top">' + iconSvg(ICONS[biz.category] || "star") + wordmark(biz.name) + "</div>"
-      + '<div class="ph">' + HB.esc(LOGO_PH) + "</div>"
+      + mediaBox(biz, "", "standard")
       + '<div class="cat">' + HB.esc(biz.category || "") + "</div>"
       + (biz.pin ? '<div class="pin">Pin ' + HB.esc(String(biz.pin)) + "</div>" : "")
       + '<p class="blurb">' + HB.esc(GENERIC_VISIT) + "</p>"
@@ -149,7 +228,7 @@
   function renderDouble(biz) {
     return '<article class="ad double" aria-label="Double sample ad">'
       + '<div class="wm">SAMPLE</div>'
-      + '<div class="ph">' + HB.esc(LOGO_PH) + "</div>"
+      + mediaBox(biz, "", "double")
       + '<div class="copy">' + iconSvg(ICONS[biz.category] || "star")
       + wordmark(biz.name)
       + '<div class="cat">' + HB.esc(biz.category || "") + (biz.pin ? " · Pin " + HB.esc(String(biz.pin)) : "") + "</div>"
@@ -162,7 +241,7 @@
   function renderPremium(biz) {
     return '<article class="ad premium" aria-label="Premium corner sample ad">'
       + '<div class="wm">SAMPLE</div>'
-      + '<div class="ph">' + HB.esc(LOGO_PH) + "</div>"
+      + mediaBox(biz, "", "premium")
       + '<div class="copy"><div class="cat">Premium corner · ' + HB.esc(biz.category || "") + "</div>"
       + wordmark(biz.name)
       + (biz.pin ? '<div class="pin">Pin ' + HB.esc(String(biz.pin)) + "</div>" : "")
@@ -179,7 +258,7 @@
       + '<div class="cat">Realty Partner' + (biz.pin ? " · Pin " + HB.esc(String(biz.pin)) : "") + "</div>"
       + '<div class="row"><div class="meta">' + contactLines(biz)
       + "<br>" + HB.esc(GENERIC_VISIT) + "</div>"
-      + '<div class="ph" style="width:88px;height:88px;flex:none">' + HB.esc("Your logo here") + '</div>'
+      + mediaBox(biz, "", "realty")
       + '<div class="qr" aria-hidden="true">QR</div></div>'
       + "</article>";
   }
@@ -187,7 +266,7 @@
     var featured = tier === "featured";
     var h = '<article class="online-card ' + (featured ? "featured" : "enhanced") + '" aria-label="' + (featured ? "Premium" : "Enhanced") + ' online listing sample">';
     h += '<div class="wm">SAMPLE</div>';
-    if (featured) h += '<span class="badge">Featured</span><div class="ph photo">' + HB.esc(LOGO_PH) + "</div>";
+    if (featured) h += '<span class="badge">Featured</span>' + mediaBox(biz, "photo", "featured");
     h += "<b>" + HB.esc(biz.name) + "</b>";
     h += '<span class="sub">' + HB.esc(biz.category || "") + (biz.address ? " · " + HB.esc(biz.address) : "") + "</span>";
     if (featured) h += '<div class="deal">Deal: ' + HB.esc(GENERIC_OFFER) + "</div>";
@@ -255,8 +334,17 @@
     var bits = ["Sample ads for " + biz.name];
     if (biz.pin) bits.push("pin " + biz.pin);
     if (biz.category) bits.push(biz.category);
-    document.getElementById("intro").textContent = bits.join(" · ")
-      + ". These use only your name, category, pin and the contact details we already have. Logo, photo and offer are placeholders. Each proof is marked SAMPLE.";
+    var intro = bits.join(" · ") + ". ";
+    if (svUrl(svRecord(biz)) && logoSrc(biz)) {
+      intro += "Your logo is pulled from your website, and a Google Street View of the storefront is shown in the photo slot. The offer line is a placeholder. Each proof is marked SAMPLE.";
+    } else if (logoSrc(biz)) {
+      intro += "Your logo is pulled from your website. The photo and offer are placeholders until you send yours. Each proof is marked SAMPLE.";
+    } else if (svUrl(svRecord(biz))) {
+      intro += "A Google Street View of the storefront is shown in the photo slot. Logo and offer are placeholders until you send yours. Each proof is marked SAMPLE.";
+    } else {
+      intro += "These use only your name, category, pin and the contact details we already have. Logo, photo and offer are placeholders. Each proof is marked SAMPLE.";
+    }
+    document.getElementById("intro").textContent = intro;
 
     var st = HB.product("standard") || {};
     var pr = HB.product("premium") || {};
@@ -363,6 +451,13 @@
     el.innerHTML = HB.esc(msg) + ' <a href="../../">Back to the map</a>';
   }
 
+  function optJson(url) {
+    return fetch(url, { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error("opt");
+      return r.json();
+    }).catch(function () { return null; });
+  }
+
   Promise.all([
     HB.load("../"),
     fetch("../../data/businesses.geojson", { cache: "no-store" }).then(function (r) {
@@ -372,10 +467,14 @@
     fetch("../data/ad-slots.json", { cache: "no-store" }).then(function (r) {
       if (!r.ok) throw new Error("slots");
       return r.json();
-    }).catch(function () { return null; })
+    }).catch(function () { return null; }),
+    optJson("../data/logos.json"),
+    optJson("../data/streetview.json")
   ]).then(function (pair) {
     var fc = pair[1];
     SLOTS_DATA = pair[2];
+    LOGOS = pair[3] || {};
+    SV = pair[4] || {};
     if (!id) {
       fail("Open this page from a business pin, using See your sample ad, so we know which listing to show.");
       return;
@@ -384,6 +483,7 @@
     if (!biz) { fail("We couldn’t find that listing. It may have been removed from the map."); return; }
     // Never show the known-bad watersports domain if it were still present.
     if (/holdenbeachwatersports\.com/i.test(biz.website || "")) biz.website = "";
+    if (!biz.logo && LOGOS[biz.id]) biz.logo = "advertise/" + LOGOS[biz.id];
     renderPage(biz);
   }).catch(function () {
     fail("The sample ads didn’t load. Please refresh, or email tourholdenbeach@gmail.com.");

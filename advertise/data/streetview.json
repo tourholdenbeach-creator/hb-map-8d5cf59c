@@ -1,0 +1,529 @@
+{
+  "biz-1-haley-s-ice-cream-parlor": {
+    "query": "477 Ocean Boulevard West, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-1-salt-peddler": {
+    "query": "477 Ocean Boulevard West, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-10-sunset-slush": {
+    "query": "111 Jordan Boulevard, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-12-dock-house": {
+    "query": "103 South Shore Drive, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-13-mermaid-s-island-grill": {
+    "query": "102 Jordan Boulevard, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-14-provision-company": {
+    "lat": 33.91698329589868,
+    "lng": -78.2702125419172,
+    "query": "33.9168474,-78.2700783",
+    "query_kind": "coords",
+    "status": "OK"
+  },
+  "biz-15-fantasea-watercraft-rentals": {
+    "query": "1307 Cedar Landing Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-16-200-proof-seafood-company": {
+    "query": "1305 Cedar Landing Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-16-hb-jet-ski-rentals": {
+    "query": "1305 Cedar Landing Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-17-holden-beach-marina": {
+    "query": "3238 Pompano Street, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-18-b-h-arms": {
+    "query": "Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-19-lucy-s-silver-jewelry-outlet": {
+    "query": "3482-B Access Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-2-holden-beach-general-store": {
+    "query": "473 Ocean Boulevard West, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-20-boomer-s-rentals": {
+    "query": "3468 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-20-reef-resort-wear": {
+    "query": "3468 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-21-island-smoke-lounge": {
+    "query": "3458 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-22-treasure-island-miniature-golf": {
+    "query": "3445 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-23-the-hot-buffalo": {
+    "query": "3446 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-24-lighthouse-crafts-gifts": {
+    "query": "3434 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-25-the-scoop": {
+    "query": "3425 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-26-fiber-alley": {
+    "query": "3430 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-26-white-dove-boutique": {
+    "query": "3430 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-27-sew-beachy": {
+    "query": "3422 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-28-seafood-shack": {
+    "query": "3405 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-29-mini-jalape-o": {
+    "query": "3408 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-3-coastal-development-realty": {
+    "query": "131 Ocean Blvd W, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-30-the-rod-reel-shop": {
+    "query": "3401 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-31-mankins-causeway-cafe": {
+    "query": "3397 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-32-cafe-ahora": {
+    "query": "3369 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-32-proactive-real-estate": {
+    "query": "3369 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-32-proactive-vacations": {
+    "query": "3369 Holden Beach Road #2, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-33-beach-mart": {
+    "query": "3368 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-33-mama-deluca-s": {
+    "query": "3368 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-33-pete-s-sweets": {
+    "query": "3368 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-33-subway": {
+    "query": "3368 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-34-fantasy-isle-ice-cream-mini-golf": {
+    "query": "3354 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-35-seaside-daisy-boutique": {
+    "query": "3342 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-36-aunt-irene-s-sweets-n-treats": {
+    "query": "3331 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-37-dee-s-by-the-sea": {
+    "query": "3324 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-38-beaches-n-cream": {
+    "query": "3316 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-39-islander-surf-resort-wear": {
+    "query": "3271 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-4-beach-fun-rentals": {
+    "query": "132 Ocean Boulevard West, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-4-ocean-blvd-coffee": {
+    "query": "132 Ocean Boulevard West, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-40-gray-gull-motel": {
+    "query": "3263 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-40-robinson-s-hardware": {
+    "query": "3263 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-41-sugar-britches": {
+    "query": "3252 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-42-sweet-sensations": {
+    "query": "3237 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-43-cape-fear-surf-shop": {
+    "query": "3229 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-44-flamingo-snowballs-mini-golf": {
+    "query": "3240 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-44-simply-barbecue": {
+    "query": "3240 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-45-sorella": {
+    "query": "3219 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-46-truist": {
+    "query": "Holden Beach Rd & Sabbath Home Rd, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-47-sky-mart": {
+    "query": "3211 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-48-breeza-beachwear": {
+    "query": "3210 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-49-anderson-dominican-barber": {
+    "query": "3172 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-5-alan-holden-realty": {
+    "query": "128 Ocean Blvd W, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-50-dollar-tree": {
+    "query": "1123 Sabbath Home Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-51-united-bank": {
+    "query": "3178 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-52-mark-saunders-luxury-homes": {
+    "query": "3184 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-53-vincent-van-go-pottery": {
+    "query": "2852 Old Ferry Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-54-hardee-s": {
+    "query": "Sabbath Home Road plaza, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-55-walgreens": {
+    "query": "1138 Sabbath Home Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-56-great-wall": {
+    "query": "1096-1 Sabbath Home Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-56-surfer-s-caf": {
+    "query": "1096-3 Sabbath Home Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-56-the-coastal-gem": {
+    "query": "1096-2 Sabbath Home Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-57-domino-s-pizza": {
+    "query": "1096-5 Sabbath Home Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-57-smoker-friendly": {
+    "query": "1096-4 Sabbath Home Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-58-saltwater-shanty": {
+    "query": "1027 Sabbath Home Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-59-rigged-ready-bait-tackle": {
+    "query": "1096-7 Sabbath Home Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-6-brunswickland-realty": {
+    "query": "123 Ocean Blvd W, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-60-food-lion": {
+    "query": "1100 Sabbath Home Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-61-rustic-crumb-company": {
+    "query": "3056 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-62-dollar-general": {
+    "query": "3045 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-63-salty-dogs-cafe": {
+    "query": "2991 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-64-jersey-girls-deli": {
+    "query": "2978 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-65-josh-s-wash": {
+    "query": "Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-66-holden-beach-rv-campground": {
+    "query": "2886 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-67-co-no-mo": {
+    "query": "2633 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-67-holden-scoop": {
+    "query": "2633 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-68-holden-beach-scuba": {
+    "query": "2645 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-69-patronies-pizza": {
+    "query": "2625 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-7-kat-s-professional-grooming": {
+    "query": "118 Ocean Boulevard West, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-70-abc-store": {
+    "query": "2567 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-71-silver-hill-grill": {
+    "query": "2049 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-72-seabreeze-rv-park": {
+    "query": "1801 Wild Cherry Drive SW, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-73-seabreeze-market-boutique-gifts": {
+    "query": "2205 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-74-holden-beach-seafood": {
+    "query": "2224 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-75-ludlum-s-produce": {
+    "query": "2401 Holden Beach Road, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-76-old-ferry-seafood": {
+    "query": "1069 Songbird Lane, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-77-holden-beach-water-sports": {
+    "query": "3325 Old Ferry Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-78-fish-peddler": {
+    "query": "3330 Old Ferry Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-79-the-wharf": {
+    "query": "1045 B-Var Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-8-hobbs-realty": {
+    "query": "114 Ocean Blvd W, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-80-pepe-s-pizza": {
+    "query": "3370 Stone Chimney Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-80-sea-biscuit-cafe": {
+    "query": "3370 Stone Chimney Road, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-81-oak-anchor": {
+    "query": "19 Clubhouse Drive, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-82-bojangles": {
+    "query": "34.0182035,-78.2721826",
+    "query_kind": "coords",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-83-hardee-s": {
+    "query": "5 Ocean Hwy East, Supply, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-84-lockwood-folly-marketplace": {
+    "query": "34.0176522,-78.2671429",
+    "query_kind": "coords",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-85-circle-k": {
+    "query": "34.0174236,-78.2741538",
+    "query_kind": "coords",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-86-mcdonald-s": {
+    "query": "34.0168300,-78.2759490",
+    "query_kind": "coords",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-87-little-caesars": {
+    "query": "34.0155274,-78.2689118",
+    "query_kind": "coords",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-88-marathon": {
+    "query": "34.0153537,-78.2691953",
+    "query_kind": "coords",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-89-dollar-general": {
+    "query": "34.0146192,-78.2695280",
+    "query_kind": "coords",
+    "status": "REQUEST_DENIED"
+  },
+  "biz-9-castaways": {
+    "query": "112 Ocean Boulevard West, Holden Beach, NC",
+    "query_kind": "address",
+    "status": "REQUEST_DENIED"
+  }
+}
