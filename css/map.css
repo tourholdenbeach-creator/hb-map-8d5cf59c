@@ -19,13 +19,14 @@
   --safe-left: env(safe-area-inset-left, 0px);
   --safe-right: env(safe-area-inset-right, 0px);
   --bar-h: 0px;
+  --dock: calc(18px + var(--safe-bottom));
   font-family: "Roboto", "Segoe UI", "Helvetica Neue", system-ui, sans-serif;
 }
 
 * { box-sizing: border-box; }
-html, body, #app { height: 100%; height: 100dvh; }
+html, body, #app { height: 100%; height: 100svh; height: 100dvh; }
 html, body { margin: 0; background: var(--navy); color: var(--cream); overflow: hidden; }
-#map { position: absolute; inset: 0; height: 100%; width: 100%; }
+#map { position: absolute; inset: 0; height: 100%; height: 100svh; height: 100dvh; width: 100%; }
 button, input { font: inherit; }
 
 .sr-only {
@@ -129,7 +130,7 @@ button, input { font: inherit; }
 .locate-btn {
   position: absolute; z-index: 1100;
   right: calc(14px + var(--safe-right));
-  bottom: calc(18px + var(--safe-bottom));
+  bottom: var(--dock);
   width: 52px; height: 52px; border: 0; border-radius: 16px;
   background: var(--cream); color: var(--navy);
   box-shadow: var(--shadow); cursor: pointer;
@@ -152,7 +153,7 @@ button, input { font: inherit; }
 .leaflet-control-zoom {
   border: 0 !important; box-shadow: var(--shadow) !important; border-radius: 14px !important; overflow: hidden;
   margin-left: calc(14px + var(--safe-left)) !important;
-  margin-bottom: calc(14px + var(--safe-bottom)) !important;
+  margin-bottom: var(--dock) !important;
   margin-top: 0 !important;
 }
 .leaflet-control-zoom a {
@@ -330,7 +331,7 @@ button, input { font: inherit; }
 .view-btn {
   position: absolute; z-index: 1100;
   right: calc(14px + var(--safe-right));
-  bottom: calc(80px + var(--safe-bottom));
+  bottom: calc(var(--dock) + 62px);
   height: 44px; padding: 0 14px;
   border: 0; border-radius: 14px;
   background: var(--cream); color: var(--navy);
@@ -379,7 +380,7 @@ button, input { font: inherit; }
   left: 50%;
   transform: translateX(-50%);
   /* Sit above the Whole island button (bottom 80px, height 44px) and zoom. */
-  bottom: calc(136px + var(--safe-bottom));
+  bottom: calc(var(--dock) + 116px);
   align-items: center;
   gap: 8px;
   max-width: calc(100vw - 28px);
@@ -519,6 +520,23 @@ button, input { font: inherit; }
   .view-chip { font-size: 0.78rem; padding: 6px 10px 6px 12px; }
   .brief-content { padding: 0 12px 10px; }
   .brief-sec { margin: 0 0 8px; padding: 0 0 8px; }
+}
+
+
+@media (max-width: 720px) {
+  :root {
+    /* ~76px above the visual bottom, plus the safe area, so controls clear
+       the Android nav bar and the browser toolbar. */
+    --dock: calc(76px + var(--safe-bottom));
+  }
+  .toast { bottom: calc(var(--dock) + 158px); }
+  .install-banner { bottom: calc(var(--dock) + 98px); }
+  .leaflet-control-attribution {
+    margin-bottom: var(--dock) !important;
+    margin-left: calc(66px + var(--safe-left)) !important;
+    margin-right: calc(66px + var(--safe-right)) !important;
+    max-width: calc(100vw - 132px - var(--safe-left) - var(--safe-right));
+  }
 }
 
 @media (display-mode: standalone) {
