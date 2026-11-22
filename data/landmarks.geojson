@@ -1,1 +1,404 @@
-{"type": "FeatureCollection", "name": "Holden Beach landmarks", "crs": {"type": "name", "properties": {"name": "EPSG:4326"}}, "source": "See data/notes/landmarks-inventory.json. Brunswick County GIS address points, OpenStreetMap (ODbL), hbtownhall.com, business websites, user confirmations.", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.270319, 33.914929]}, "properties": {"id": "water_tower", "name": "Water Tower", "map_label": "Water Tower", "category": "civic", "icon": "water_tower", "address": "Bridgeview Park block, Brunswick Ave W end, across from Town Hall", "source": "OSM node/5366751196 (man_made=water_tower); Location confirmed by user (Bridgeview block, Brunswick Ave end, across from Town Hall)", "precision": "osm_node", "sources": ["OSM node/5366751196 (man_made=water_tower)", "Location confirmed by user (Bridgeview block, Brunswick Ave end, across from Town Hall)"], "views": "all", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.270247, 33.914534]}, "properties": {"id": "town_hall", "name": "Town of Holden Beach Town Hall", "map_label": "Town Hall", "category": "civic", "icon": "town_hall", "address": "110 Rothschild St", "source": "Brunswick County address point 110 ROTHSCHILD ST; OSM way/221137588 (amenity=townhall, addr 110 Rothschild Street; centroid -78.27006, 33.914627); hbtownhall.com", "precision": "county_address_point", "sources": ["Brunswick County address point 110 ROTHSCHILD ST", "OSM way/221137588 (amenity=townhall, addr 110 Rothschild Street; centroid -78.27006, 33.914627)", "hbtownhall.com"], "views": "all", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.271026, 33.914432]}, "properties": {"id": "chapel", "name": "Holden Beach Chapel", "map_label": "Holden Beach Chapel", "category": "civic", "icon": "chapel", "address": "107 Rothschild St", "source": "Brunswick County address point 107 ROTHSCHILD ST; OSM way/556341579 (Holden Beach Chapel, 107 Rothschild Street; centroid -78.27105, 33.914425)", "precision": "county_address_point", "sources": ["Brunswick County address point 107 ROTHSCHILD ST", "OSM way/556341579 (Holden Beach Chapel, 107 Rothschild Street; centroid -78.27105, 33.914425)"], "views": "all", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.297167, 33.910083]}, "properties": {"id": "pier", "name": "Holden Beach Fishing Pier", "map_label": "Holden Beach Pier (closed; future TBD)", "category": "civic", "icon": "pier", "address": "441 Ocean Blvd W (pier property)", "source": "OSM way/164850000 (man_made=pier, Holden Beach Fishing Pier), midpoint of the pier deck; Brunswick County address point 441 OCEAN BLVD W (-78.297255, 33.911188); hbtownhall.com/project-info", "precision": "osm_way_midpoint", "sources": ["OSM way/164850000 (man_made=pier, Holden Beach Fishing Pier), midpoint of the pier deck", "Brunswick County address point 441 OCEAN BLVD W (-78.297255, 33.911188)", "hbtownhall.com/project-info"], "views": "all", "layer": "landmarks", "status_note": "Pier's future is under discussion: closed to the public since 2022; condemned by the town inspections director Oct 12, 2026; on Oct 27, 2026 the Board voted to pursue demolition and apply for demolition and replacement permits at the same time. No replacement design yet (hbtownhall.com/project-info; Brunswick Beacon). Marker may need updating."}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.26723, 33.916313]}, "properties": {"id": "boat_launch", "name": "Public Boat Launch", "map_label": "Public Boat Launch", "category": "civic", "icon": "boat_launch", "address": "131 Jordan Blvd (under the bridge)", "source": "OSM node/8143324017 (leisure=slipway, Holden Beach Boat Slip) at the waterway end of Jordan Blvd under the bridge; Brunswick County address point 131 JORDAN BLVD (NON-RES) at -78.267765, 33.915989 is the parcel; the marker uses the ramp itself; Hobbs Realty 'Public Parking, Launches & Services' (restrooms and boat launch under the bridge)", "precision": "osm_node", "sources": ["OSM node/8143324017 (leisure=slipway, Holden Beach Boat Slip) at the waterway end of Jordan Blvd under the bridge", "Brunswick County address point 131 JORDAN BLVD (NON-RES) at -78.267765, 33.915989 is the parcel; the marker uses the ramp itself", "Hobbs Realty 'Public Parking, Launches & Services' (restrooms and boat launch under the bridge)"], "views": "all", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.266767, 33.914342]}, "properties": {"id": "mermaids", "name": "Mermaids Island Grill", "map_label": "Mermaids", "category": "restaurant", "icon": "restaurant", "address": "102 Jordan Blvd", "source": "Brunswick County address point 102 JORDAN BLVD; OSM node/2315236747 (Mermaids Island Grill, 102 Jordan Boulevard; -78.266752, 33.914353)", "precision": "county_address_point", "sources": ["Brunswick County address point 102 JORDAN BLVD", "OSM node/2315236747 (Mermaids Island Grill, 102 Jordan Boulevard; -78.266752, 33.914353)"], "views": "all", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.268229, 33.914186]}, "properties": {"id": "castaways", "name": "Castaways Raw Bar & Grill", "map_label": "Castaways", "category": "restaurant", "icon": "restaurant", "address": "112 Ocean Blvd W", "source": "Brunswick County address point 112 OCEAN BLVD W; OSM node/5366751235 (Castaway's Raw Bar & Grill; -78.268126, 33.914315); castawayshb.com / Toast / Facebook listing: 112 Ocean Blvd W", "precision": "county_address_point", "sources": ["Brunswick County address point 112 OCEAN BLVD W", "OSM node/5366751235 (Castaway's Raw Bar & Grill; -78.268126, 33.914315)", "castawayshb.com / Toast / Facebook listing: 112 Ocean Blvd W"], "views": "all", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.270042, 33.914065]}, "properties": {"id": "ocean_blvd_coffee", "name": "Ocean Boulevard Coffee", "map_label": "Ocean Boulevard Coffee", "category": "restaurant", "icon": "coffee", "address": "132 Ocean Blvd W", "source": "Brunswick County address point 132 OCEAN BLVD W; Address confirmed by user", "precision": "county_address_point", "sources": ["Brunswick County address point 132 OCEAN BLVD W", "Address confirmed by user"], "views": "all", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.268436, 33.914195]}, "properties": {"id": "hobbs_realty", "name": "Hobbs Realty", "map_label": "Hobbs Realty", "category": "business", "icon": "realty", "address": "114 Ocean Blvd W", "source": "Brunswick County address point 114 OCEAN BLVD W; hobbsrealty.com contact page: 114 Ocean Blvd West", "precision": "county_address_point", "sources": ["Brunswick County address point 114 OCEAN BLVD W", "hobbsrealty.com contact page: 114 Ocean Blvd West"], "views": "east-4000, west-4000, phone previews", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.269329, 33.913702]}, "properties": {"id": "brunswickland_realty", "name": "Brunswickland Realty / Holden Beach Vacations", "map_label": "Brunswickland Realty", "category": "business", "icon": "realty", "address": "123 Ocean Blvd W", "source": "Brunswick County address point 123 OCEAN BLVD W; holdenbeachvacations.com rental agreement: 123 Ocean Blvd West, 'directly across the street on the oceanfront' from the stop sign at the bridge", "precision": "county_address_point", "sources": ["Brunswick County address point 123 OCEAN BLVD W", "holdenbeachvacations.com rental agreement: 123 Ocean Blvd West, 'directly across the street on the oceanfront' from the stop sign at the bridge"], "views": "east-4000, west-4000, phone previews", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.269746, 33.914122]}, "properties": {"id": "alan_holden_realty", "name": "Alan Holden Realty (RE/MAX at the Beach)", "map_label": "Alan Holden Realty (RE/MAX)", "category": "business", "icon": "realty", "address": "128 Ocean Blvd W (beside the bridge landing)", "source": "Brunswick County address point 128 OCEAN BLVD W; OSM node/8143292114 (RE/MAX at the Beach, 128 Ocean Blvd West; -78.269682, 33.914056); alanholdenrealty.com contact page: 128 Ocean Blvd West; User: bridge lands beside Alan Holden Realty", "precision": "county_address_point", "sources": ["Brunswick County address point 128 OCEAN BLVD W", "OSM node/8143292114 (RE/MAX at the Beach, 128 Ocean Blvd West; -78.269682, 33.914056)", "alanholdenrealty.com contact page: 128 Ocean Blvd West", "User: bridge lands beside Alan Holden Realty"], "views": "east-4000, west-4000, phone previews", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.270315, 33.91364]}, "properties": {"id": "coastal_development_realty", "name": "Coastal Development & Realty", "map_label": "Coastal Development & Realty", "category": "business", "icon": "realty", "address": "131 Ocean Blvd W", "source": "Brunswick County address point 131 OCEAN BLVD W; coastaldevelopmentandrealty.com: 131 Ocean Blvd W", "precision": "county_address_point", "sources": ["Brunswick County address point 131 OCEAN BLVD W", "coastaldevelopmentandrealty.com: 131 Ocean Blvd W"], "views": "east-4000, west-4000, phone previews", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.357609, 33.905451]}, "properties": {"id": "hbw_gate", "name": "Holden Beach West gate", "map_label": "Holden Beach West (gated)", "category": "gate", "icon": "gate", "address": "West end of Ocean Blvd W (near 1191 OBW)", "source": "OSM node/12852034323 and node/12852034327 (barrier=lift_gate) on Ocean Blvd W; OSM node/1641815767 (Holden Beach West Security building, -78.357783, 33.905603); Town ADA assessment: '1191 OBW - New Walkway at West End Gate'", "precision": "osm_node_pair_midpoint", "sources": ["OSM node/12852034323 and node/12852034327 (barrier=lift_gate) on Ocean Blvd W", "OSM node/1641815767 (Holden Beach West Security building, -78.357783, 33.905603)", "Town ADA assessment: '1191 OBW - New Walkway at West End Gate'"], "views": "all", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.249797, 33.915428]}, "properties": {"id": "dunescape_gate", "name": "Dunescape gate", "map_label": "Dunescape (gated)", "category": "gate", "icon": "gate", "address": "Dunescape Dr at the east end of Ocean Blvd E", "source": "OSM node/14020028646 and node/14020028647 (barrier=lift_gate, motor_vehicle=private) on Dunescape Drive (way/1539756455); Pope Real Estate listing (332 Serenity Ln): Dunescape gate on the left at the end of Ocean Blvd East, just before McCray St", "precision": "osm_node_pair_midpoint", "sources": ["OSM node/14020028646 and node/14020028647 (barrier=lift_gate, motor_vehicle=private) on Dunescape Drive (way/1539756455)", "Pope Real Estate listing (332 Serenity Ln): Dunescape gate on the left at the end of Ocean Blvd East, just before McCray St"], "views": "all", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.267961, 33.917717]}, "properties": {"id": "hb_bridge", "name": "Holden Beach Bridge (NC-130)", "map_label": "Holden Beach Bridge (NC-130)", "category": "civic", "icon": "bridge", "address": "NC-130 / Holden Beach Rd over the Intracoastal Waterway", "source": "OSM way/111878106 (bridge=yes, ref NC 130, wikipedia en:Holden Beach Bridge); dot placed on the span over the waterway", "precision": "osm_way_point", "sources": ["OSM way/111878106 (bridge=yes, ref NC 130, wikipedia en:Holden Beach Bridge); dot placed on the span over the waterway"], "views": "all", "layer": "landmarks"}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.26775, 33.9163]}, "properties": {"id": "jordan_fishing_pier", "name": "Jordan Blvd Fishing Pier", "map_label": "Fishing Pier (sound side)", "category": "civic", "icon": "pier", "address": "End of Jordan Blvd at the ICW, beside the bridge", "source": "Town of Holden Beach My Maps pin '131 Jordan Blvd' (fishing pier; the 'HB Pavilion' it also names is gone; per Keith 2026-11-15 the pavilion is now at Block Q); Placement from Keith 2026-11-15 (end of Jordan Blvd, next to the bridge); street end and shoreline from OSM", "precision": "keith_described_end_of_street", "sources": ["Town of Holden Beach My Maps pin '131 Jordan Blvd' (fishing pier; the 'HB Pavilion' it also names is gone; per Keith 2026-11-15 the pavilion is now at Block Q)", "Placement from Keith 2026-11-15 (end of Jordan Blvd, next to the bridge); street end and shoreline from OSM"], "views": "all", "layer": "landmarks", "status_note": "Moved 2026-11-15 per Keith: not under the bridge; at the end of Jordan Blvd at the ICW, adjacent to (west of) the bridge. Placed just off the shoreline ~40 m north of the Jordan Blvd street end and ~30 m west of the bridge centerline."}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.26439, 33.91705]}, "properties": {"id": "halstead_fishing_pier", "name": "Halstead Park Fishing Pier", "map_label": "Fishing Pier (Halstead Park)", "category": "civic", "icon": "pier", "address": "Halstead Park, Halstead St & South Shore Dr (ICW)", "source": "OSM way/1224881478 (man_made=pier, mooring=public, surface=wood) extending from the end of Halstead St into the ICW; marker at mid-deck; Parks layer: Halstead Park (Master Plan fishing dock; Beautification Club public fishing pier and gazebo)", "precision": "osm_way_midpoint", "sources": ["OSM way/1224881478 (man_made=pier, mooring=public, surface=wood) extending from the end of Halstead St into the ICW; marker at mid-deck", "Parks layer: Halstead Park (Master Plan fishing dock; Beautification Club public fishing pier and gazebo)"], "views": "all", "layer": "landmarks", "status_note": "Confirmed by Keith 2026-11-15."}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.2669504, 33.9163065]}, "properties": {"id": "dock_house", "name": "Dock House Seafood & More", "map_label": "Dock House Seafood", "category": "restaurant", "icon": "restaurant", "address": "103 South Shore Dr", "source": "OSM node/11944988373 (amenity=restaurant, cuisine=seafood, Dock House Seafood & More); Restaurant website dockhousehb.com: 103 South Shore Dr, Holden Beach, NC 28462, (910) 846-9920; Place listing coordinates 33.916271, -78.267015 (~6 m from OSM point)", "precision": "osm_node", "sources": ["OSM node/11944988373 (amenity=restaurant, cuisine=seafood, Dock House Seafood & More)", "Restaurant website dockhousehb.com: 103 South Shore Dr, Holden Beach, NC 28462, (910) 846-9920", "Place listing coordinates 33.916271, -78.267015 (~6 m from OSM point)"], "views": "all", "layer": "landmarks", "status_note": "Added 2026-11-15 at Keith's request (ICW, beside the boat ramp and bridge)."}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.2990849, 33.9110548]}, "properties": {"id": "general_store", "name": "Holden Beach General Store", "map_label": "Holden Beach General Store", "category": "business", "icon": "store", "address": "473 Ocean Blvd W", "source": "OSM node/5366751341 (shop=convenience, Holden Beach General Store); Apple Maps / Yellow Pages / Holden Beach Locator: 473 Ocean Blvd W, Holden Beach, NC 28462, (910) 842-3660", "precision": "osm_node", "sources": ["OSM node/5366751341 (shop=convenience, Holden Beach General Store)", "Apple Maps / Yellow Pages / Holden Beach Locator: 473 Ocean Blvd W, Holden Beach, NC 28462, (910) 842-3660"], "views": "all", "layer": "landmarks", "status_note": "Added 2026-11-15 at Keith's request."}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.307615, 33.910917]}, "properties": {"id": "fire_station", "name": "Tri-Beach Fire Station 2 (Holden Beach)", "map_label": "Fire Station", "category": "civic", "icon": "fire_station", "address": "572 Ocean Blvd W", "source": "OSM way/556341605 (amenity=fire_station, Tri-Beach VFD Station 8-2), building centroid; Tri-Beach VFD website: Station 2, 572 Ocean Blvd West, Holden Beach, NC 28462 (910-842-2070); town RFQ lists the site as 574 Ocean Blvd W", "precision": "osm_building_centroid", "sources": ["OSM way/556341605 (amenity=fire_station, Tri-Beach VFD Station 8-2), building centroid", "Tri-Beach VFD website: Station 2, 572 Ocean Blvd West, Holden Beach, NC 28462 (910-842-2070); town RFQ lists the site as 574 Ocean Blvd W"], "views": "all", "layer": "landmarks", "status_note": "Added 2026-11-15 at Keith's request. Town has an RFQ for a new fire station on this site (574 OBW); Station 2 to be temporarily relocated during construction."}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.270471, 33.915504]}, "properties": {"id": "bridgeview_kayak_launch", "name": "Bridgeview Park Kayak Launch", "map_label": "Kayak Launch", "category": "civic", "icon": "kayak", "address": "Bridgeview Park, 125 Davis St (ICW)", "source": "OSM node/8143292116 (leisure=slipway) at the Bridgeview Park waterfront; StarNews 2017: town's first kayak launch (roller launch) at Bridgeview Park, attached to the public dock; Hobbs Realty: public kayak launch at the Bridgeview Park transient dock, 125 Davis St", "precision": "osm_node", "sources": ["OSM node/8143292116 (leisure=slipway) at the Bridgeview Park waterfront", "StarNews 2017: town's first kayak launch (roller launch) at Bridgeview Park, attached to the public dock", "Hobbs Realty: public kayak launch at the Bridgeview Park transient dock, 125 Davis St"], "views": "all", "layer": "landmarks", "status_note": "Added 2026-11-15 at Keith's request."}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.2704, 33.91572]}, "properties": {"id": "bridgeview_dock", "name": "Bridgeview Public Dock (transient boat dock)", "map_label": "Public Boat Dock", "category": "civic", "icon": "dock", "address": "Bridgeview Park, 125 Davis St (ICW)", "source": "StarNews 2017: Bridgeview Public Dock ('BIG dock', federal Boating Infrastructure Grant), three slips, stays up to 3 days, pump-out, electric, showers, laundry; Hobbs Realty: transient dock at 125 Davis St, overnight dockage by reservation; Placed just off the shoreline beside the kayak launch; OSM does not map the dock itself", "precision": "approx_shoreline", "sources": ["StarNews 2017: Bridgeview Public Dock ('BIG dock', federal Boating Infrastructure Grant), three slips, stays up to 3 days, pump-out, electric, showers, laundry", "Hobbs Realty: transient dock at 125 Davis St, overnight dockage by reservation", "Placed just off the shoreline beside the kayak launch; OSM does not map the dock itself"], "views": "all", "layer": "landmarks", "status_note": "Added 2026-11-15 at Keith's request (he called it the commercial boat dock). Position approximate; verify on the interactive map."}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-78.269457, 33.913915]}, "properties": {"id": "realty_offices", "name": "Realty offices (group)", "map_label": "Realty Offices", "category": "business", "icon": "realty", "address": "114, 123, 128 and 131 Ocean Blvd W", "source": "Centroid of the four realty office address points (see individual features)", "precision": "group_centroid", "sources": ["Centroid of the four realty office address points (see individual features)"], "views": "1920x1080, 6000", "layer": "landmarks", "members": ["hobbs_realty", "brunswickland_realty", "alan_holden_realty", "coastal_development_realty"]}}]}
+{
+ "type": "FeatureCollection",
+ "name": "Holden Beach landmarks",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "EPSG:4326"
+  }
+ },
+ "source": "See data/notes/landmarks-inventory.json. Brunswick County GIS address points, OpenStreetMap (ODbL), hbtownhall.com, business websites, user confirmations.",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.270319,
+     33.914929
+    ]
+   },
+   "properties": {
+    "id": "water_tower",
+    "name": "Water Tower",
+    "map_label": "Water Tower",
+    "category": "civic",
+    "icon": "water_tower",
+    "address": "Bridgeview Park block, Brunswick Ave W end, across from Town Hall",
+    "source": "OSM node/5366751196 (man_made=water_tower); Location confirmed by user (Bridgeview block, Brunswick Ave end, across from Town Hall)",
+    "precision": "osm_node",
+    "sources": [
+     "OSM node/5366751196 (man_made=water_tower)",
+     "Location confirmed by user (Bridgeview block, Brunswick Ave end, across from Town Hall)"
+    ],
+    "views": "all",
+    "layer": "landmarks"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.270247,
+     33.914534
+    ]
+   },
+   "properties": {
+    "id": "town_hall",
+    "name": "Town of Holden Beach Town Hall",
+    "map_label": "Town Hall",
+    "category": "civic",
+    "icon": "town_hall",
+    "address": "110 Rothschild St",
+    "source": "Brunswick County address point 110 ROTHSCHILD ST; OSM way/221137588 (amenity=townhall, addr 110 Rothschild Street; centroid -78.27006, 33.914627); hbtownhall.com",
+    "precision": "county_address_point",
+    "sources": [
+     "Brunswick County address point 110 ROTHSCHILD ST",
+     "OSM way/221137588 (amenity=townhall, addr 110 Rothschild Street; centroid -78.27006, 33.914627)",
+     "hbtownhall.com"
+    ],
+    "views": "all",
+    "layer": "landmarks"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.271026,
+     33.914432
+    ]
+   },
+   "properties": {
+    "id": "chapel",
+    "name": "Holden Beach Chapel",
+    "map_label": "Holden Beach Chapel",
+    "category": "civic",
+    "icon": "chapel",
+    "address": "107 Rothschild St",
+    "source": "Brunswick County address point 107 ROTHSCHILD ST; OSM way/556341579 (Holden Beach Chapel, 107 Rothschild Street; centroid -78.27105, 33.914425)",
+    "precision": "county_address_point",
+    "sources": [
+     "Brunswick County address point 107 ROTHSCHILD ST",
+     "OSM way/556341579 (Holden Beach Chapel, 107 Rothschild Street; centroid -78.27105, 33.914425)"
+    ],
+    "views": "all",
+    "layer": "landmarks"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.297167,
+     33.910083
+    ]
+   },
+   "properties": {
+    "id": "pier",
+    "name": "Holden Beach Fishing Pier",
+    "map_label": "Holden Beach Fishing Pier",
+    "category": "civic",
+    "icon": "pier",
+    "address": "441 Ocean Blvd W (pier property)",
+    "source": "OSM way/164850000 (man_made=pier, Holden Beach Fishing Pier), midpoint of the pier deck; Brunswick County address point 441 OCEAN BLVD W (-78.297255, 33.911188); hbtownhall.com/project-info",
+    "precision": "osm_way_midpoint",
+    "sources": [
+     "OSM way/164850000 (man_made=pier, Holden Beach Fishing Pier), midpoint of the pier deck",
+     "Brunswick County address point 441 OCEAN BLVD W (-78.297255, 33.911188)",
+     "hbtownhall.com/project-info"
+    ],
+    "views": "all",
+    "layer": "landmarks",
+    "status_note": "Pier's future is under discussion: closed to the public since 2022; condemned by the town inspections director Oct 12, 2026; on Oct 27, 2026 the Board voted to pursue demolition and apply for demolition and replacement permits at the same time. No replacement design yet (hbtownhall.com/project-info; Brunswick Beacon). Marker may need updating."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.26723,
+     33.916313
+    ]
+   },
+   "properties": {
+    "id": "boat_launch",
+    "name": "Public Boat Launch",
+    "map_label": "Public Boat Launch",
+    "category": "civic",
+    "icon": "boat_launch",
+    "address": "131 Jordan Blvd (under the bridge)",
+    "source": "OSM node/8143324017 (leisure=slipway, Holden Beach Boat Slip) at the waterway end of Jordan Blvd under the bridge; Brunswick County address point 131 JORDAN BLVD (NON-RES) at -78.267765, 33.915989 is the parcel; the marker uses the ramp itself; Hobbs Realty 'Public Parking, Launches & Services' (restrooms and boat launch under the bridge)",
+    "precision": "osm_node",
+    "sources": [
+     "OSM node/8143324017 (leisure=slipway, Holden Beach Boat Slip) at the waterway end of Jordan Blvd under the bridge",
+     "Brunswick County address point 131 JORDAN BLVD (NON-RES) at -78.267765, 33.915989 is the parcel; the marker uses the ramp itself",
+     "Hobbs Realty 'Public Parking, Launches & Services' (restrooms and boat launch under the bridge)"
+    ],
+    "views": "all",
+    "layer": "landmarks"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.357609,
+     33.905451
+    ]
+   },
+   "properties": {
+    "id": "hbw_gate",
+    "name": "Holden Beach West gate",
+    "map_label": "Holden Beach West (gated)",
+    "category": "gate",
+    "icon": "gate",
+    "address": "West end of Ocean Blvd W (near 1191 OBW)",
+    "source": "OSM node/12852034323 and node/12852034327 (barrier=lift_gate) on Ocean Blvd W; OSM node/1641815767 (Holden Beach West Security building, -78.357783, 33.905603); Town ADA assessment: '1191 OBW - New Walkway at West End Gate'",
+    "precision": "osm_node_pair_midpoint",
+    "sources": [
+     "OSM node/12852034323 and node/12852034327 (barrier=lift_gate) on Ocean Blvd W",
+     "OSM node/1641815767 (Holden Beach West Security building, -78.357783, 33.905603)",
+     "Town ADA assessment: '1191 OBW - New Walkway at West End Gate'"
+    ],
+    "views": "all",
+    "layer": "landmarks"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.249797,
+     33.915428
+    ]
+   },
+   "properties": {
+    "id": "dunescape_gate",
+    "name": "Dunescape gate",
+    "map_label": "Dunescape (gated)",
+    "category": "gate",
+    "icon": "gate",
+    "address": "Dunescape Dr at the east end of Ocean Blvd E",
+    "source": "OSM node/14020028646 and node/14020028647 (barrier=lift_gate, motor_vehicle=private) on Dunescape Drive (way/1539756455); Pope Real Estate listing (332 Serenity Ln): Dunescape gate on the left at the end of Ocean Blvd East, just before McCray St",
+    "precision": "osm_node_pair_midpoint",
+    "sources": [
+     "OSM node/14020028646 and node/14020028647 (barrier=lift_gate, motor_vehicle=private) on Dunescape Drive (way/1539756455)",
+     "Pope Real Estate listing (332 Serenity Ln): Dunescape gate on the left at the end of Ocean Blvd East, just before McCray St"
+    ],
+    "views": "all",
+    "layer": "landmarks"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.267961,
+     33.917717
+    ]
+   },
+   "properties": {
+    "id": "hb_bridge",
+    "name": "Holden Beach Bridge (NC-130)",
+    "map_label": "Holden Beach Bridge (NC 130)",
+    "category": "civic",
+    "icon": "bridge",
+    "address": "NC-130 / Holden Beach Rd over the Intracoastal Waterway",
+    "source": "OSM way/111878106 (bridge=yes, ref NC 130, wikipedia en:Holden Beach Bridge); dot placed on the span over the waterway",
+    "precision": "osm_way_point",
+    "sources": [
+     "OSM way/111878106 (bridge=yes, ref NC 130, wikipedia en:Holden Beach Bridge); dot placed on the span over the waterway"
+    ],
+    "views": "all",
+    "layer": "landmarks"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.26775,
+     33.9163
+    ]
+   },
+   "properties": {
+    "id": "jordan_fishing_pier",
+    "name": "Jordan Blvd Fishing Pier",
+    "map_label": "Fishing Pier (sound side)",
+    "category": "civic",
+    "icon": "pier",
+    "address": "End of Jordan Blvd at the ICW, beside the bridge",
+    "source": "Town of Holden Beach My Maps pin '131 Jordan Blvd' (fishing pier; the 'HB Pavilion' it also names is gone; per Keith 2026-11-15 the pavilion is now at Block Q); Placement from Keith 2026-11-15 (end of Jordan Blvd, next to the bridge); street end and shoreline from OSM",
+    "precision": "keith_described_end_of_street",
+    "sources": [
+     "Town of Holden Beach My Maps pin '131 Jordan Blvd' (fishing pier; the 'HB Pavilion' it also names is gone; per Keith 2026-11-15 the pavilion is now at Block Q)",
+     "Placement from Keith 2026-11-15 (end of Jordan Blvd, next to the bridge); street end and shoreline from OSM"
+    ],
+    "views": "all",
+    "layer": "landmarks",
+    "status_note": "Moved 2026-11-15 per Keith: not under the bridge; at the end of Jordan Blvd at the ICW, adjacent to (west of) the bridge. Placed just off the shoreline ~40 m north of the Jordan Blvd street end and ~30 m west of the bridge centerline."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.26439,
+     33.91705
+    ]
+   },
+   "properties": {
+    "id": "halstead_fishing_pier",
+    "name": "Halstead Park Fishing Pier",
+    "map_label": "Fishing Pier (Halstead Park)",
+    "category": "civic",
+    "icon": "pier",
+    "address": "Halstead Park, Halstead St & South Shore Dr (ICW)",
+    "source": "OSM way/1224881478 (man_made=pier, mooring=public, surface=wood) extending from the end of Halstead St into the ICW; marker at mid-deck; Parks layer: Halstead Park (Master Plan fishing dock; Beautification Club public fishing pier and gazebo)",
+    "precision": "osm_way_midpoint",
+    "sources": [
+     "OSM way/1224881478 (man_made=pier, mooring=public, surface=wood) extending from the end of Halstead St into the ICW; marker at mid-deck",
+     "Parks layer: Halstead Park (Master Plan fishing dock; Beautification Club public fishing pier and gazebo)"
+    ],
+    "views": "all",
+    "layer": "landmarks",
+    "status_note": "Confirmed by Keith 2026-11-15."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.307615,
+     33.910917
+    ]
+   },
+   "properties": {
+    "id": "fire_station",
+    "name": "Tri-Beach Fire Station 2 (Holden Beach)",
+    "map_label": "Fire Station",
+    "category": "civic",
+    "icon": "fire_station",
+    "address": "572 Ocean Blvd W",
+    "source": "OSM way/556341605 (amenity=fire_station, Tri-Beach VFD Station 8-2), building centroid; Tri-Beach VFD website: Station 2, 572 Ocean Blvd West, Holden Beach, NC 28462 (910-842-2070); town RFQ lists the site as 574 Ocean Blvd W",
+    "precision": "osm_building_centroid",
+    "sources": [
+     "OSM way/556341605 (amenity=fire_station, Tri-Beach VFD Station 8-2), building centroid",
+     "Tri-Beach VFD website: Station 2, 572 Ocean Blvd West, Holden Beach, NC 28462 (910-842-2070); town RFQ lists the site as 574 Ocean Blvd W"
+    ],
+    "views": "all",
+    "layer": "landmarks",
+    "status_note": "Added 2026-11-15 at Keith's request. Town has an RFQ for a new fire station on this site (574 OBW); Station 2 to be temporarily relocated during construction."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.270471,
+     33.915504
+    ]
+   },
+   "properties": {
+    "id": "bridgeview_kayak_launch",
+    "name": "Bridgeview Park Kayak Launch",
+    "map_label": "Kayak Launch",
+    "category": "civic",
+    "icon": "kayak",
+    "address": "Bridgeview Park, 125 Davis St (ICW)",
+    "source": "OSM node/8143292116 (leisure=slipway) at the Bridgeview Park waterfront; StarNews 2017: town's first kayak launch (roller launch) at Bridgeview Park, attached to the public dock; Hobbs Realty: public kayak launch at the Bridgeview Park transient dock, 125 Davis St",
+    "precision": "osm_node",
+    "sources": [
+     "OSM node/8143292116 (leisure=slipway) at the Bridgeview Park waterfront",
+     "StarNews 2017: town's first kayak launch (roller launch) at Bridgeview Park, attached to the public dock",
+     "Hobbs Realty: public kayak launch at the Bridgeview Park transient dock, 125 Davis St"
+    ],
+    "views": "all",
+    "layer": "landmarks",
+    "status_note": "Added 2026-11-15 at Keith's request."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2704,
+     33.91572
+    ]
+   },
+   "properties": {
+    "id": "bridgeview_dock",
+    "name": "Bridgeview Public Dock (transient boat dock)",
+    "map_label": "Public Boat Dock",
+    "category": "civic",
+    "icon": "dock",
+    "address": "Bridgeview Park, 125 Davis St (ICW)",
+    "source": "StarNews 2017: Bridgeview Public Dock ('BIG dock', federal Boating Infrastructure Grant), three slips, stays up to 3 days, pump-out, electric, showers, laundry; Hobbs Realty: transient dock at 125 Davis St, overnight dockage by reservation; Placed just off the shoreline beside the kayak launch; OSM does not map the dock itself",
+    "precision": "approx_shoreline",
+    "sources": [
+     "StarNews 2017: Bridgeview Public Dock ('BIG dock', federal Boating Infrastructure Grant), three slips, stays up to 3 days, pump-out, electric, showers, laundry",
+     "Hobbs Realty: transient dock at 125 Davis St, overnight dockage by reservation",
+     "Placed just off the shoreline beside the kayak launch; OSM does not map the dock itself"
+    ],
+    "views": "all",
+    "layer": "landmarks",
+    "status_note": "Added 2026-11-15 at Keith's request (he called it the commercial boat dock). Position approximate; verify on the interactive map."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2667349,
+     33.9153084
+    ]
+   },
+   "properties": {
+    "id": "blockq_stage_pavilion",
+    "name": "Concert Stage (Block Q)",
+    "map_label": "Concert Stage",
+    "category": "civic",
+    "icon": "stage",
+    "address": "82 South Shore Drive",
+    "notes": "Concert stage on the Block Q lot (center-south of the block), as on the printed map.",
+    "source": "Keith, printed map proof rounds 1-2 (Nov 21, 2026); Block Q lot from the Town of Holden Beach",
+    "layer": "landmarks"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2972554,
+     33.9111877
+    ]
+   },
+   "properties": {
+    "id": "pier_camping",
+    "name": "Full Hook-up Camping (6 sites)",
+    "map_label": "Full Hook-up Camping",
+    "category": "civic",
+    "icon": "camping",
+    "address": "441 Ocean Blvd West (pier property)",
+    "notes": "6 full hook-up RV/camper sites at the pier property.",
+    "source": "Keith, printed map proof round 1 (Nov 21, 2026); Brunswick County GIS address point 441 OCEAN BLVD W",
+    "layer": "landmarks"
+   }
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "format": "webp",
+ "minzoom": 11,
+ "maxzoom": 18,
+ "native_maxzoom": 17,
+ "z18_bounds": [
+  [
+   33.912909415378834,
+   -78.27259051351876
+  ],
+  [
+   33.91908629745133,
+   -78.2634093137387
+  ]
+ ],
+ "main_bounds": [
+  [
+   33.85277966237154,
+   -78.38568091202502
+  ],
+  [
+   33.94929381646353,
+   -78.22871624925926
+  ]
+ ],
+ "supply_bounds": [
+  [
+   34.00249534770788,
+   -78.29402121973065
+  ],
+  [
+   34.03328635408994,
+   -78.25208415868511
+  ]
+ ],
+ "source": "build_map_enh.py final illustrated print art (no labels/pins), UTM 17N (EPSG:32617) rasters warped to EPSG:3857",
+ "res_m": {
+  "main": 1.0,
+  "causeway": 1.0,
+  "supply": 1.0,
+  "bridge_area": 0.5
+ }
+}

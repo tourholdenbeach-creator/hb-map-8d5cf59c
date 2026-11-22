@@ -7,7 +7,9 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="description" content="Interactive map of Holden Beach, North Carolina — parks, landmarks, beach accesses, and public restrooms.">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="description" content="Illustrated interactive map of Holden Beach, North Carolina — businesses, parks, landmarks, beach accesses, restrooms and parking.">
   <link rel="icon" href="favicon.ico">
   <title>Holden Beach Map</title>
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
@@ -21,9 +23,15 @@
           <span class="brand-mark" aria-hidden="true"></span>
           <div>
             <h1>Holden Beach Map</h1>
-            <p class="tagline">Parks, restrooms, beach accesses &amp; places</p>
+            <p class="tagline">Businesses, parks, beach accesses &amp; restrooms</p>
           </div>
         </div>
+        <button type="button" class="icon-btn" id="btn-dir" aria-expanded="false" aria-controls="dir-panel" title="Business directory">
+          <span class="sr-only">Business directory</span>
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path fill="currentColor" d="M4 5h2v2H4zm4 0h12v2H8zM4 11h2v2H4zm4 0h12v2H8zM4 17h2v2H4zm4 0h12v2H8z"/>
+          </svg>
+        </button>
         <button type="button" class="icon-btn" id="btn-layers" aria-expanded="false" aria-controls="layer-panel" title="Map layers">
           <span class="sr-only">Map layers</span>
           <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
@@ -34,7 +42,7 @@
       <div class="search-wrap">
         <label class="sr-only" for="search">Search the map</label>
         <input id="search" type="search" enterkeyhint="search" autocomplete="off" autocorrect="off" spellcheck="false"
-               placeholder="Search parks, restrooms, accesses, places…">
+               placeholder="Search businesses, pin numbers, parks, accesses…">
         <button type="button" class="search-clear" id="search-clear" hidden aria-label="Clear search">×</button>
         <ul id="search-results" class="search-results" hidden role="listbox" aria-label="Search results"></ul>
       </div>
@@ -47,12 +55,31 @@
         <h2>Layers</h2>
         <button type="button" class="icon-btn" id="btn-layers-close" aria-label="Close layers">×</button>
       </div>
+      <div class="layer-sub">Base map</div>
+      <label class="layer-row"><input type="radio" name="basemap" id="bm-illustrated" value="illustrated" checked> Illustrated map</label>
+      <label class="layer-row"><input type="radio" name="basemap" id="bm-plain" value="plain"> Plain map</label>
+      <div class="layer-sub">Show</div>
       <label class="layer-row"><input type="checkbox" id="ly-streets" checked> Street names</label>
+      <label class="layer-row"><input type="checkbox" id="ly-business" checked> Businesses (numbered pins)</label>
       <label class="layer-row"><input type="checkbox" id="ly-parks" checked> Parks &amp; Fit Trail</label>
       <label class="layer-row"><input type="checkbox" id="ly-landmarks" checked> Landmarks</label>
       <label class="layer-row"><input type="checkbox" id="ly-accesses" checked> Beach accesses</label>
       <label class="layer-row"><input type="checkbox" id="ly-restrooms" checked> Public restrooms</label>
-      <p class="layer-note">The base map stays on. Turn layers off to unclutter the view.</p>
+      <label class="layer-row"><input type="checkbox" id="ly-parking"> Parking areas (OpenStreetMap)</label>
+      <p class="layer-note">Pin numbers match the printed Holden Beach Insider map. Turn layers off to unclutter the view.</p>
+    </aside>
+
+    <aside id="dir-panel" class="dir-panel" hidden aria-label="Business directory">
+      <div class="layer-panel-head">
+        <h2>Business Directory</h2>
+        <button type="button" class="icon-btn" id="btn-dir-close" aria-label="Close directory">×</button>
+      </div>
+      <div class="dir-search">
+        <label class="sr-only" for="dir-filter">Filter by pin number or name</label>
+        <input id="dir-filter" type="search" autocomplete="off" autocorrect="off" spellcheck="false" enterkeyhint="search" placeholder="Pin number or name">
+      </div>
+      <p class="dir-note">Pin number • business. Tap a name to go to its pin.</p>
+      <div id="dir-list" class="dir-list"></div>
     </aside>
 
     <button type="button" class="locate-btn" id="btn-locate" title="Show my location" aria-label="Show my location">

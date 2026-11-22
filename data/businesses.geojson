@@ -1,0 +1,2731 @@
+{
+ "type": "FeatureCollection",
+ "name": "businesses",
+ "source": "Final print build (build_map_enh.py): Keith's business sheet + Keith adds, Brunswick County GIS address points, OSM; pin numbers match the printed map and directory.",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2994478,
+     33.9109616
+    ]
+   },
+   "properties": {
+    "id": "biz-1-haley-s-ice-cream-parlor",
+    "pin": 1,
+    "name": "Haley's Ice Cream Parlor",
+    "category": "Coffee, Sweets & Treats",
+    "area": "island",
+    "address": "477 Ocean Boulevard West",
+    "shared_with": [
+     "Salt Peddler"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2994478,
+     33.9109616
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2994478,
+     33.9109616
+    ]
+   },
+   "properties": {
+    "id": "biz-1-salt-peddler",
+    "pin": 1,
+    "name": "Salt Peddler",
+    "category": "Shopping & Groceries",
+    "area": "island",
+    "address": "477 Ocean Boulevard West",
+    "shared_with": [
+     "Haley's Ice Cream Parlor"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2994478,
+     33.9109616
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2991217,
+     33.9110733
+    ]
+   },
+   "properties": {
+    "id": "biz-2-holden-beach-general-store",
+    "pin": 2,
+    "name": "Holden Beach General Store",
+    "category": "Shopping & Groceries",
+    "area": "island",
+    "address": "473 Ocean Boulevard West",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2991217,
+     33.9110733
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.270315,
+     33.91364
+    ]
+   },
+   "properties": {
+    "id": "biz-3-coastal-development-realty",
+    "pin": 3,
+    "name": "Coastal Development & Realty",
+    "category": "Realty & Vacation Rentals",
+    "area": "island",
+    "address": "131 Ocean Blvd W",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.270315,
+     33.91364
+    ],
+    "source": "landmark data"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2700421,
+     33.914065
+    ]
+   },
+   "properties": {
+    "id": "biz-4-beach-fun-rentals",
+    "pin": 4,
+    "name": "Beach Fun Rentals",
+    "category": "Rentals & Water Sports",
+    "area": "island",
+    "address": "132 Ocean Boulevard West",
+    "shared_with": [
+     "Ocean Blvd Coffee"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2700421,
+     33.914065
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2700421,
+     33.914065
+    ]
+   },
+   "properties": {
+    "id": "biz-4-ocean-blvd-coffee",
+    "pin": 4,
+    "name": "Ocean Blvd Coffee",
+    "category": "Coffee, Sweets & Treats",
+    "area": "island",
+    "address": "132 Ocean Boulevard West",
+    "shared_with": [
+     "Beach Fun Rentals"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2700421,
+     33.914065
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.269746,
+     33.914122
+    ]
+   },
+   "properties": {
+    "id": "biz-5-alan-holden-realty",
+    "pin": 5,
+    "name": "Alan Holden Realty",
+    "category": "Realty & Vacation Rentals",
+    "area": "island",
+    "address": "128 Ocean Blvd W (beside the bridge landing)",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.269746,
+     33.914122
+    ],
+    "source": "landmark data"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.269329,
+     33.913702
+    ]
+   },
+   "properties": {
+    "id": "biz-6-brunswickland-realty",
+    "pin": 6,
+    "name": "Brunswickland Realty",
+    "category": "Realty & Vacation Rentals",
+    "area": "island",
+    "address": "123 Ocean Blvd W",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.269329,
+     33.913702
+    ],
+    "source": "landmark data"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2688025,
+     33.914185
+    ]
+   },
+   "properties": {
+    "id": "biz-7-kat-s-professional-grooming",
+    "pin": 7,
+    "name": "Kat's Professional Grooming",
+    "category": "Services & Lodging",
+    "area": "island",
+    "address": "118 Ocean Boulevard West",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2688025,
+     33.914185
+    ],
+    "source": "Keith (added Nov 21, 2026)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.268436,
+     33.914195
+    ]
+   },
+   "properties": {
+    "id": "biz-8-hobbs-realty",
+    "pin": 8,
+    "name": "Hobbs Realty",
+    "category": "Realty & Vacation Rentals",
+    "area": "island",
+    "address": "114 Ocean Blvd W",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.268436,
+     33.914195
+    ],
+    "source": "landmark data"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.268229,
+     33.9141863
+    ]
+   },
+   "properties": {
+    "id": "biz-9-castaways",
+    "pin": 9,
+    "name": "Castaways",
+    "category": "Restaurants",
+    "area": "island",
+    "address": "112 Ocean Boulevard West",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.268229,
+     33.9141863
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2678057,
+     33.9149281
+    ]
+   },
+   "properties": {
+    "id": "biz-10-sunset-slush",
+    "pin": 10,
+    "name": "Sunset Slush",
+    "category": "Coffee, Sweets & Treats",
+    "area": "island",
+    "address": "111 Jordan Boulevard",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2678057,
+     33.9149281
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2668553,
+     33.9163658
+    ]
+   },
+   "properties": {
+    "id": "biz-11-captain-pete-s-seafood-market",
+    "pin": 11,
+    "name": "Captain Pete's Seafood Market",
+    "category": "Seafood Markets",
+    "area": "island",
+    "address": "101 South Shore Drive",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2668553,
+     33.9163658
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2667967,
+     33.9165116
+    ]
+   },
+   "properties": {
+    "id": "biz-12-dock-house",
+    "pin": 12,
+    "name": "Dock House",
+    "category": "Restaurants",
+    "area": "island",
+    "address": "103 South Shore Drive",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2667967,
+     33.9165116
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2667669,
+     33.9143417
+    ]
+   },
+   "properties": {
+    "id": "biz-13-mermaid-s-island-grill",
+    "pin": 13,
+    "name": "Mermaid's Island Grill",
+    "category": "Restaurants",
+    "area": "island",
+    "address": "102 Jordan Boulevard",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2667669,
+     33.9143417
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2700783,
+     33.9168474
+    ]
+   },
+   "properties": {
+    "id": "biz-14-provision-company",
+    "pin": 14,
+    "name": "Provision Company",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "1343 Cedar Landing Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2700783,
+     33.9168474
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2686628,
+     33.9170897
+    ]
+   },
+   "properties": {
+    "id": "biz-15-fantasea-watercraft-rentals",
+    "pin": 15,
+    "name": "Fantasea Watercraft Rentals",
+    "category": "Rentals & Water Sports",
+    "area": "causeway",
+    "address": "1307 Cedar Landing Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2686628,
+     33.9170897
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2689741,
+     33.9175326
+    ]
+   },
+   "properties": {
+    "id": "biz-16-200-proof-seafood-company",
+    "pin": 16,
+    "name": "200 Proof Seafood Company",
+    "category": "Seafood Markets",
+    "area": "causeway",
+    "address": "1305 Cedar Landing Road",
+    "shared_with": [
+     "HB Jet Ski Rentals"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2689741,
+     33.9175326
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2689741,
+     33.9175326
+    ]
+   },
+   "properties": {
+    "id": "biz-16-hb-jet-ski-rentals",
+    "pin": 16,
+    "name": "HB Jet Ski Rentals",
+    "category": "Rentals & Water Sports",
+    "area": "causeway",
+    "address": "1305 Cedar Landing Road",
+    "shared_with": [
+     "200 Proof Seafood Company"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2689741,
+     33.9175326
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.267579,
+     33.917843
+    ]
+   },
+   "properties": {
+    "id": "biz-17-holden-beach-marina",
+    "pin": 17,
+    "name": "Holden Beach Marina",
+    "category": "Services & Lodging",
+    "area": "causeway",
+    "address": "3238 Pompano Street",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.267579,
+     33.917843
+    ],
+    "source": "verified extra (not in sheet)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.269287,
+     33.918306
+    ]
+   },
+   "properties": {
+    "id": "biz-18-b-h-arms",
+    "pin": 18,
+    "name": "B&H Arms",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.269287,
+     33.918306
+    ],
+    "source": "verified extra (not in sheet)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2687304,
+     33.9198161
+    ]
+   },
+   "properties": {
+    "id": "biz-19-lucy-s-silver-jewelry-outlet",
+    "pin": 19,
+    "name": "Lucy's Silver Jewelry Outlet",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3482-B Access Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2687304,
+     33.9198161
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2688486,
+     33.9205646
+    ]
+   },
+   "properties": {
+    "id": "biz-20-boomer-s-rentals",
+    "pin": 20,
+    "name": "Boomer's Rentals",
+    "category": "Rentals & Water Sports",
+    "area": "causeway",
+    "address": "3468 Holden Beach Road",
+    "shared_with": [
+     "Reef Resort Wear"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2688486,
+     33.9205646
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2688486,
+     33.9205646
+    ]
+   },
+   "properties": {
+    "id": "biz-20-reef-resort-wear",
+    "pin": 20,
+    "name": "Reef Resort Wear",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3468 Holden Beach Road",
+    "shared_with": [
+     "Boomer's Rentals"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2688486,
+     33.9205646
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2691188,
+     33.9206259
+    ]
+   },
+   "properties": {
+    "id": "biz-21-island-smoke-lounge",
+    "pin": 21,
+    "name": "Island Smoke Lounge",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3458 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2691188,
+     33.9206259
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2700597,
+     33.9207471
+    ]
+   },
+   "properties": {
+    "id": "biz-22-treasure-island-miniature-golf",
+    "pin": 22,
+    "name": "Treasure Island Miniature Golf",
+    "category": "Fun & Attractions",
+    "area": "causeway",
+    "address": "3445 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2700597,
+     33.9207471
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2691833,
+     33.92112
+    ]
+   },
+   "properties": {
+    "id": "biz-23-the-hot-buffalo",
+    "pin": 23,
+    "name": "The Hot Buffalo",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "3446 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2691833,
+     33.92112
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.26942,
+     33.9214172
+    ]
+   },
+   "properties": {
+    "id": "biz-24-lighthouse-crafts-gifts",
+    "pin": 24,
+    "name": "Lighthouse Crafts & Gifts",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3434 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.26942,
+     33.9214172
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2702464,
+     33.9214566
+    ]
+   },
+   "properties": {
+    "id": "biz-25-the-scoop",
+    "pin": 25,
+    "name": "The Scoop",
+    "category": "Coffee, Sweets & Treats",
+    "area": "causeway",
+    "address": "3425 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2702464,
+     33.9214566
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2695107,
+     33.9215606
+    ]
+   },
+   "properties": {
+    "id": "biz-26-fiber-alley",
+    "pin": 26,
+    "name": "Fiber Alley",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3430 Holden Beach Road",
+    "shared_with": [
+     "White Dove Boutique"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2695107,
+     33.9215606
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2695107,
+     33.9215606
+    ]
+   },
+   "properties": {
+    "id": "biz-26-white-dove-boutique",
+    "pin": 26,
+    "name": "White Dove Boutique",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3430 Holden Beach Road",
+    "shared_with": [
+     "Fiber Alley"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2695107,
+     33.9215606
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2695719,
+     33.9217539
+    ]
+   },
+   "properties": {
+    "id": "biz-27-sew-beachy",
+    "pin": 27,
+    "name": "SEW Beachy",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3422 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2695719,
+     33.9217539
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2704691,
+     33.9221426
+    ]
+   },
+   "properties": {
+    "id": "biz-28-seafood-shack",
+    "pin": 28,
+    "name": "Seafood Shack",
+    "category": "Seafood Markets",
+    "area": "causeway",
+    "address": "3405 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2704691,
+     33.9221426
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2698077,
+     33.9222498
+    ]
+   },
+   "properties": {
+    "id": "biz-29-mini-jalape-o",
+    "pin": 29,
+    "name": "Mini Jalapeño",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "3408 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2698077,
+     33.9222498
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2705628,
+     33.9222595
+    ]
+   },
+   "properties": {
+    "id": "biz-30-the-rod-reel-shop",
+    "pin": 30,
+    "name": "The Rod & Reel Shop",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3401 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2705628,
+     33.9222595
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2707401,
+     33.9223848
+    ]
+   },
+   "properties": {
+    "id": "biz-31-mankins-causeway-cafe",
+    "pin": 31,
+    "name": "Mankins Causeway Cafe",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "3397 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2707401,
+     33.9223848
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2710841,
+     33.923197
+    ]
+   },
+   "properties": {
+    "id": "biz-32-cafe-ahora",
+    "pin": 32,
+    "name": "Cafe Ahora",
+    "category": "Coffee, Sweets & Treats",
+    "area": "causeway",
+    "address": "3369 Holden Beach Road",
+    "shared_with": [
+     "PROACTIVE Vacations",
+     "PROACTIVE Real Estate"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2710841,
+     33.923197
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2710841,
+     33.923197
+    ]
+   },
+   "properties": {
+    "id": "biz-32-proactive-real-estate",
+    "pin": 32,
+    "name": "PROACTIVE Real Estate",
+    "category": "Realty & Vacation Rentals",
+    "area": "causeway",
+    "address": "3369 Holden Beach Road",
+    "shared_with": [
+     "Cafe Ahora",
+     "PROACTIVE Vacations"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2710841,
+     33.923197
+    ],
+    "source": "Keith (added Nov 21, 2026)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2710841,
+     33.923197
+    ]
+   },
+   "properties": {
+    "id": "biz-32-proactive-vacations",
+    "pin": 32,
+    "name": "PROACTIVE Vacations",
+    "category": "Realty & Vacation Rentals",
+    "area": "causeway",
+    "address": "3369 Holden Beach Road #2",
+    "shared_with": [
+     "Cafe Ahora",
+     "PROACTIVE Real Estate"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2710841,
+     33.923197
+    ],
+    "source": "Keith (added Nov 21, 2026)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.270073,
+     33.9236142
+    ]
+   },
+   "properties": {
+    "id": "biz-33-beach-mart",
+    "pin": 33,
+    "name": "Beach Mart",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3368 Holden Beach Road",
+    "shared_with": [
+     "Subway",
+     "Mama DeLuca's",
+     "Pete's Sweets"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.270073,
+     33.9236142
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.270073,
+     33.9236142
+    ]
+   },
+   "properties": {
+    "id": "biz-33-mama-deluca-s",
+    "pin": 33,
+    "name": "Mama DeLuca's",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "3368 Holden Beach Road",
+    "shared_with": [
+     "Subway",
+     "Beach Mart",
+     "Pete's Sweets"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.270073,
+     33.9236142
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.270073,
+     33.9236142
+    ]
+   },
+   "properties": {
+    "id": "biz-33-pete-s-sweets",
+    "pin": 33,
+    "name": "Pete's Sweets",
+    "category": "Coffee, Sweets & Treats",
+    "area": "causeway",
+    "address": "3368 Holden Beach Road",
+    "shared_with": [
+     "Subway",
+     "Beach Mart",
+     "Mama DeLuca's"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.270073,
+     33.9236142
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.270073,
+     33.9236142
+    ]
+   },
+   "properties": {
+    "id": "biz-33-subway",
+    "pin": 33,
+    "name": "Subway",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "3368 Holden Beach Road",
+    "shared_with": [
+     "Beach Mart",
+     "Mama DeLuca's",
+     "Pete's Sweets"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.270073,
+     33.9236142
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2703544,
+     33.9238416
+    ]
+   },
+   "properties": {
+    "id": "biz-34-fantasy-isle-ice-cream-mini-golf",
+    "pin": 34,
+    "name": "Fantasy Isle Ice Cream & Mini Golf",
+    "category": "Fun & Attractions",
+    "area": "causeway",
+    "address": "3354 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2703544,
+     33.9238416
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2705339,
+     33.9241291
+    ]
+   },
+   "properties": {
+    "id": "biz-35-seaside-daisy-boutique",
+    "pin": 35,
+    "name": "Seaside Daisy Boutique",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3342 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2705339,
+     33.9241291
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2712331,
+     33.9241797
+    ]
+   },
+   "properties": {
+    "id": "biz-36-aunt-irene-s-sweets-n-treats",
+    "pin": 36,
+    "name": "Aunt Irene's Sweets-n-Treats",
+    "category": "Coffee, Sweets & Treats",
+    "area": "causeway",
+    "address": "3331 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2712331,
+     33.9241797
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2706837,
+     33.9245448
+    ]
+   },
+   "properties": {
+    "id": "biz-37-dee-s-by-the-sea",
+    "pin": 37,
+    "name": "Dee's By The Sea",
+    "category": "Rentals & Water Sports",
+    "area": "causeway",
+    "address": "3324 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2706837,
+     33.9245448
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.270744,
+     33.92489
+    ]
+   },
+   "properties": {
+    "id": "biz-38-beaches-n-cream",
+    "pin": 38,
+    "name": "Beaches-N-Cream",
+    "category": "Coffee, Sweets & Treats",
+    "area": "causeway",
+    "address": "3316 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.270744,
+     33.92489
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2719992,
+     33.9255671
+    ]
+   },
+   "properties": {
+    "id": "biz-39-islander-surf-resort-wear",
+    "pin": 39,
+    "name": "Islander Surf & Resort Wear",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3271 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2719992,
+     33.9255671
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2720393,
+     33.92611
+    ]
+   },
+   "properties": {
+    "id": "biz-40-gray-gull-motel",
+    "pin": 40,
+    "name": "Gray Gull Motel",
+    "category": "Services & Lodging",
+    "area": "causeway",
+    "address": "3263 Holden Beach Road",
+    "shared_with": [
+     "Robinson's Hardware"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.272046,
+     33.926107
+    ],
+    "source": "verified extra (not in sheet)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2720393,
+     33.92611
+    ]
+   },
+   "properties": {
+    "id": "biz-40-robinson-s-hardware",
+    "pin": 40,
+    "name": "Robinson's Hardware",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3263 Holden Beach Road",
+    "shared_with": [
+     "Gray Gull Motel"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2720393,
+     33.92611
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2714966,
+     33.9267003
+    ]
+   },
+   "properties": {
+    "id": "biz-41-sugar-britches",
+    "pin": 41,
+    "name": "Sugar Britches",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3252 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2714966,
+     33.9267003
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2724787,
+     33.9267619
+    ]
+   },
+   "properties": {
+    "id": "biz-42-sweet-sensations",
+    "pin": 42,
+    "name": "Sweet Sensations",
+    "category": "Coffee, Sweets & Treats",
+    "area": "causeway",
+    "address": "3237 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2724787,
+     33.9267619
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2726949,
+     33.9270848
+    ]
+   },
+   "properties": {
+    "id": "biz-43-cape-fear-surf-shop",
+    "pin": 43,
+    "name": "Cape Fear Surf Shop",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3229 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2726949,
+     33.9270848
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2709147,
+     33.9272163
+    ]
+   },
+   "properties": {
+    "id": "biz-44-flamingo-snowballs-mini-golf",
+    "pin": 44,
+    "name": "Flamingo Snowballs & Mini Golf",
+    "category": "Fun & Attractions",
+    "area": "causeway",
+    "address": "3240 Holden Beach Road",
+    "shared_with": [
+     "Simply Barbecue"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2709147,
+     33.9272163
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2709147,
+     33.9272163
+    ]
+   },
+   "properties": {
+    "id": "biz-44-simply-barbecue",
+    "pin": 44,
+    "name": "Simply Barbecue",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "3240 Holden Beach Road",
+    "shared_with": [
+     "Flamingo Snowballs & Mini Golf"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2709147,
+     33.9272163
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2724692,
+     33.9273556
+    ]
+   },
+   "properties": {
+    "id": "biz-45-sorella",
+    "pin": 45,
+    "name": "Sorella",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "3219 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2724692,
+     33.9273556
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.271621,
+     33.92743
+    ]
+   },
+   "properties": {
+    "id": "biz-46-truist",
+    "pin": 46,
+    "name": "Truist",
+    "category": "Services & Lodging",
+    "area": "causeway",
+    "address": "Holden Beach Rd & Sabbath Home Rd",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.271621,
+     33.92743
+    ],
+    "source": "verified extra (not in sheet)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2728032,
+     33.9275077
+    ]
+   },
+   "properties": {
+    "id": "biz-47-sky-mart",
+    "pin": 47,
+    "name": "Sky Mart",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3211 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2728032,
+     33.9275077
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2718051,
+     33.927953
+    ]
+   },
+   "properties": {
+    "id": "biz-48-breeza-beachwear",
+    "pin": 48,
+    "name": "Breeza Beachwear",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3210 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2718051,
+     33.927953
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2736066,
+     33.9279691
+    ]
+   },
+   "properties": {
+    "id": "biz-49-anderson-dominican-barber",
+    "pin": 49,
+    "name": "Anderson Dominican Barber",
+    "category": "Services & Lodging",
+    "area": "causeway",
+    "address": "3172 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2736066,
+     33.9279691
+    ],
+    "source": "Keith (added Nov 21, 2026)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2713352,
+     33.928092
+    ]
+   },
+   "properties": {
+    "id": "biz-50-dollar-tree",
+    "pin": 50,
+    "name": "Dollar Tree",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "1123 Sabbath Home Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2713352,
+     33.928092
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2733518,
+     33.9281004
+    ]
+   },
+   "properties": {
+    "id": "biz-51-united-bank",
+    "pin": 51,
+    "name": "United Bank",
+    "category": "Services & Lodging",
+    "area": "causeway",
+    "address": "3178 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2733518,
+     33.9281004
+    ],
+    "source": "Keith (added Nov 21, 2026)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2731101,
+     33.9281211
+    ]
+   },
+   "properties": {
+    "id": "biz-52-mark-saunders-luxury-homes",
+    "pin": 52,
+    "name": "Mark Saunders Luxury Homes",
+    "category": "Realty & Vacation Rentals",
+    "area": "causeway",
+    "address": "3184 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2731101,
+     33.9281211
+    ],
+    "source": "Keith (added Nov 21, 2026)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2705405,
+     33.9286159
+    ]
+   },
+   "properties": {
+    "id": "biz-53-vincent-van-go-pottery",
+    "pin": 53,
+    "name": "Vincent Van-Go Pottery",
+    "category": "Coffee, Sweets & Treats",
+    "area": "causeway",
+    "address": "2852 Old Ferry Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2705405,
+     33.9286159
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.273063,
+     33.928691
+    ]
+   },
+   "properties": {
+    "id": "biz-54-hardee-s",
+    "pin": 54,
+    "name": "Hardee's",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "Sabbath Home Road plaza",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.273063,
+     33.928691
+    ],
+    "source": "verified extra (not in sheet)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2721083,
+     33.9289655
+    ]
+   },
+   "properties": {
+    "id": "biz-55-walgreens",
+    "pin": 55,
+    "name": "Walgreens",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "1138 Sabbath Home Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2721083,
+     33.9289655
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2705781,
+     33.9294687
+    ]
+   },
+   "properties": {
+    "id": "biz-56-great-wall",
+    "pin": 56,
+    "name": "Great Wall",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "1096-1 Sabbath Home Road",
+    "shared_with": [
+     "The Coastal Gem",
+     "Surfer's Café"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2705457,
+     33.929423
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2705781,
+     33.9294687
+    ]
+   },
+   "properties": {
+    "id": "biz-56-surfer-s-caf",
+    "pin": 56,
+    "name": "Surfer's Café",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "1096-3 Sabbath Home Road",
+    "shared_with": [
+     "The Coastal Gem",
+     "Great Wall"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2706145,
+     33.9295176
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2705781,
+     33.9294687
+    ]
+   },
+   "properties": {
+    "id": "biz-56-the-coastal-gem",
+    "pin": 56,
+    "name": "The Coastal Gem",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "1096-2 Sabbath Home Road",
+    "shared_with": [
+     "Great Wall",
+     "Surfer's Café"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2705781,
+     33.9294687
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2706715,
+     33.9296057
+    ]
+   },
+   "properties": {
+    "id": "biz-57-domino-s-pizza",
+    "pin": 57,
+    "name": "Domino's Pizza",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "1096-5 Sabbath Home Road",
+    "shared_with": [
+     "Smoker Friendly"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2706715,
+     33.9296057
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2706715,
+     33.9296057
+    ]
+   },
+   "properties": {
+    "id": "biz-57-smoker-friendly",
+    "pin": 57,
+    "name": "Smoker Friendly",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "1096-4 Sabbath Home Road",
+    "shared_with": [
+     "Domino's Pizza"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2706391,
+     33.929557
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2684637,
+     33.9296793
+    ]
+   },
+   "properties": {
+    "id": "biz-58-saltwater-shanty",
+    "pin": 58,
+    "name": "Saltwater Shanty",
+    "category": "Coffee, Sweets & Treats",
+    "area": "causeway",
+    "address": "1027 Sabbath Home Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2684637,
+     33.9296793
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2707357,
+     33.9296943
+    ]
+   },
+   "properties": {
+    "id": "biz-59-rigged-ready-bait-tackle",
+    "pin": 59,
+    "name": "Rigged & Ready Bait & Tackle",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "1096-7 Sabbath Home Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2707357,
+     33.9296943
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2713099,
+     33.9299729
+    ]
+   },
+   "properties": {
+    "id": "biz-60-food-lion",
+    "pin": 60,
+    "name": "Food Lion",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "1100 Sabbath Home Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2713099,
+     33.9299729
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2775651,
+     33.9272293
+    ]
+   },
+   "properties": {
+    "id": "biz-61-rustic-crumb-company",
+    "pin": 61,
+    "name": "Rustic Crumb Company",
+    "category": "Coffee, Sweets & Treats",
+    "area": "causeway",
+    "address": "3056 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2775651,
+     33.9272293
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.277757,
+     33.9263929
+    ]
+   },
+   "properties": {
+    "id": "biz-62-dollar-general",
+    "pin": 62,
+    "name": "Dollar General",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "3045 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.277757,
+     33.9263929
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2802252,
+     33.9266148
+    ]
+   },
+   "properties": {
+    "id": "biz-63-salty-dogs-cafe",
+    "pin": 63,
+    "name": "Salty Dogs Cafe",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "2991 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2802252,
+     33.9266148
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2805698,
+     33.927286
+    ]
+   },
+   "properties": {
+    "id": "biz-64-jersey-girls-deli",
+    "pin": 64,
+    "name": "Jersey Girls' Deli",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "2978 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2805698,
+     33.927286
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.283394,
+     33.926828
+    ]
+   },
+   "properties": {
+    "id": "biz-65-josh-s-wash",
+    "pin": 65,
+    "name": "Josh's Wash",
+    "category": "Services & Lodging",
+    "area": "causeway",
+    "address": "Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.283394,
+     33.926828
+    ],
+    "source": "verified extra (not in sheet)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.284314,
+     33.930556
+    ]
+   },
+   "properties": {
+    "id": "biz-66-holden-beach-rv-campground",
+    "pin": 66,
+    "name": "Holden Beach RV Campground",
+    "category": "Services & Lodging",
+    "area": "causeway",
+    "address": "2886 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.284314,
+     33.930556
+    ],
+    "source": "verified extra (not in sheet)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2935311,
+     33.9285058
+    ]
+   },
+   "properties": {
+    "id": "biz-67-co-no-mo",
+    "pin": 67,
+    "name": "Co No Mo",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "2633 Holden Beach Road",
+    "shared_with": [
+     "Holden Scoop"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2935311,
+     33.9285058
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2935311,
+     33.9285058
+    ]
+   },
+   "properties": {
+    "id": "biz-67-holden-scoop",
+    "pin": 67,
+    "name": "Holden Scoop",
+    "category": "Coffee, Sweets & Treats",
+    "area": "causeway",
+    "address": "2633 Holden Beach Road",
+    "shared_with": [
+     "Co No Mo"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2935311,
+     33.9285058
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.293694,
+     33.928064
+    ]
+   },
+   "properties": {
+    "id": "biz-68-holden-beach-scuba",
+    "pin": 68,
+    "name": "Holden Beach Scuba",
+    "category": "Services & Lodging",
+    "area": "causeway",
+    "address": "2645 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.293694,
+     33.928064
+    ],
+    "source": "verified extra (not in sheet)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2937649,
+     33.9288881
+    ]
+   },
+   "properties": {
+    "id": "biz-69-patronies-pizza",
+    "pin": 69,
+    "name": "Patronies Pizza",
+    "category": "Restaurants",
+    "area": "causeway",
+    "address": "2625 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2937649,
+     33.9288881
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2943328,
+     33.9307461
+    ]
+   },
+   "properties": {
+    "id": "biz-70-abc-store",
+    "pin": 70,
+    "name": "ABC Store",
+    "category": "Shopping & Groceries",
+    "area": "causeway",
+    "address": "2567 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2943328,
+     33.9307461
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.3027473,
+     33.9428711
+    ]
+   },
+   "properties": {
+    "id": "biz-71-silver-hill-grill",
+    "pin": 71,
+    "name": "Silver Hill Grill",
+    "category": "Restaurants",
+    "area": "mainland",
+    "address": "2049 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.3027473,
+     33.9428711
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2988843,
+     33.9390804
+    ]
+   },
+   "properties": {
+    "id": "biz-72-seabreeze-rv-park",
+    "pin": 72,
+    "name": "SeaBreeze RV Park",
+    "category": "Services & Lodging",
+    "area": "mainland",
+    "address": "1801 Wild Cherry Drive SW",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2988843,
+     33.9390804
+    ],
+    "source": "Keith (added Nov 21, 2026, proof 3)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2983818,
+     33.9401308
+    ]
+   },
+   "properties": {
+    "id": "biz-73-seabreeze-market-boutique-gifts",
+    "pin": 73,
+    "name": "SeaBreeze Market Boutique & Gifts",
+    "category": "Shopping & Groceries",
+    "area": "mainland",
+    "address": "2205 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2983818,
+     33.9401308
+    ],
+    "source": "Keith (added Nov 21, 2026, proof 3)"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.297254,
+     33.9402141
+    ]
+   },
+   "properties": {
+    "id": "biz-74-holden-beach-seafood",
+    "pin": 74,
+    "name": "Holden Beach Seafood",
+    "category": "Seafood Markets",
+    "area": "mainland",
+    "address": "2224 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.297254,
+     33.9402141
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2949935,
+     33.9349279
+    ]
+   },
+   "properties": {
+    "id": "biz-75-ludlum-s-produce",
+    "pin": 75,
+    "name": "Ludlum's Produce",
+    "category": "Shopping & Groceries",
+    "area": "mainland",
+    "address": "2401 Holden Beach Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2949935,
+     33.9349279
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2610986,
+     33.9185987
+    ]
+   },
+   "properties": {
+    "id": "biz-76-old-ferry-seafood",
+    "pin": 76,
+    "name": "Old Ferry Seafood",
+    "category": "Seafood Markets",
+    "area": "mainland",
+    "address": "1069 Songbird Lane",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2610986,
+     33.9185987
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2605841,
+     33.9188195
+    ]
+   },
+   "properties": {
+    "id": "biz-77-holden-beach-water-sports",
+    "pin": 77,
+    "name": "Holden Beach Water Sports",
+    "category": "Rentals & Water Sports",
+    "area": "mainland",
+    "address": "3325 Old Ferry Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2605841,
+     33.9188195
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2601221,
+     33.9185625
+    ]
+   },
+   "properties": {
+    "id": "biz-78-fish-peddler",
+    "pin": 78,
+    "name": "Fish Peddler",
+    "category": "Seafood Markets",
+    "area": "mainland",
+    "address": "3330 Old Ferry Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2601221,
+     33.9185625
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2583137,
+     33.9189409
+    ]
+   },
+   "properties": {
+    "id": "biz-79-the-wharf",
+    "pin": 79,
+    "name": "The Wharf",
+    "category": "Restaurants",
+    "area": "mainland",
+    "address": "1045 B-Var Road",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2583137,
+     33.9189409
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2473277,
+     33.9336949
+    ]
+   },
+   "properties": {
+    "id": "biz-80-pepe-s-pizza",
+    "pin": 80,
+    "name": "Pepe's Pizza",
+    "category": "Restaurants",
+    "area": "mainland",
+    "address": "3370 Stone Chimney Road",
+    "shared_with": [
+     "Sea Biscuit Cafe"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2473277,
+     33.9336949
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2473277,
+     33.9336949
+    ]
+   },
+   "properties": {
+    "id": "biz-80-sea-biscuit-cafe",
+    "pin": 80,
+    "name": "Sea Biscuit Cafe",
+    "category": "Restaurants",
+    "area": "mainland",
+    "address": "3370 Stone Chimney Road",
+    "shared_with": [
+     "Pepe's Pizza"
+    ],
+    "layer": "businesses",
+    "true_point": [
+     -78.2473277,
+     33.9336949
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2213938,
+     33.9304594
+    ]
+   },
+   "properties": {
+    "id": "biz-81-oak-anchor",
+    "pin": 81,
+    "name": "Oak & Anchor",
+    "category": "Restaurants",
+    "area": "mainland",
+    "address": "19 Clubhouse Drive",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2213938,
+     33.9304594
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2721826,
+     34.0182035
+    ]
+   },
+   "properties": {
+    "id": "biz-82-bojangles",
+    "pin": 82,
+    "name": "Bojangles'",
+    "category": "Restaurants",
+    "area": "supply",
+    "address": "",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2721826,
+     34.0182035
+    ],
+    "source": "OSM w1176366025"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2730631,
+     34.0179123
+    ]
+   },
+   "properties": {
+    "id": "biz-83-hardee-s",
+    "pin": 83,
+    "name": "Hardee's",
+    "category": "Restaurants",
+    "area": "supply",
+    "address": "5 Ocean Hwy East",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2730631,
+     34.0179123
+    ],
+    "source": "Keith's sheet"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2671429,
+     34.0176522
+    ]
+   },
+   "properties": {
+    "id": "biz-84-lockwood-folly-marketplace",
+    "pin": 84,
+    "name": "Lockwood Folly Marketplace",
+    "category": "Shopping & Groceries",
+    "area": "supply",
+    "address": "",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2671429,
+     34.0176522
+    ],
+    "source": "OSM n12766437293"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2741538,
+     34.0174236
+    ]
+   },
+   "properties": {
+    "id": "biz-85-circle-k",
+    "pin": 85,
+    "name": "Circle K",
+    "category": "Shopping & Groceries",
+    "area": "supply",
+    "address": "",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2741538,
+     34.0174236
+    ],
+    "source": "OSM n12766462711"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.275949,
+     34.01683
+    ]
+   },
+   "properties": {
+    "id": "biz-86-mcdonald-s",
+    "pin": 86,
+    "name": "McDonald's",
+    "category": "Restaurants",
+    "area": "supply",
+    "address": "",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.275949,
+     34.01683
+    ],
+    "source": "OSM n12292163910"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2689118,
+     34.0155274
+    ]
+   },
+   "properties": {
+    "id": "biz-87-little-caesars",
+    "pin": 87,
+    "name": "Little Caesars",
+    "category": "Restaurants",
+    "area": "supply",
+    "address": "",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2689118,
+     34.0155274
+    ],
+    "source": "OSM n12766444864"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2691953,
+     34.0153537
+    ]
+   },
+   "properties": {
+    "id": "biz-88-marathon",
+    "pin": 88,
+    "name": "Marathon",
+    "category": "Shopping & Groceries",
+    "area": "supply",
+    "address": "",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.2691953,
+     34.0153537
+    ],
+    "source": "OSM n12766444862"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.269528,
+     34.0146192
+    ]
+   },
+   "properties": {
+    "id": "biz-89-dollar-general",
+    "pin": 89,
+    "name": "Dollar General",
+    "category": "Shopping & Groceries",
+    "area": "supply",
+    "address": "",
+    "shared_with": [],
+    "layer": "businesses",
+    "true_point": [
+     -78.269528,
+     34.0146192
+    ],
+    "source": "OSM w1378695412"
+   }
+  }
+ ]
+}

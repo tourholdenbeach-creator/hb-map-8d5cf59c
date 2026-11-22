@@ -19,14 +19,26 @@ block the map tiles and data files.
 On a phone, add the page to the home screen or open it in Chrome. The layout
 is built for a phone-sized screen first.
 
-What is on the map
+What is on the map (updated 21 Nov 2026)
 ------------------
-- Painted Holden Beach base map, with a Street names layer you can turn off
+- Illustrated base map (default): the final Holden Beach Insider print art,
+  without print labels, pins, insets, key or ads, rendered in UTM 17N
+  (EPSG:32617) and warped to Web Mercator tiles (tiles/illustrated, webp,
+  native to zoom 17, zoom 18 around the bridge). Bridge Area, Causeway and
+  Supply detail art is blended in where it applies. Built by
+  build_web_tiles.py in the print project (build_map_enh.py, read-only).
+- Plain base map (Layers > Plain map), as before.
+- Street names (overlay on the illustrated map up to zoom 16)
+- 106 businesses on 89 numbered pins - numbers and names match the printed
+  map and its Business Directory (Directory button, top right)
 - 9 official parks / Fit Trail
-- 24 landmarks
-- 25 public beach accesses
-- 7 public restrooms / porta-johns (the former PW1 porta-john and the
-  OpenStreetMap toilet at The Point are not on this map)
+- 15 landmarks (incl. Concert Stage at Block Q and the 6 full hook-up
+  campsites at the pier property; realty offices and restaurants that are
+  now business pins were removed from this layer)
+- 25 public beach accesses (shown on the dune line, as printed)
+- 7 public restrooms / porta-johns (Block Q restrooms moved per Keith;
+  porta-johns stay online only)
+- Parking areas: 10 mapped OpenStreetMap parking areas (off by default)
 
 Tap a marker for its name, address, details, and Walking / Biking
 directions (Google Maps). Use the location button to show where you are.

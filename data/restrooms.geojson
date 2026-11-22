@@ -1,185 +1,186 @@
 {
-  "type": "FeatureCollection",
-  "name": "Holden Beach public restrooms",
-  "crs": {
-    "type": "name",
-    "properties": {
-      "name": "EPSG:4326"
-    }
+ "type": "FeatureCollection",
+ "name": "Holden Beach public restrooms",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "EPSG:4326"
+  }
+ },
+ "source": "Town of Holden Beach Public Restroom Locations; Town of Holden Beach My Maps; Town ADA assessment (Oct 2025); NC DCM Beach & Waterfront Access; Brunswick County address points. Sites and merge decisions confirmed by Keith 2026-11-15. The former PW1 porta-john is gone and is not included. The OpenStreetMap toilet at The Point Parking Lot does not exist and is not included.",
+ "credit": "Map data © OpenStreetMap contributors",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.246575,
+     33.914625
+    ]
+   },
+   "properties": {
+    "id": "rr_339_obe",
+    "name": "East End Restrooms",
+    "address": "339 Ocean Blvd East",
+    "type": "restroom",
+    "ada": true,
+    "notes": "ADA restrooms with emergency vehicle access, at the first beach access (PW1).",
+    "sources": [
+     "Town restroom list",
+     "Town ADA assessment (Oct 2025) 'Ave E / 339 OBE - Bathroom'",
+     "DCM PW1 (343.5 OBE) RESTRM=Y"
+    ],
+    "map_label": "East End Restrooms",
+    "layer": "public_restrooms"
+   }
   },
-  "source": "Town of Holden Beach Public Restroom Locations; Town of Holden Beach My Maps; Town ADA assessment (Oct 2025); NC DCM Beach & Waterfront Access; Brunswick County address points. Sites and merge decisions confirmed by Keith 2026-11-15. The former PW1 porta-john is gone and is not included. The OpenStreetMap toilet at The Point Parking Lot does not exist and is not included.",
-  "credit": "Map data \u00a9 OpenStreetMap contributors",
-  "features": [
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -78.246575,
-          33.914625
-        ]
-      },
-      "properties": {
-        "id": "rr_339_obe",
-        "name": "East End Restrooms",
-        "address": "339 Ocean Blvd East",
-        "type": "restroom",
-        "ada": true,
-        "notes": "ADA restrooms with emergency vehicle access, at the first beach access (PW1).",
-        "sources": [
-          "Town restroom list",
-          "Town ADA assessment (Oct 2025) 'Ave E / 339 OBE - Bathroom'",
-          "DCM PW1 (343.5 OBE) RESTRM=Y"
-        ],
-        "map_label": "East End Restrooms",
-        "layer": "public_restrooms"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -78.265824,
-          33.91411
-        ]
-      },
-      "properties": {
-        "id": "rr_114_obe",
-        "name": "Quinton Street Restrooms",
-        "address": "114 Ocean Blvd East",
-        "type": "restroom",
-        "ada": true,
-        "notes": "Public restrooms at the Quinton Street lot (PW180), with an ADA ramp and parking.",
-        "sources": [
-          "Town restroom list",
-          "Town ADA assessment '114 OBE'",
-          "holdenbeachvisitors.com notes restrooms at the Quinton St lot. DCM PW180 says RESTRM=N (conflict)"
-        ],
-        "map_label": "Quinton St",
-        "layer": "public_restrooms"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -78.266725,
-          33.915464
-        ]
-      },
-      "properties": {
-        "id": "rr_block_q",
-        "name": "Block Q Restrooms & Stage Pavilion",
-        "address": "101 Brunswick Ave East",
-        "type": "restroom",
-        "ada": false,
-        "notes": "One marker for Block Q and the new Jordan Boulevard restrooms and stage pavilion, on the east side of Jordan Boulevard only. No separate west-side, under-the-bridge, or 131 Jordan Boulevard marker.",
-        "sources": [
-          "Town restroom list",
-          "Town ADA assessment 'Block Q Bathrooms'",
-          "DCM Block Q"
-        ],
-        "map_label": "Block Q",
-        "layer": "public_restrooms"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -78.270009,
-          33.915434
-        ]
-      },
-      "properties": {
-        "id": "rr_bridgeview",
-        "name": "Bridgeview Park Restrooms",
-        "address": "125 Davis St",
-        "type": "restroom",
-        "ada": false,
-        "notes": "Restrooms at Bridgeview Park (Rothschild and Davis Park).",
-        "sources": [
-          "Town restroom list 'Rothschild and Davis Park'",
-          "DCM 'Bridgeview Park' RESTRM=Y"
-        ],
-        "map_label": "Bridgeview Park",
-        "layer": "public_restrooms"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -78.297255,
-          33.911188
-        ]
-      },
-      "properties": {
-        "id": "rr_pier",
-        "name": "Pier Property Restrooms",
-        "address": "441 Ocean Blvd West",
-        "type": "restroom",
-        "ada": false,
-        "notes": "Restrooms at the pier property are still open even though the pier itself is closed.",
-        "sources": [
-          "Town restroom list 'Pier Property'",
-          "DCM PW340 (441 OBW) RESTRM=Y",
-          "holdenbeachvisitors.com (pier lot restrooms). Pier itself closed/condemned (Oct 2026)."
-        ],
-        "map_label": "Pier Property",
-        "layer": "public_restrooms"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -78.3252838,
-          33.9092059
-        ]
-      },
-      "properties": {
-        "id": "rr_porta_792_obw",
-        "name": "Porta-john, 792 Ocean Blvd West",
-        "address": "792 Ocean Blvd West",
-        "type": "porta_john",
-        "ada": false,
-        "notes": "Town address is 792 Ocean Blvd West (parking lot 792-788 OBW). 796 Ocean Blvd West is the town-owned house next door, not the porta-john address.",
-        "sources": [
-          "Town of Holden Beach My Maps pin \"792 OBW\"",
-          "Town Parking Table May 2025 \"792-788 Ocean Blvd W\""
-        ],
-        "map_label": "Porta-john 792 OBW",
-        "layer": "public_restrooms"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -78.2997473,
-          33.9116474
-        ]
-      },
-      "properties": {
-        "id": "rr_porta_greensboro",
-        "name": "Porta-john, Greensboro Street",
-        "address": "Greensboro St & Ocean Blvd West",
-        "type": "porta_john",
-        "ada": false,
-        "notes": "At Greensboro Street and Ocean Blvd West, at the sewer lift station (per Keith).",
-        "sources": [
-          "Town of Holden Beach My Maps"
-        ],
-        "map_label": "Porta-john Greensboro",
-        "layer": "public_restrooms"
-      }
-    }
-  ]
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.265824,
+     33.91411
+    ]
+   },
+   "properties": {
+    "id": "rr_114_obe",
+    "name": "Quinton Street Restrooms",
+    "address": "114 Ocean Blvd East",
+    "type": "restroom",
+    "ada": true,
+    "notes": "Public restrooms at the Quinton Street lot (PW180), with an ADA ramp and parking.",
+    "sources": [
+     "Town restroom list",
+     "Town ADA assessment '114 OBE'",
+     "holdenbeachvisitors.com notes restrooms at the Quinton St lot. DCM PW180 says RESTRM=N (conflict)"
+    ],
+    "map_label": "Quinton St",
+    "layer": "public_restrooms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2672592,
+     33.9153604
+    ]
+   },
+   "properties": {
+    "id": "rr_block_q",
+    "name": "Block Q Restrooms",
+    "address": "101 Brunswick Ave East",
+    "type": "restroom",
+    "ada": false,
+    "notes": "One marker for Block Q and the new Jordan Boulevard restrooms and stage pavilion, on the east side of Jordan Boulevard only. No separate west-side, under-the-bridge, or 131 Jordan Boulevard marker.",
+    "sources": [
+     "Town restroom list",
+     "Town ADA assessment 'Block Q Bathrooms'",
+     "DCM Block Q"
+    ],
+    "map_label": "Block Q Restrooms",
+    "layer": "public_restrooms",
+    "coord_note": "Moved to the west/southwest part of the Block Q lot toward Jordan Blvd (Keith, Nov 21, 2026), as on the printed map."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.270009,
+     33.915434
+    ]
+   },
+   "properties": {
+    "id": "rr_bridgeview",
+    "name": "Bridgeview Park Restrooms",
+    "address": "125 Davis St",
+    "type": "restroom",
+    "ada": false,
+    "notes": "Restrooms at Bridgeview Park (Rothschild and Davis Park).",
+    "sources": [
+     "Town restroom list 'Rothschild and Davis Park'",
+     "DCM 'Bridgeview Park' RESTRM=Y"
+    ],
+    "map_label": "Bridgeview Park",
+    "layer": "public_restrooms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.297255,
+     33.911188
+    ]
+   },
+   "properties": {
+    "id": "rr_pier",
+    "name": "Pier Property Restrooms",
+    "address": "441 Ocean Blvd West",
+    "type": "restroom",
+    "ada": false,
+    "notes": "Restrooms at the pier property are still open even though the pier itself is closed.",
+    "sources": [
+     "Town restroom list 'Pier Property'",
+     "DCM PW340 (441 OBW) RESTRM=Y",
+     "holdenbeachvisitors.com (pier lot restrooms). Pier itself closed/condemned (Oct 2026)."
+    ],
+    "map_label": "Pier Property",
+    "layer": "public_restrooms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.3252838,
+     33.9092059
+    ]
+   },
+   "properties": {
+    "id": "rr_porta_792_obw",
+    "name": "Porta-john, 792 Ocean Blvd West",
+    "address": "792 Ocean Blvd West",
+    "type": "porta_john",
+    "ada": false,
+    "notes": "Town address is 792 Ocean Blvd West (parking lot 792-788 OBW). 796 Ocean Blvd West is the town-owned house next door, not the porta-john address.",
+    "sources": [
+     "Town of Holden Beach My Maps pin \"792 OBW\"",
+     "Town Parking Table May 2025 \"792-788 Ocean Blvd W\""
+    ],
+    "map_label": "Porta-john 792 OBW",
+    "layer": "public_restrooms"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -78.2997473,
+     33.9116474
+    ]
+   },
+   "properties": {
+    "id": "rr_porta_greensboro",
+    "name": "Porta-john, Greensboro Street",
+    "address": "Greensboro St & Ocean Blvd West",
+    "type": "porta_john",
+    "ada": false,
+    "notes": "At Greensboro Street and Ocean Blvd West, at the sewer lift station (per Keith).",
+    "sources": [
+     "Town of Holden Beach My Maps"
+    ],
+    "map_label": "Porta-john Greensboro",
+    "layer": "public_restrooms"
+   }
+  }
+ ]
 }
