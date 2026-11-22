@@ -475,6 +475,12 @@
       render(data);
       if (wantOpen) setOpen(true);
     });
+    window.HBBrief = {
+      open: function () {
+        setOpen(true);
+        loadAll(false).then(render);
+      }
+    };
   }
 
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setup);

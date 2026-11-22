@@ -372,6 +372,30 @@ button, input { font: inherit; }
 .brief-toggle.open .brief-chevron { transform: rotate(180deg); }
 .brief-toggle:active { transform: scale(0.98); }
 
+.view-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+  background: var(--cream);
+  color: var(--navy);
+  border-radius: 999px;
+  padding: 7px 12px 7px 14px;
+  box-shadow: var(--shadow);
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.view-chip[hidden] { display: none !important; }
+.view-chip a {
+  color: var(--teal-dk);
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.view-chip a:hover { text-decoration: underline; }
+
 .brief-panel {
   position: absolute; z-index: 1250;
   left: calc(12px + var(--safe-left));
@@ -455,6 +479,7 @@ button, input { font: inherit; }
 @media (max-width: 520px) {
   .brief-panel { left: 8px; right: 8px; width: auto; max-height: min(38vh, 320px); }
   .brief-toggle { height: 38px; font-size: 0.82rem; }
+  .view-chip { font-size: 0.78rem; padding: 6px 10px 6px 12px; }
   .brief-content { padding: 0 12px 10px; }
   .brief-sec { margin: 0 0 8px; padding: 0 0 8px; }
 }

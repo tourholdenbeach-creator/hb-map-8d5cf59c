@@ -47,7 +47,9 @@
     features: [], // searchable
     ready: false,
     includeSupply: false,
-    viewMode: "bridge" // "bridge" | "full"
+    viewMode: "bridge", // "bridge" | "full"
+    layerPreset: "",
+    businessFilter: null
   };
 
   function $(id) { return document.getElementById(id); }
@@ -535,6 +537,9 @@
       if (openPopup && marker && marker.openPopup) marker.openPopup(latlng);
     }
     var group = state.layers.business;
+    if (marker && group && group.hasLayer && !group.hasLayer(marker) && marker.options) {
+      group.addLayer(marker);
+    }
     var inCluster = marker && group && group.hasLayer && group.hasLayer(marker) && group.zoomToShowLayer;
     if (inCluster) {
       if (!state.map.hasLayer(group) && $("ly-business").checked) group.addTo(state.map);
@@ -561,9 +566,10 @@
       var total = 0;
       ["island", "causeway", "mainland", "supply"].forEach(function (a) {
         var inArea = rows.filter(function (p) { return p.area === a; }).filter(function (p) {
+          if (state.businessFilter && state.businessFilter.indexOf(p.category) === -1) return false;
           if (!q) return true;
           if (isNum) return String(p.pin) === q || String(p.pin).indexOf(q) === 0;
-          return p.name.toLowerCase().indexOf(q) !== -1 || (p.category || "").toLowerCase().indexOf(q) !== -1;
+          return p.name.toLowerCase().indexOf(q) !== -1 || (p.category || "").toLowerCase().indexOf(q) === -1;
         });
         if (!inArea.length) return;
         html.push('<div class="dir-area">' + escapeHtml(AREA_TITLE[a][0]) + "<small>" + escapeHtml(AREA_TITLE[a][1]) + "</small></div>");
@@ -761,12 +767,13 @@
       if (want && !state.map.hasLayer(layer)) layer.addTo(state.map);
       if (!want && state.map.hasLayer(layer)) state.map.removeLayer(layer);
     }
+    var relaxMinor = state.layerPreset === "beach";
     vis(state.layers.business, "ly-business", null);
     vis(state.layers.parks, "ly-parks", null);
     vis(state.layers.landmarks, "ly-landmarks", null);
-    vis(state.layers.accesses, "ly-accesses", MINOR_LAYER_MIN_ZOOM);
-    vis(state.layers.restrooms, "ly-restrooms", MINOR_LAYER_MIN_ZOOM);
-    vis(state.layers.parking, "ly-parking", MINOR_LAYER_MIN_ZOOM);
+    vis(state.layers.accesses, "ly-accesses", relaxMinor ? null : MINOR_LAYER_MIN_ZOOM);
+    vis(state.layers.restrooms, "ly-restrooms", relaxMinor ? null : MINOR_LAYER_MIN_ZOOM);
+    vis(state.layers.parking, "ly-parking", relaxMinor ? null : MINOR_LAYER_MIN_ZOOM);
   }
 
   function setupLayerPanel() {
@@ -911,6 +918,111 @@
     updateViewButton();
   }
 
+  /* ?layers=directory|beach|todo (alias: ?show=) turns matching overlays on
+     and the rest off. ?view=full and ?biz= still work alongside it. */
+  var DIR_CATS = ["Restaurants", "Seafood Markets", "Coffee, Sweets & Treats", "Shopping & Groceries", "Realty & Vacation Rentals", "Services & Lodging"];
+  var TODO_CATS = ["Fun & Attractions", "Rentals & Water Sports"];
+  var LAYER_PRESETS = {
+    directory: {
+      label: "Local Business Directory",
+      layers: { business: true, parks: false, landmarks: false, accesses: false, restrooms: false, parking: false },
+      cats: DIR_CATS,
+      view: "bridge",
+      brief: false
+    },
+    beach: {
+      label: "Beach Information",
+      layers: { business: false, parks: false, landmarks: false, accesses: true, restrooms: true, parking: true },
+      cats: null,
+      view: "full",
+      brief: true
+    },
+    todo: {
+      label: "Things to Do",
+      layers: { business: true, parks: true, landmarks: true, accesses: false, restrooms: false, parking: false },
+      cats: TODO_CATS,
+      view: "full",
+      brief: false
+    }
+  };
+
+  function queryLayers() {
+    var raw = (queryParam("layers") || queryParam("show") || "").toLowerCase().replace(/_/g, "-");
+    if (raw === "directory" || raw === "dir") return "directory";
+    if (raw === "beach") return "beach";
+    if (raw === "todo" || raw === "things" || raw === "things-to-do") return "todo";
+    return "";
+  }
+
+  function pinMatchesFilter(pin) {
+    if (!state.businessFilter) return true;
+    return pin.items.some(function (it) {
+      return state.businessFilter.indexOf(it.props.category) !== -1;
+    });
+  }
+
+  function applyBusinessFilter(cats) {
+    state.businessFilter = cats && cats.length ? cats : null;
+    var group = state.layers.business;
+    if (!group || !state.pins) return;
+    Object.keys(state.pins).forEach(function (k) {
+      var pin = state.pins[k];
+      if (!pin.marker) return;
+      var want = pinMatchesFilter(pin);
+      var has = group.hasLayer(pin.marker);
+      if (want && !has) group.addLayer(pin.marker);
+      if (!want && has) group.removeLayer(pin.marker);
+    });
+    if (window.HBDirectory && typeof window.HBDirectory.render === "function") {
+      var filter = $("dir-filter");
+      window.HBDirectory.render(filter ? filter.value : "");
+    }
+  }
+
+  function showViewChip(preset) {
+    var chip = $("view-chip");
+    var label = $("view-chip-label");
+    if (!chip) return;
+    if (!preset) {
+      chip.hidden = true;
+      if (label) label.textContent = "";
+      return;
+    }
+    if (label) label.textContent = preset.label;
+    chip.hidden = false;
+  }
+
+  function openBeachBrief() {
+    var tries = 0;
+    function go() {
+      if (window.HBBrief && typeof window.HBBrief.open === "function") {
+        window.HBBrief.open();
+        return;
+      }
+      tries += 1;
+      if (tries < 20) setTimeout(go, 50);
+    }
+    go();
+  }
+
+  function applyLayerPreset() {
+    var key = queryLayers();
+    state.layerPreset = key;
+    var preset = key ? LAYER_PRESETS[key] : null;
+    showViewChip(preset);
+    if (!preset) {
+      applyBusinessFilter(null);
+      return;
+    }
+    var layers = preset.layers;
+    [["ly-business", layers.business], ["ly-parks", layers.parks], ["ly-landmarks", layers.landmarks],
+     ["ly-accesses", layers.accesses], ["ly-restrooms", layers.restrooms], ["ly-parking", layers.parking]].forEach(function (pair) {
+      if ($(pair[0])) $(pair[0]).checked = !!pair[1];
+    });
+    applyBusinessFilter(preset.cats);
+    if (preset.brief) openBeachBrief();
+  }
+
   function applyInitialView() {
     var hm = /^#(\d{1,2})\/(-?\d+\.\d+)\/(-?\d+\.\d+)$/.exec(location.hash || "");
     if (hm) {
@@ -925,7 +1037,11 @@
       updateViewButton();
       return;
     }
-    if (queryView() === "full") showWholeIsland({ animate: false });
+    if (!state.layerPreset) state.layerPreset = queryLayers();
+    var preset = state.layerPreset ? LAYER_PRESETS[state.layerPreset] : null;
+    var view = queryView();
+    var wantFull = view === "full" || (preset && preset.view === "full" && view !== "bridge");
+    if (wantFull) showWholeIsland({ animate: false });
     else showBridgeArea({ animate: false });
   }
 
@@ -997,6 +1113,7 @@
       setupLayerPanel();
       positionZoom();
       state.map.invalidateSize();
+      applyLayerPreset();
       applyInitialView();
       applyOverlayVisibility();
       openBizFromQuery();
