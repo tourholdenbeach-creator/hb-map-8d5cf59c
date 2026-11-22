@@ -378,10 +378,11 @@ button, input { font: inherit; }
   z-index: 1250;
   left: 50%;
   transform: translateX(-50%);
-  bottom: calc(78px + var(--safe-bottom));
+  /* Sit above the Whole island button (bottom 80px, height 44px) and zoom. */
+  bottom: calc(136px + var(--safe-bottom));
   align-items: center;
   gap: 8px;
-  max-width: calc(100vw - 128px);
+  max-width: calc(100vw - 28px);
   background: var(--cream);
   color: var(--navy);
   border: 1px solid rgba(214, 176, 62, 0.45);
