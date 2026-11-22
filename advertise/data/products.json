@@ -1,0 +1,139 @@
+{
+  "_admin_note": "Edit prices and inventory here. 'total' = spaces for sale, 'sold' = spaces already sold. The site shows 'X of Y available' and switches the Buy buttons to 'Sold out' when sold >= total. Prices are whole US dollars except deposits, which may have cents. Set a 'deposit' to null to offer pay-in-full only. For a product with no price yet (Premium Featured Listing), leave the prices null: the card shows 'Pricing coming soon' and an interest button. Set 'total' to null for online products with no inventory limit.",
+  "season": "2027",
+  "contact_email": "tourholdenbeach@gmail.com",
+  "dates": [
+    {
+      "label": "Early-bird deadline",
+      "date": "December 31, 2026",
+      "note": "Payment in by this date locks placement preference and prepaid pricing."
+    },
+    {
+      "label": "Contracts due",
+      "date": "January 31, 2027",
+      "note": ""
+    },
+    {
+      "label": "Artwork due",
+      "date": "February 15, 2027",
+      "note": ""
+    },
+    {
+      "label": "Maps in realty offices",
+      "date": "Mid-March 2027",
+      "note": ""
+    }
+  ],
+  "products": [
+    {
+      "id": "standard",
+      "name": "Standard ad space",
+      "summary": "One full-color ad space on the front map border or the back-side ad grid.",
+      "includes": [
+        "One full-color ad space (front border or back grid)",
+        "A featured pin with your name at your location on the illustrated map",
+        "An online listing with a link on the interactive map",
+        "Your offers in the Holden Beach Insiders Club",
+        "Complimentary ad layout, up to two hours"
+      ],
+      "season_price": 750,
+      "prepaid_price": 695,
+      "deposit": 375,
+      "total": 48,
+      "sold": 0,
+      "inventory_note": "12 on the front border, 36 on the back",
+      "featured": true
+    },
+    {
+      "id": "featured",
+      "name": "Premium Featured Listing",
+      "summary": "Online. A full business profile and a promotional offer on the interactive map. Add it on its own, or bundle it with any print ad.",
+      "includes": [
+        "A full business profile: photos, description, hours and website",
+        "Your promotional offer (Deal) on your listing",
+        "Enhanced visibility, with a subtle Featured badge on your pin and in search",
+        "A spot in the rotating Featured Businesses section, coming to the visitor site",
+        "Bundles with any print ad space"
+      ],
+      "season_price": null,
+      "prepaid_price": null,
+      "deposit": null,
+      "total": null,
+      "sold": 0,
+      "inventory_note": "Online only",
+      "featured": false,
+      "online_only": true
+    },
+    {
+      "id": "premium",
+      "name": "Premium corner",
+      "summary": "One of the four corners of the front map border, priced as two standard spaces.",
+      "includes": [
+        "A two-space ad in a front-border corner",
+        "A featured pin with your name at your location on the illustrated map",
+        "An online listing with a link on the interactive map",
+        "Your offers in the Holden Beach Insiders Club",
+        "Complimentary ad layout, up to two hours"
+      ],
+      "season_price": 1500,
+      "prepaid_price": 1390,
+      "deposit": 750,
+      "total": 4,
+      "sold": 0,
+      "inventory_note": "4 front corners",
+      "featured": false
+    },
+    {
+      "id": "half",
+      "name": "Half space",
+      "summary": "A smaller full-color ad on the front map border.",
+      "includes": [
+        "A half-size full-color ad on the front border",
+        "Your business name in the printed directory",
+        "An online name listing on the interactive map",
+        "Your offers in the Holden Beach Insiders Club",
+        "Complimentary ad layout, up to one hour"
+      ],
+      "season_price": 375,
+      "prepaid_price": 348,
+      "deposit": 187.5,
+      "total": 6,
+      "sold": 0,
+      "inventory_note": "",
+      "featured": false
+    },
+    {
+      "id": "name",
+      "name": "Name listing",
+      "summary": "Your business name in the printed directory and on the online map.",
+      "includes": [
+        "Your business name in the printed business directory, under its category",
+        "An online name listing on the interactive map"
+      ],
+      "season_price": 75,
+      "prepaid_price": 70,
+      "deposit": null,
+      "total": 30,
+      "sold": 0,
+      "inventory_note": "",
+      "featured": false
+    },
+    {
+      "id": "realty",
+      "name": "Realty Partner",
+      "summary": "\"Compliments of\" your agency on the maps you hand out to guests, priced as two standard spaces.",
+      "includes": [
+        "Your agency mark on the \"Compliments of\" co-brand panel of 500 maps for you to hand out",
+        "A featured pin at your office on the illustrated map",
+        "An online listing on the interactive map"
+      ],
+      "season_price": 1500,
+      "prepaid_price": 1390,
+      "deposit": 750,
+      "total": 4,
+      "sold": 0,
+      "inventory_note": "",
+      "featured": false
+    }
+  ]
+}

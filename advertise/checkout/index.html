@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1f33">
+<link rel="icon" href="../../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<title>Checkout coming soon — Tour Holden Beach</title>
+</head>
+<body class="page">
+<main>
+  <img class="mini-family" src="../assets/insider-family.webp" width="190" alt="The Holden Beach Insider family">
+  <div class="card">
+    <span class="tag coral">Checkout coming soon</span>
+    <h1>Online checkout is almost ready.</h1>
+    <p id="sum">Card checkout for Tour Holden Beach ads opens soon. You can still reserve now by email, and we'll reply with how to pay.</p>
+    <div class="notice" id="item" hidden></div>
+    <label for="biz" style="margin-top:16px">Business name</label>
+    <input id="biz" autocomplete="organization" maxlength="90">
+    <div class="row" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div><label for="nm">Your name</label><input id="nm" autocomplete="name"></div>
+      <div><label for="ph">Phone</label><input id="ph" type="tel" autocomplete="tel"></div>
+    </div>
+    <a class="btn btn-coral" id="mail" href="mailto:tourholdenbeach@gmail.com" style="width:100%">Email us to reserve</a>
+    <p class="fine" style="margin:12px 0 0">Opens your email app with your choice filled in. Nothing is charged. Questions? <a class="em" href="mailto:tourholdenbeach@gmail.com">tourholdenbeach@gmail.com</a></p>
+    <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+    <p style="margin:0"><a href="../#pricing">Back to prices</a> · <a href="../../">Online map</a></p>
+  </div>
+</main>
+<script src="../assets/site.js"></script>
+<script>
+(function () {
+  "use strict";
+  var id = HB.param("product") || "", plan = HB.param("plan") === "deposit" ? "deposit" : "prepaid";
+  var bizIn = document.getElementById("biz"), mail = document.getElementById("mail");
+  bizIn.value = HB.clean(HB.param("biz") || "");
+  var line = "";
+  function v(i) { return (document.getElementById(i).value || "").trim(); }
+  function upd() {
+    mail.href = HB.mailto("Reserve: " + (line || "Tour Holden Beach ad") + (v("biz") ? " for " + v("biz") : ""),
+      "I'd like to reserve " + (line || "an ad on the Tour Holden Beach map") + ".\n\nBusiness: " + v("biz") + "\nName: " + v("nm") + "\nPhone: " + v("ph") + "\nWebsite:\n\n");
+  }
+  ["biz", "nm", "ph"].forEach(function (i) { document.getElementById(i).addEventListener("input", upd); });
+  upd();
+  HB.load("../").then(function () {
+    var p = HB.product(id);
+    Array.prototype.forEach.call(document.querySelectorAll("a.em"), function (a) { a.href = "mailto:" + HB.email; a.textContent = HB.email; });
+    if (!p) { upd(); return; }
+    if (plan === "deposit" && !p.deposit) plan = "prepaid";
+    line = p.name + (plan === "deposit" ? " (50% deposit " + HB.money(p.deposit) + " of the " + HB.money(p.season_price) + " season rate)" : " (paid in full, " + HB.money(p.prepaid_price) + " prepaid)");
+    var it = document.getElementById("item");
+    it.hidden = false;
+    it.innerHTML = "<b>" + HB.esc(p.name) + "</b><br>" + HB.esc(plan === "deposit" ? "50% deposit: " + HB.money(p.deposit) + " (season rate " + HB.money(p.season_price) + ")" : "Pay in full: " + HB.money(p.prepaid_price) + " prepaid")
+      + "<br><span class=\"fine\">" + HB.left(p) + " of " + p.total + " available · first come, first served</span>";
+    upd();
+  });
+})();
+</script>
+</body>
+</html>

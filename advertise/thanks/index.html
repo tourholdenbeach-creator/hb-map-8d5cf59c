@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1f33">
+<link rel="icon" href="../../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<title>Thank you — Tour Holden Beach</title>
+</head>
+<body class="page">
+<main>
+  <img class="mini-family" src="../assets/insider-family.webp" width="190" alt="The Holden Beach Insider family">
+  <div class="card">
+    <span class="tag">Payment received</span>
+    <h1>Thank you, you're on the map!</h1>
+    <p>Stripe will email your receipt. Here's what to send us next so we can build your ad and listing.</p>
+    <ul class="ticks">
+      <li>Your logo (and finished ad, if you have one: press-ready PDF, CMYK, 300 dpi, built to the final ad size)</li>
+      <li>Business name exactly as it should print, phone and website</li>
+      <li>A photo for your online listing</li>
+      <li>Any Insiders Club deal you want to offer visitors</li>
+    </ul>
+    <a class="btn btn-coral" id="mail" href="mailto:tourholdenbeach@gmail.com" style="width:100%;margin-top:8px">Email my logo and details</a>
+    <p class="fine" style="margin:12px 0 0">Attach your files to the email. All artwork is due February 15, 2027.</p>
+    <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+    <p style="margin:0"><a href="../">Advertising home</a> · <a href="../../">Online map</a></p>
+  </div>
+</main>
+<script src="../assets/site.js"></script>
+<script>
+document.getElementById("mail").href = HB.mailto("Ad artwork and details",
+  "Business name (as it should print):\nPhone:\nWebsite:\nWhat I bought:\nInsiders Club deal (optional):\n\nLogo, ad and photo attached.\n");
+</script>
+</body>
+</html>

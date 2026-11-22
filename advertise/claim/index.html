@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="theme-color" content="#0b1f33">
+<link rel="icon" href="../../favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<title>Claim your listing — Tour Holden Beach</title>
+</head>
+<body class="page">
+<main>
+  <img class="mini-family" src="../assets/insider-family.webp" width="190" alt="The Holden Beach Insider family">
+  <div class="card">
+    <span class="tag coral">Claim your listing · 2027 season</span>
+    <h1 id="title">Claim your listing</h1>
+    <p id="intro">Final listings on the 2027 Tour Holden Beach map are paid. Choose how you want your business to appear on the printed map and the online map.</p>
+    <label for="biz">Business name</label>
+    <input id="biz" autocomplete="organization" maxlength="90" placeholder="Your business name">
+    <div class="choice" id="choices" role="radiogroup" aria-label="Choose a listing"><p>Loading options…</p></div>
+    <a class="btn btn-coral" id="go" href="../#pricing" style="width:100%">Continue to checkout</a>
+    <p class="fine" style="margin:12px 0 0">After checkout, email your logo, website and any Insiders Club deal to <a class="em" href="mailto:tourholdenbeach@gmail.com">tourholdenbeach@gmail.com</a>. Prices do not include applicable tax.</p>
+    <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
+    <p style="margin:0"><a href="../#pricing">See every ad option</a> · <a href="../#faq">FAQ</a> · <a href="../../">Back to the map</a></p>
+  </div>
+</main>
+<script src="../assets/site.js"></script>
+<script>
+(function () {
+  "use strict";
+  var bizIn = document.getElementById("biz"), go = document.getElementById("go"), box = document.getElementById("choices");
+  var biz = HB.clean(HB.param("biz") || HB.param("business") || "");
+  var pin = HB.clean(HB.param("pin") || "").replace(/[^0-9A-Za-z]/g, "").slice(0, 6);
+  var plan = (HB.param("plan") || HB.param("product") || "name").toLowerCase();
+  if (plan === "ad" || plan === "standard-ad") plan = "standard";
+  if (biz) {
+    bizIn.value = biz;
+    var t = document.getElementById("title");
+    t.textContent = "Claim ";
+    var s = document.createElement("span"); s.className = "bizname"; s.textContent = biz; t.appendChild(s);
+    document.getElementById("intro").textContent = (pin ? "This business is pin " + pin + " on our sample map. " : "")
+      + "Final listings on the 2027 Tour Holden Beach map are paid. Choose how you want it to appear on the printed map and the online map.";
+    document.title = "Claim " + biz + " — Tour Holden Beach";
+  }
+  var opts, sel;
+  function update() {
+    var o = opts[sel], name = HB.clean(bizIn.value);
+    go.href = HB.buyUrl("../", o.id, o.plan, name);
+    go.textContent = "Continue: " + o.price;
+    Array.prototype.forEach.call(box.querySelectorAll("label"), function (l, i) { l.classList.toggle("on", i === sel); });
+  }
+  HB.load("../").then(function () {
+    var nm = HB.product("name"), st = HB.product("standard");
+    opts = [];
+    if (nm && HB.left(nm) > 0) opts.push({ id: "name", plan: "prepaid", t: "Name listing", d: "Your business name in the printed directory, plus an online name listing.", price: HB.money(nm.prepaid_price), left: HB.left(nm) + " of " + nm.total + " left" });
+    if (st && HB.left(st) > 0) {
+      opts.push({ id: "standard", plan: "prepaid", t: "Standard ad space, paid in full", d: "A full-color ad, a featured pin with your name, an online listing with Website, photo and Deal buttons, and the Insiders Club.", price: HB.money(st.prepaid_price), left: HB.left(st) + " of " + st.total + " left" });
+      if (st.deposit) opts.push({ id: "standard", plan: "deposit", t: "Standard ad space, 50% deposit", d: "Season rate " + HB.money(st.season_price) + ". The balance is due within 30 days or before the map goes to press, whichever comes first.", price: HB.money(st.deposit), left: "" });
+    }
+    if (!opts.length) { box.innerHTML = '<p class="notice">These listings are sold out. Email us to join the waitlist.</p>'; go.href = HB.mailto("Listing waitlist" + (biz ? ": " + biz : ""), "Business: " + biz + "\nPhone:\n"); go.textContent = "Join the waitlist"; return; }
+    box.innerHTML = opts.map(function (o, i) {
+      return '<label><input type="radio" name="opt" value="' + i + '"><span>' + HB.esc(o.t) + "<small>" + HB.esc(o.d) + (o.left ? " · " + HB.esc(o.left) : "") + '</small></span><span class="p">' + HB.esc(o.price) + "</span></label>";
+    }).join("");
+    sel = 0;
+    for (var i = 0; i < opts.length; i++) if (opts[i].id === plan) { sel = i; break; }
+    box.querySelectorAll("input")[sel].checked = true;
+    box.addEventListener("change", function (e) { sel = +e.target.value; update(); });
+    bizIn.addEventListener("input", update);
+    Array.prototype.forEach.call(document.querySelectorAll("a.em"), function (a) { a.href = "mailto:" + HB.email; a.textContent = HB.email; });
+    update();
+  }).catch(function () { box.innerHTML = '<p class="notice">Options didn\'t load. Please refresh, or email tourholdenbeach@gmail.com.</p>'; });
+})();
+</script>
+</body>
+</html>
