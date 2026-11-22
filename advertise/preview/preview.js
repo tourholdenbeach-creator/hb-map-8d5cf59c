@@ -107,7 +107,7 @@
     standard: { img: "back", box: slotPct(38, 856, 702, 704), cap: "A standard space in a category zone on the back of the map." },
     double: { img: "back", box: slotPct(38, 132, 1424, 704), cap: "A double space: two adjacent standard cells in a category zone on the back of the map." },
     premium: { img: "front", box: slotPct(36, 36, 1150, 410), cap: "A premium corner on the front map border (highest-visibility corner)." },
-    realty: { img: "back", box: slotPct(4500, 0, 1500, 2318), cap: "Realty Partner: 5,000 personalized copies of the map with your logo on the cover, included in the 25,000 print run. The Insider family and logo are resized beneath it. Only 4 available." }
+    realty: { img: "back", box: slotPct(4500, 0, 1500, 2318), cap: "Insider Realty Partner: 5,000 personalized copies of the map with your logo on the cover, included in the 25,000 print run. The cover reads “Compliments of our Insider Realty Partner” above your logo. The Insider family and logo are resized beneath it. Only 4 available." }
   };
 
   var CAT_TO_ZONE = {
@@ -280,10 +280,10 @@
         + '<div class="rc-name">' + HB.esc(biz.name) + "</div>"
       : '<div class="rc-ph">REALTY PARTNER<br>LOGO HERE</div>'
         + '<div class="rc-name">' + HB.esc(biz.name) + "</div>";
-    return '<article class="ad realty-cover" aria-label="Realty Partner cover sample">'
+    return '<article class="ad realty-cover" aria-label="Insider Realty Partner cover sample">'
       + '<div class="wm">SAMPLE</div>'
       + '<div class="rc-head">FREE MAP &amp; GUIDE</div>'
-      + '<div class="rc-eye">Compliments of</div>'
+      + '<div class="rc-eye">Compliments of our Insider Realty Partner</div>'
       + '<div class="rc-logo-slot">'
       + '<span class="rc-flag">SAMPLE</span>'
       + logo
@@ -306,7 +306,7 @@
       : "../assets/cover-realty-partner-mockup.jpg";
     var alt = sample
       ? "Printed folded-cover sample for Alan Holden Realty, marked SAMPLE"
-      : "Printed folded-cover mockup with a Realty Partner logo placeholder";
+      : "Printed folded-cover mockup with an Insider Realty Partner logo placeholder";
     var cap = sample
       ? "Printed-cover sample (marked SAMPLE). Your logo is in the top spot; the Insider family and logo sit beneath it."
       : "Printed-cover mockup: your logo goes in the top box. The Insider family and logo are resized beneath it. This is a layout proof, not a paid placement.";
@@ -449,13 +449,13 @@
     if (isRealty(biz)) {
       parts.push(section({
         id: "fmt-realty",
-        title: "Realty Partner",
-        summary: "5,000 personalized copies of the map with your logo on the cover, included in the 25,000 print run. The Insider family and logo are resized beneath it so the cover stays clearly branded. Includes a featured pin and an online listing. Only 4 available.",
+        title: "Insider Realty Partner",
+        summary: "5,000 personalized copies of the map with your logo on the cover, included in the 25,000 print run. The cover reads “Compliments of our Insider Realty Partner” above your logo, and the Insider family and logo are resized beneath it. Includes a featured pin and an online listing. Only 4 available.",
         ad: renderRealty(biz),
         place: coverFig(biz) + placementFig("realty", biz),
         price: moneyPair(ry.season_price, ry.prepaid_price),
         btn: chooseBtn(HB.buyUrl("../", "realty", "prepaid", name), "Choose this ad"),
-        fine: "Shown only for realty and vacation-rental companies. Four Realty Partner slots are available, at $2,500 a season ($2,325 prepaid, $1,250 deposit). Each partner gets their own cover plate."
+        fine: "Shown only for realty and vacation-rental companies. Four Insider Realty Partner slots are available, at $2,500 a season ($2,325 prepaid, $1,250 deposit). Each partner gets their own cover plate."
       }));
     }
     var featuredYearly = typeof ft.annual_price === "number";

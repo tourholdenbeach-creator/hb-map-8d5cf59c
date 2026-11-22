@@ -5,7 +5,7 @@ Live (unlisted, noindex): https://tourholdenbeach-creator.github.io/hb-map-8d5cf
 | Page | What it is |
 |---|---|
 | `advertise/` | Pitch, what you get, map preview, prices with Buy buttons, how it works, Host Partner + $99 drone interest form, FAQ, terms, contact |
-| `advertise/preview/?id=<business id>` | "See your sample ad" page. Builds sample print and online ads in the browser from `data/businesses.geojson`. Linked from each unpaid pin popup next to Claim your listing. Realty Partner is shown only for realty and vacation-rental companies. Print ads include a sample tracked QR (short.io) that goes to the business website, or to `/?biz=<id>` on the map when no verified website is on file. |
+| `advertise/preview/?id=<business id>` | "See your sample ad" page. Builds sample print and online ads in the browser from `data/businesses.geojson`. Linked from each unpaid pin popup next to Claim your listing. Insider Realty Partner is shown only for realty and vacation-rental companies. Print ads include a sample tracked QR (short.io) that goes to the business website, or to `/?biz=<id>` on the map when no verified website is on file. |
 | `advertise/claim/?biz=Name` | "Claim your listing" page. Shows the business name and preselects the name listing. `&plan=standard` preselects the standard ad. Also accepts the map's `?business=…&pin=…&id=…` |
 | `advertise/checkout/?product=…&plan=…` | "Checkout coming soon" page, used while a product has no Stripe link. Builds a reservation email |
 | `advertise/thanks/` | Page to send buyers to after Stripe payment: asks for logo, artwork and details by email |
@@ -46,8 +46,8 @@ The Buy buttons read **`data/payment-links.json`**. Any value that doesn't start
    | `featured.annual` | Premium Featured Listing, annual (online) | $299 a year |
    | `featured.monthly` | Premium Featured Listing, monthly (online) | $29 a month (recurring) |
    | `name.prepaid` | Name listing, paid in full (2027) | $70 |
-   | `realty.prepaid` | Realty Partner, paid in full (2027) | $2,325 |
-   | `realty.deposit` | Realty Partner, 50% deposit (2027, season rate $2,500) | $1,250 |
+   | `realty.prepaid` | Insider Realty Partner, paid in full (2027) | $2,325 |
+   | `realty.deposit` | Insider Realty Partner, 50% deposit (2027, season rate $2,500) | $1,250 |
 
    Deposit balances are invoiced later (Stripe Invoices) within 30 days or before press.
 3. **Payment Links** (Payment Links > New). For each price above:
