@@ -172,3 +172,16 @@ footer .tl{font-family:"Bree Serif",Georgia,serif;color:var(--gold);font-size:1.
 
 .price .ribbon.teal{background:var(--teal)}
 @media(max-width:820px){#directory .dates{grid-template-columns:1fr!important}}
+
+/* From paper to phone */
+.paper-phone{padding:48px 0 56px;background:#fff}
+.paper-phone .sec-head{margin-bottom:26px}
+.paper-phone .sec-head p{margin:0;font-size:1.08rem;color:var(--navy);max-width:40em}
+.paper-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:ps}
+.paper-steps li{background:var(--sand-l);border:1px solid var(--line);border-radius:var(--r);padding:22px 22px 20px;box-shadow:var(--shadow);position:relative}
+.paper-steps li:before{counter-increment:ps;content:counter(ps);position:absolute;top:18px;right:18px;width:28px;height:28px;border-radius:50%;background:var(--gold);color:var(--navy);font-family:"Bree Serif",Georgia,serif;font-size:1.05rem;display:grid;place-items:center}
+.paper-ico{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:var(--navy);color:var(--gold);margin-bottom:12px}
+.paper-ico svg{width:26px;height:26px;fill:currentColor}
+.paper-steps h3{margin:0 0 8px;font-size:1.2rem}
+.paper-steps p{margin:0;color:var(--ink);font-size:1rem}
+@media(max-width:820px){.paper-steps{grid-template-columns:1fr}}

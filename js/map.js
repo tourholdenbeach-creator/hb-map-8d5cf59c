@@ -474,7 +474,8 @@
         state.features.push(item);
       });
     });
-    group.addTo(state.map);
+    /* Added in applyOverlayVisibility when the Businesses checkbox is on,
+       so presets like Beach Information never flash numbered pins or clusters. */
     state.layers.business = group;
     return fc.features.length;
   }
@@ -921,7 +922,6 @@
   /* ?layers=directory|beach|todo (alias: ?show=) turns matching overlays on
      and the rest off. ?view=full and ?biz= still work alongside it. */
   var DIR_CATS = ["Restaurants", "Seafood Markets", "Coffee, Sweets & Treats", "Shopping & Groceries", "Realty & Vacation Rentals", "Services & Lodging"];
-  var TODO_CATS = ["Fun & Attractions", "Rentals & Water Sports"];
   var LAYER_PRESETS = {
     directory: {
       label: "Local Business Directory",
@@ -934,14 +934,14 @@
       label: "Beach Information",
       layers: { business: false, parks: false, landmarks: false, accesses: true, restrooms: true, parking: true },
       cats: null,
-      view: "full",
+      view: "bridge",
       brief: true
     },
     todo: {
       label: "Things to Do",
-      layers: { business: true, parks: true, landmarks: true, accesses: false, restrooms: false, parking: false },
-      cats: TODO_CATS,
-      view: "full",
+      layers: { business: false, parks: true, landmarks: true, accesses: false, restrooms: false, parking: false },
+      cats: null,
+      view: "bridge",
       brief: false
     }
   };
@@ -1020,6 +1020,9 @@
       if ($(pair[0])) $(pair[0]).checked = !!pair[1];
     });
     applyBusinessFilter(preset.cats);
+    if (!layers.business && state.layers.business && state.map.hasLayer(state.layers.business)) {
+      state.map.removeLayer(state.layers.business);
+    }
     if (preset.brief) openBeachBrief();
   }
 

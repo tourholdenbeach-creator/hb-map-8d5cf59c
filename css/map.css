@@ -372,6 +372,42 @@ button, input { font: inherit; }
 .brief-toggle.open .brief-chevron { transform: rotate(180deg); }
 .brief-toggle:active { transform: scale(0.98); }
 
+.brief-tab {
+  display: none;
+  position: absolute;
+  z-index: 1250;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: calc(78px + var(--safe-bottom));
+  align-items: center;
+  gap: 8px;
+  max-width: calc(100vw - 128px);
+  background: var(--cream);
+  color: var(--navy);
+  border: 1px solid rgba(214, 176, 62, 0.45);
+  border-radius: 999px;
+  padding: 8px 14px;
+  box-shadow: var(--shadow);
+  font-weight: 800;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  cursor: pointer;
+  font-family: inherit;
+}
+.brief-tab[hidden] { display: none !important; }
+.brief-tab-title { white-space: nowrap; }
+.brief-tab-summary {
+  font-weight: 700;
+  color: var(--teal-dk);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.brief-tab .brief-chevron { margin-left: 2px; border-top: 0; border-bottom: 6px solid var(--navy); }
+@media (max-width: 720px) {
+  .brief-tab:not([hidden]) { display: flex; }
+}
+
 .view-chip {
   display: flex;
   align-items: center;

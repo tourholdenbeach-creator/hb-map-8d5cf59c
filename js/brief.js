@@ -414,9 +414,57 @@
     return '<p class="brief-lead">Check today’s rip current risk before you go in.</p>' + links;
   }
 
+  function isPhoneBrief() {
+    return window.matchMedia && window.matchMedia("(max-width: 720px)").matches;
+  }
+
+  function nyNowMinutes() {
+    var parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/New_York",
+      hour: "2-digit",
+      minute: "2-digit",
+      hourCycle: "h23"
+    }).formatToParts(new Date());
+    var h = 0, m = 0;
+    parts.forEach(function (p) {
+      if (p.type === "hour") h = parseInt(p.value, 10);
+      if (p.type === "minute") m = parseInt(p.value, 10);
+    });
+    return h * 60 + m;
+  }
+
+  function briefSummary(data) {
+    if (!data) return "";
+    var parts = [];
+    var today = nyDateStr(new Date());
+    var now = nyNowMinutes();
+    var tides = (data.tides || []).filter(function (p) { return parseTideDate(p.t) === today; });
+    var next = null;
+    for (var i = 0; i < tides.length; i++) {
+      if (parseTideMinutes(tides[i].t) >= now) { next = tides[i]; break; }
+    }
+    if (!next && tides.length) next = tides[tides.length - 1];
+    if (next) parts.push((next.type === "H" ? "High" : "Low") + " " + formatClock(next.t));
+    var day = data.forecast && data.forecast.day;
+    if (day && day.temperature != null) {
+      parts.push(String(day.temperature) + "°" + (day.temperatureUnit || "F"));
+    }
+    return parts.join(" · ");
+  }
+
+  var lastBriefData = null;
+  var briefExpanded = false;
+
+  function updateTabSummary(data) {
+    var el = $("brief-tab-summary");
+    if (el) el.textContent = briefSummary(data || lastBriefData);
+  }
+
   function render(data) {
     var body = $("brief-content");
     if (!body) return;
+    lastBriefData = data || lastBriefData;
+    updateTabSummary(lastBriefData);
     if (!data || (!data.tides && !data.forecast)) {
       body.innerHTML = '<p class="brief-error">Today’s beach brief could not be loaded. Check your connection and try again.</p>' +
         '<p class="brief-links"><a href="' + BEACH_FORECAST_URL + '" target="_blank" rel="noopener">NWS Wilmington beach forecast</a></p>';
@@ -443,24 +491,72 @@
   function setOpen(open) {
     var panel = $("brief-panel");
     var btn = $("btn-brief");
+    var tab = $("brief-tab");
     if (!panel || !btn) return;
-    panel.hidden = !open;
-    btn.setAttribute("aria-expanded", open ? "true" : "false");
-    btn.classList.toggle("open", open);
-    if (open) positionPanel();
+    if (!open) {
+      briefExpanded = false;
+      panel.hidden = true;
+      if (tab) {
+        tab.hidden = true;
+        tab.setAttribute("aria-expanded", "false");
+      }
+      btn.setAttribute("aria-expanded", "false");
+      btn.classList.remove("open");
+      return;
+    }
+    btn.classList.add("open");
+    btn.setAttribute("aria-expanded", "true");
+    if (isPhoneBrief() && !briefExpanded) {
+      panel.hidden = true;
+      if (tab) {
+        tab.hidden = false;
+        tab.setAttribute("aria-expanded", "false");
+        updateTabSummary(lastBriefData);
+      }
+      return;
+    }
+    if (tab) {
+      tab.hidden = true;
+      tab.setAttribute("aria-expanded", "true");
+    }
+    panel.hidden = false;
+    positionPanel();
   }
 
   function setup() {
     var btn = $("btn-brief");
     var panel = $("brief-panel");
     if (!btn || !panel) return;
-    $("btn-brief-close").addEventListener("click", function () { setOpen(false); });
-    btn.addEventListener("click", function () {
-      var open = panel.hidden;
-      setOpen(open);
-      if (open) loadAll(false).then(render);
+    $("btn-brief-close").addEventListener("click", function () {
+      if (isPhoneBrief() && btn.classList.contains("open")) {
+        briefExpanded = false;
+        setOpen(true);
+      } else {
+        setOpen(false);
+      }
     });
+    btn.addEventListener("click", function () {
+      var opening = !btn.classList.contains("open");
+      if (opening) {
+        briefExpanded = !isPhoneBrief();
+        setOpen(true);
+        loadAll(false).then(render);
+      } else {
+        setOpen(false);
+      }
+    });
+    var tab = $("brief-tab");
+    if (tab) {
+      tab.addEventListener("click", function () {
+        briefExpanded = true;
+        setOpen(true);
+        loadAll(false).then(render);
+      });
+    }
     window.addEventListener("resize", function () {
+      if (!btn.classList.contains("open")) return;
+      if (!isPhoneBrief()) briefExpanded = true;
+      setOpen(true);
       if (!panel.hidden) positionPanel();
     });
     ["btn-dir", "btn-layers"].forEach(function (id) {
@@ -477,6 +573,7 @@
     });
     window.HBBrief = {
       open: function () {
+        briefExpanded = !isPhoneBrief();
         setOpen(true);
         loadAll(false).then(render);
       }
