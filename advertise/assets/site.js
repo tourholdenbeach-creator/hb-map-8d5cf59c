@@ -39,9 +39,10 @@
     return base + "checkout/?" + q;
   };
   HB.planLabel = function (p, plan) {
-    return plan === "deposit"
-      ? "Reserve with 50% deposit: " + HB.money(p.deposit)
-      : "Pay in full: " + HB.money(p.prepaid_price);
+    if (plan === "deposit") return "Reserve with 50% deposit: " + HB.money(p.deposit);
+    if (plan === "annual") return "Pay annually: " + HB.money(p.annual_price) + " a year";
+    if (plan === "monthly") return "Pay monthly: " + HB.money(p.monthly_price) + " a month";
+    return "Pay in full: " + HB.money(p.prepaid_price);
   };
   HB.mailto = function (subject, body) {
     return "mailto:" + HB.email + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);

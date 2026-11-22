@@ -36,7 +36,8 @@
 <script>
 (function () {
   "use strict";
-  var id = HB.param("product") || "", plan = HB.param("plan") === "deposit" ? "deposit" : "prepaid";
+  var id = HB.param("product") || "", rawPlan = HB.param("plan") || "prepaid";
+  var plan = (rawPlan === "deposit" || rawPlan === "annual" || rawPlan === "monthly") ? rawPlan : "prepaid";
   var unit = (HB.param("unit") || "").toLowerCase();
   var bizIn = document.getElementById("biz"), mail = document.getElementById("mail");
   bizIn.value = HB.clean(HB.param("biz") || "");
@@ -53,15 +54,31 @@
     Array.prototype.forEach.call(document.querySelectorAll("a.em"), function (a) { a.href = "mailto:" + HB.email; a.textContent = HB.email; });
     if (!p) { upd(); return; }
     if (plan === "deposit" && !p.deposit) plan = "prepaid";
+    if (plan === "annual" && typeof p.annual_price !== "number") plan = typeof p.monthly_price === "number" ? "monthly" : "prepaid";
+    if (plan === "monthly" && typeof p.monthly_price !== "number") plan = typeof p.annual_price === "number" ? "annual" : "prepaid";
     var isDouble = unit === "double" && p.id === "standard";
     var season = isDouble && typeof p.season_price === "number" ? p.season_price * 2 : p.season_price;
     var prepaid = isDouble && typeof p.prepaid_price === "number" ? p.prepaid_price * 2 : p.prepaid_price;
     var deposit = isDouble && typeof p.deposit === "number" ? p.deposit * 2 : p.deposit;
     var pname = isDouble ? "Double space (two adjacent standard ads)" : p.name;
-    line = pname + (plan === "deposit" ? " (50% deposit " + HB.money(deposit) + " of the " + HB.money(season) + " season rate)" : " (paid in full, " + HB.money(prepaid) + " prepaid)");
+    var planText = plan === "deposit"
+      ? "50% deposit " + HB.money(deposit) + " of the " + HB.money(season) + " season rate"
+      : plan === "annual"
+        ? HB.money(p.annual_price) + " a year"
+        : plan === "monthly"
+          ? HB.money(p.monthly_price) + " a month"
+          : "paid in full, " + HB.money(prepaid) + " prepaid";
+    line = pname + " (" + planText + ")";
+    var itemText = plan === "deposit"
+      ? "50% deposit: " + HB.money(deposit) + " (season rate " + HB.money(season) + ")"
+      : plan === "annual"
+        ? "Pay annually: " + HB.money(p.annual_price) + " a year"
+        : plan === "monthly"
+          ? "Pay monthly: " + HB.money(p.monthly_price) + " a month"
+          : "Pay in full: " + HB.money(prepaid) + " prepaid";
     var it = document.getElementById("item");
     it.hidden = false;
-    it.innerHTML = "<b>" + HB.esc(pname) + "</b><br>" + HB.esc(plan === "deposit" ? "50% deposit: " + HB.money(deposit) + " (season rate " + HB.money(season) + ")" : "Pay in full: " + HB.money(prepaid) + " prepaid")
+    it.innerHTML = "<b>" + HB.esc(pname) + "</b><br>" + HB.esc(itemText)
       + "<br><span class=\"fine\">" + (isDouble || p.id === "double" ? "Priced as two standard spaces. " : "") + (p.total != null ? HB.left(p) + " of " + p.total + " available · first come, first served" : "") + "</span>";
     upd();
   });

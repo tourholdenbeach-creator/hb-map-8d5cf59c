@@ -1,5 +1,5 @@
 {
-  "_admin_note": "Paste one Stripe Payment Link per product and plan. 'prepaid' = pay in full at the prepaid price. 'deposit' = 50% deposit of the season rate. Any value that does not start with https:// sends the buyer to the 'checkout coming soon' page instead. See advertise/README.md.",
+  "_admin_note": "Paste one Stripe Payment Link per product and plan. 'prepaid' = pay in full at the prepaid price. 'deposit' = 50% deposit of the season rate. For Premium Featured, 'annual' = $299 a year and 'monthly' = $29 a month. Any value that does not start with https:// sends the buyer to the 'checkout coming soon' page instead. See advertise/README.md.",
   "standard": {
     "prepaid": "PASTE_STRIPE_PAYMENT_LINK",
     "deposit": "PASTE_STRIPE_PAYMENT_LINK"
@@ -9,7 +9,8 @@
     "deposit": "PASTE_STRIPE_PAYMENT_LINK"
   },
   "featured": {
-    "prepaid": "PASTE_STRIPE_PAYMENT_LINK"
+    "annual": "PASTE_STRIPE_PAYMENT_LINK",
+    "monthly": "PASTE_STRIPE_PAYMENT_LINK"
   },
   "premium": {
     "prepaid": "PASTE_STRIPE_PAYMENT_LINK",

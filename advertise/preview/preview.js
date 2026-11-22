@@ -107,7 +107,7 @@
     standard: { img: "back", box: slotPct(38, 856, 702, 704), cap: "A standard space in a category zone on the back of the map." },
     double: { img: "back", box: slotPct(38, 132, 1424, 704), cap: "A double space: two adjacent standard cells in a category zone on the back of the map." },
     premium: { img: "front", box: slotPct(36, 36, 1150, 410), cap: "A premium corner on the front map border (highest-visibility corner)." },
-    realty: { img: "back", box: slotPct(4500, 0, 1500, 2318), cap: "Realty Partner: your logo takes the top spot on the folded front cover of the maps you hand out. The Insider family and logo are resized beneath it. Only 4 covers are printed this way — one plate per partner." }
+    realty: { img: "back", box: slotPct(4500, 0, 1500, 2318), cap: "Realty Partner: personalized copies of the map with your logo on the cover (part of 5,000 Realty Partner copies). The Insider family and logo are resized beneath it. Only 4 available." }
   };
 
   var CAT_TO_ZONE = {
@@ -450,7 +450,7 @@
       parts.push(section({
         id: "fmt-realty",
         title: "Realty Partner",
-        summary: "Your logo takes the top spot on the folded front cover of the 500 maps you hand out. The Insider family and logo are resized beneath it so the cover stays clearly branded. Includes a featured pin and an online listing. Only 4 available.",
+        summary: "Personalized copies of the map with your logo on the cover (part of 5,000 Realty Partner copies). The Insider family and logo are resized beneath it so the cover stays clearly branded. Includes a featured pin and an online listing. Only 4 available.",
         ad: renderRealty(biz),
         place: coverFig(biz) + placementFig("realty", biz),
         price: moneyPair(ry.season_price, ry.prepaid_price),
@@ -458,12 +458,17 @@
         fine: "Shown only for realty and vacation-rental companies. Four Realty Partner slots are available, at $2,500 a season ($2,325 prepaid, $1,250 deposit). Each partner gets their own cover plate."
       }));
     }
-    var featuredPriced = typeof ft.prepaid_price === "number" || typeof ft.season_price === "number";
-    var featuredBtn = featuredPriced
-      ? chooseBtn(HB.buyUrl("../", "featured", "prepaid", name), "Choose this ad")
-      : chooseBtn(HB.mailto("Interest: Premium Featured Listing for " + name,
-          "Hi,\n\nI'd like to know when the Premium Featured Listing is available for " + name + ".\n\nPhone:\nWebsite: " + (biz.website || "") + "\n"),
-          "Tell me when it's available");
+    var featuredYearly = typeof ft.annual_price === "number";
+    var featuredMonthly = typeof ft.monthly_price === "number";
+    var featuredPriced = featuredYearly || featuredMonthly || typeof ft.prepaid_price === "number" || typeof ft.season_price === "number";
+    var featuredBtn = featuredYearly
+      ? chooseBtn(HB.buyUrl("../", "featured", "annual", name), "Choose this ad · " + HB.money(ft.annual_price) + " a year")
+        + (featuredMonthly ? " " + chooseBtn(HB.buyUrl("../", "featured", "monthly", name), "Or " + HB.money(ft.monthly_price) + " a month") : "")
+      : featuredPriced
+        ? chooseBtn(HB.buyUrl("../", "featured", "prepaid", name), "Choose this ad")
+        : chooseBtn(HB.mailto("Interest: Premium Featured Listing for " + name,
+            "Hi,\n\nI'd like to know when the Premium Featured Listing is available for " + name + ".\n\nPhone:\nWebsite: " + (biz.website || "") + "\n"),
+            "Tell me when it's available");
     parts.push(section({
       id: "fmt-enhanced",
       title: "Enhanced online listing",
@@ -480,9 +485,14 @@
       summary: "How a Premium Featured Listing could appear on the online map: photo, a Featured badge, and your offer.",
       ad: renderOnline(biz, "featured"),
       place: "",
-      price: featuredPriced ? moneyPair(ft.season_price, ft.prepaid_price) : '<div class="tbd">Pricing coming soon</div>',
+      price: featuredYearly || featuredMonthly
+        ? '<div class="amt">' + (featuredYearly ? HB.money(ft.annual_price) + " <small>a year</small>" : "")
+          + (featuredYearly && featuredMonthly ? " " : "")
+          + (featuredMonthly ? "<small>" + (featuredYearly ? "or " : "") + HB.money(ft.monthly_price) + " a month</small>" : "")
+          + "</div>"
+        : (featuredPriced ? moneyPair(ft.season_price, ft.prepaid_price) : '<div class="tbd">Pricing coming soon</div>'),
       btn: featuredBtn,
-      fine: featuredPriced ? "" : "The Premium Featured Listing is listed on the sales site; a price has not been set yet."
+      fine: featuredPriced ? "Add it on its own, or bundle it with any print ad." : "The Premium Featured Listing is listed on the sales site; a price has not been set yet."
     }));
 
     var box = document.getElementById("formats");

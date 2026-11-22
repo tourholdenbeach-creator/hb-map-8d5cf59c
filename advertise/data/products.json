@@ -1,5 +1,5 @@
 {
-  "_admin_note": "Edit prices and inventory here. 'total' = spaces for sale, 'sold' = spaces already sold. The site shows 'X of Y available' and switches the Buy buttons to 'Sold out' when sold >= total. Prices are whole US dollars except deposits, which may have cents. Set a 'deposit' to null to offer pay-in-full only. For a product with no price yet (Premium Featured Listing), leave the prices null: the card shows 'Pricing coming soon' and an interest button. Set 'total' to null for online products with no inventory limit.",
+  "_admin_note": "Edit prices and inventory here. 'total' = spaces for sale, 'sold' = spaces already sold. The site shows 'X of Y available' and switches the Buy buttons to 'Sold out' when sold >= total. Prices are whole US dollars except deposits, which may have cents. Set a 'deposit' to null to offer pay-in-full only. For an online listing billed by the year or the month, set annual_price and monthly_price and leave season_price and prepaid_price null. Leave all prices null for a product with no price yet: the card shows 'Pricing coming soon' and an interest button. Set 'total' to null for online products with no inventory limit.",
   "season": "2027",
   "contact_email": "tourholdenbeach@gmail.com",
   "dates": [
@@ -81,7 +81,9 @@
       "sold": 0,
       "inventory_note": "Online only",
       "featured": false,
-      "online_only": true
+      "online_only": true,
+      "annual_price": 299,
+      "monthly_price": 29
     },
     {
       "id": "premium",
@@ -140,9 +142,9 @@
     {
       "id": "realty",
       "name": "Realty Partner",
-      "summary": "Your agency's logo in the top spot on the front cover of the maps you hand out to guests, with the Insider family and logo resized beneath it. Only 4 available, realty and vacation rental companies only.",
+      "summary": "Personalized copies of the map with your logo on the cover (part of 5,000 Realty Partner copies), with the Insider family and logo resized beneath it. Only 4 available, realty and vacation rental companies only.",
       "includes": [
-        "Your agency's logo in the top spot on the folded front cover of 500 maps for you to hand out, with the Insider family and logo resized beneath it",
+        "Personalized copies of the map with your logo on the cover (part of 5,000 Realty Partner copies), with the Insider family and logo resized beneath it",
         "A featured pin at your office on the illustrated map",
         "An online listing on the interactive map"
       ],

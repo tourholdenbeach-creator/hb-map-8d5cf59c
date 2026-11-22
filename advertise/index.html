@@ -285,11 +285,19 @@
   HB.load("").then(function () {
     var ps = HB.data.products, html = "", left = 0, tot = 0;
     ps.forEach(function (p) {
-      var priced = typeof p.prepaid_price === "number", limited = typeof p.total === "number";
+      var priced = typeof p.prepaid_price === "number", yearly = typeof p.annual_price === "number", monthly = typeof p.monthly_price === "number";
+      var limited = typeof p.total === "number";
       var n = limited ? HB.left(p) : null, pct = limited && p.total ? Math.round(100 * n / p.total) : 0, out = limited && n <= 0;
       if (limited) { left += n; tot += p.total; }
       var btns = "", amt = "", avail = "";
-      if (!priced) {
+      if (yearly || monthly) {
+        amt = yearly
+          ? '<div class="amt"><b>' + HB.money(p.annual_price) + "</b><span>a year</span></div>"
+          : '<div class="amt"><b>' + HB.money(p.monthly_price) + "</b><span>a month</span></div>";
+        amt += '<div class="amt-note">' + (yearly && monthly ? "or " + HB.money(p.monthly_price) + " a month" : (p.online_only ? "Online add-on · bundle it with any print ad" : "&nbsp;")) + "</div>";
+        if (yearly) btns += '<a class="btn btn-coral" href="' + HB.esc(HB.buyUrl("", p.id, "annual")) + '">Buy now · ' + HB.money(p.annual_price) + " a year</a>";
+        if (monthly) btns += '<a class="btn ' + (yearly ? "btn-ghost" : "btn-coral") + '" href="' + HB.esc(HB.buyUrl("", p.id, "monthly")) + '">' + (yearly ? "Or " : "Buy now · ") + HB.money(p.monthly_price) + " a month</a>";
+      } else if (!priced) {
         amt = '<div class="amt"><b style="font-size:1.6rem">Pricing coming soon</b></div><div class="amt-note">' + (p.online_only ? "Online add-on · bundle it with any print ad" : "&nbsp;") + "</div>";
         btns = '<a class="btn btn-teal" href="' + HB.esc(HB.mailto(p.name + " interest", "Please tell me when the " + p.name + " is available" + (p.online_only ? ", on its own or bundled with a print ad" : "") + ".\n\nBusiness:\nName:\nPhone:\n")) + '">Tell me when it\'s available</a>';
       } else {
