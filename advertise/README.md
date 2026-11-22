@@ -5,6 +5,7 @@ Live (unlisted, noindex): https://tourholdenbeach-creator.github.io/hb-map-8d5cf
 | Page | What it is |
 |---|---|
 | `advertise/` | Pitch, what you get, map preview, prices with Buy buttons, how it works, Host Partner + $99 drone interest form, FAQ, terms, contact |
+| `advertise/preview/?id=<business id>` | "See your sample ad" page. Builds sample print and online ads in the browser from `data/businesses.geojson`. Linked from each unpaid pin popup next to Claim your listing. Realty Partner is shown only for realty and vacation-rental companies. |
 | `advertise/claim/?biz=Name` | "Claim your listing" page. Shows the business name and preselects the name listing. `&plan=standard` preselects the standard ad. Also accepts the map's `?business=…&pin=…&id=…` |
 | `advertise/checkout/?product=…&plan=…` | "Checkout coming soon" page, used while a product has no Stripe link. Builds a reservation email |
 | `advertise/thanks/` | Page to send buyers to after Stripe payment: asks for logo, artwork and details by email |

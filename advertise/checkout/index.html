@@ -37,6 +37,7 @@
 (function () {
   "use strict";
   var id = HB.param("product") || "", plan = HB.param("plan") === "deposit" ? "deposit" : "prepaid";
+  var unit = (HB.param("unit") || "").toLowerCase();
   var bizIn = document.getElementById("biz"), mail = document.getElementById("mail");
   bizIn.value = HB.clean(HB.param("biz") || "");
   var line = "";
@@ -52,11 +53,16 @@
     Array.prototype.forEach.call(document.querySelectorAll("a.em"), function (a) { a.href = "mailto:" + HB.email; a.textContent = HB.email; });
     if (!p) { upd(); return; }
     if (plan === "deposit" && !p.deposit) plan = "prepaid";
-    line = p.name + (plan === "deposit" ? " (50% deposit " + HB.money(p.deposit) + " of the " + HB.money(p.season_price) + " season rate)" : " (paid in full, " + HB.money(p.prepaid_price) + " prepaid)");
+    var isDouble = unit === "double" && p.id === "standard";
+    var season = isDouble && typeof p.season_price === "number" ? p.season_price * 2 : p.season_price;
+    var prepaid = isDouble && typeof p.prepaid_price === "number" ? p.prepaid_price * 2 : p.prepaid_price;
+    var deposit = isDouble && typeof p.deposit === "number" ? p.deposit * 2 : p.deposit;
+    var pname = isDouble ? "Double space (two adjacent standard ads)" : p.name;
+    line = pname + (plan === "deposit" ? " (50% deposit " + HB.money(deposit) + " of the " + HB.money(season) + " season rate)" : " (paid in full, " + HB.money(prepaid) + " prepaid)");
     var it = document.getElementById("item");
     it.hidden = false;
-    it.innerHTML = "<b>" + HB.esc(p.name) + "</b><br>" + HB.esc(plan === "deposit" ? "50% deposit: " + HB.money(p.deposit) + " (season rate " + HB.money(p.season_price) + ")" : "Pay in full: " + HB.money(p.prepaid_price) + " prepaid")
-      + "<br><span class=\"fine\">" + HB.left(p) + " of " + p.total + " available · first come, first served</span>";
+    it.innerHTML = "<b>" + HB.esc(pname) + "</b><br>" + HB.esc(plan === "deposit" ? "50% deposit: " + HB.money(deposit) + " (season rate " + HB.money(season) + ")" : "Pay in full: " + HB.money(prepaid) + " prepaid")
+      + "<br><span class=\"fine\">" + (isDouble ? "Priced as two standard spaces. " : "") + HB.left(p) + " of " + p.total + " standard spaces available · first come, first served</span>";
     upd();
   });
 })();

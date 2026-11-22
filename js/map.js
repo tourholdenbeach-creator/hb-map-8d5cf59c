@@ -380,6 +380,10 @@
     var q = "business=" + encodeURIComponent(p.name) + "&pin=" + encodeURIComponent(p.pin) + "&id=" + encodeURIComponent(p.id);
     return base + (base.indexOf("?") === -1 ? "?" : "&") + q;
   }
+  function previewHref(p) {
+    if (!p || !p.id) return "advertise/preview/";
+    return "advertise/preview/?id=" + encodeURIComponent(p.id);
+  }
   function telHref(phone) {
     var d = String(phone || "").replace(/[^0-9]/g, "");
     if (d.length === 10) d = "1" + d;
@@ -408,7 +412,12 @@
     h += '<a class="biz-btn dirs" href="' + bizDirUrl(p, pin.latlng) + '"' + ext + ' aria-label="Directions to ' + escapeHtml(p.name) + '">Directions</a>';
     if (p.paid && safeUrl(p.website)) h += '<a class="biz-btn web" href="' + escapeHtml(p.website) + '"' + ext + ">Website</a>";
     h += "</div>";
-    if (!p.paid) h += '<a class="biz-claim" href="' + escapeHtml(claimHref(p)) + '">Claim your listing</a>';
+    if (!p.paid) {
+      h += '<div class="biz-claim-row">';
+      h += '<a class="biz-claim" href="' + escapeHtml(claimHref(p)) + '">Claim your listing</a>';
+      h += '<a class="biz-sample" href="' + escapeHtml(previewHref(p)) + '">See your sample ad</a>';
+      h += "</div>";
+    }
     return h + "</li>";
   }
 
