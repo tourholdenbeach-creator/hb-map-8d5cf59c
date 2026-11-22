@@ -531,11 +531,22 @@ button, input { font: inherit; }
   }
   .toast { bottom: calc(var(--dock) + 158px); }
   .install-banner { bottom: calc(var(--dock) + 98px); }
+  /* The Leaflet attribution is the phone "info bar" beside zoom. Keep it
+     one line, and sit zoom fully above it with a 12px gap. Locate stays put. */
   .leaflet-control-attribution {
     margin-bottom: var(--dock) !important;
     margin-left: calc(66px + var(--safe-left)) !important;
     margin-right: calc(66px + var(--safe-right)) !important;
     max-width: calc(100vw - 132px - var(--safe-left) - var(--safe-right));
+    max-height: 16px;
+    padding: 3px 8px !important;
+    line-height: 1 !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .leaflet-control-zoom {
+    margin-bottom: calc(var(--dock) + 16px + 12px) !important;
   }
 }
 
