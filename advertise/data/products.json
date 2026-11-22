@@ -47,7 +47,7 @@
     {
       "id": "double",
       "name": "Double space",
-      "summary": "Two adjacent standard spaces in a category zone on the back of the map, priced as two standard spaces.",
+      "summary": "Two adjacent standard spaces in a category zone on the back of the map, about 14% less than two standard spaces.",
       "includes": [
         "A two-space full-color ad on the back of the map, in the matching category zone",
         "A featured pin with your name at your location on the illustrated map",
@@ -55,9 +55,9 @@
         "Your offers in the Holden Beach Insiders Club",
         "Complimentary ad layout, up to two hours"
       ],
-      "season_price": 1500,
-      "prepaid_price": 1390,
-      "deposit": 750,
+      "season_price": 1295,
+      "prepaid_price": 1195,
+      "deposit": 647.5,
       "total": 8,
       "sold": 0,
       "inventory_note": "8 double spaces on the back",
@@ -86,7 +86,7 @@
     {
       "id": "premium",
       "name": "Premium corner",
-      "summary": "One of the four corners of the front map border, priced as two standard spaces.",
+      "summary": "One of the four corners of the front map border, the most visible print spot.",
       "includes": [
         "A two-space ad in a front-border corner",
         "A featured pin with your name at your location on the illustrated map",
@@ -94,9 +94,9 @@
         "Your offers in the Holden Beach Insiders Club",
         "Complimentary ad layout, up to two hours"
       ],
-      "season_price": 1500,
-      "prepaid_price": 1390,
-      "deposit": 750,
+      "season_price": 1750,
+      "prepaid_price": 1595,
+      "deposit": 875.0,
       "total": 4,
       "sold": 0,
       "inventory_note": "4 front corners",
@@ -113,9 +113,9 @@
         "Your offers in the Holden Beach Insiders Club",
         "Complimentary ad layout, up to one hour"
       ],
-      "season_price": 375,
-      "prepaid_price": 348,
-      "deposit": 187.5,
+      "season_price": 395,
+      "prepaid_price": 365,
+      "deposit": 197.5,
       "total": 6,
       "sold": 0,
       "inventory_note": "",
