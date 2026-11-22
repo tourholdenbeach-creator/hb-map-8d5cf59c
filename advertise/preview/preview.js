@@ -107,7 +107,7 @@
     standard: { img: "back", box: slotPct(38, 856, 702, 704), cap: "A standard space in a category zone on the back of the map." },
     double: { img: "back", box: slotPct(38, 132, 1424, 704), cap: "A double space: two adjacent standard cells in a category zone on the back of the map." },
     premium: { img: "front", box: slotPct(36, 36, 1150, 410), cap: "A premium corner on the front map border (highest-visibility corner)." },
-    realty: { img: "back", box: slotPct(4500, 0, 1500, 2318), cap: "Realty Partner: personalized copies of the map with your logo on the cover (part of 5,000 Realty Partner copies). The Insider family and logo are resized beneath it. Only 4 available." }
+    realty: { img: "back", box: slotPct(4500, 0, 1500, 2318), cap: "Realty Partner: 5,000 personalized copies of the map with your logo on the cover, included in the 25,000 print run. The Insider family and logo are resized beneath it. Only 4 available." }
   };
 
   var CAT_TO_ZONE = {
@@ -450,7 +450,7 @@
       parts.push(section({
         id: "fmt-realty",
         title: "Realty Partner",
-        summary: "Personalized copies of the map with your logo on the cover (part of 5,000 Realty Partner copies). The Insider family and logo are resized beneath it so the cover stays clearly branded. Includes a featured pin and an online listing. Only 4 available.",
+        summary: "5,000 personalized copies of the map with your logo on the cover, included in the 25,000 print run. The Insider family and logo are resized beneath it so the cover stays clearly branded. Includes a featured pin and an online listing. Only 4 available.",
         ad: renderRealty(biz),
         place: coverFig(biz) + placementFig("realty", biz),
         price: moneyPair(ry.season_price, ry.prepaid_price),
