@@ -66,3 +66,16 @@ Business contacts, paid listings and "Claim your listing" (added 21 Nov 2026)
 - js/config.js -> claimUrl: where the Claim buttons go (now claim.html, a
   coming-soon page with a mailto link). Change this one value to repoint to a
   HubSpot form or sales page; ?business=&pin=&id= are appended.
+
+Today's Beach Brief, street names and add-to-home-screen (22 Nov 2026)
+------------------
+- Today's Beach Brief (button under the search): today's and tomorrow's tides
+  from NOAA station 8659414 (Varnamtown, Lockwoods Folly River), NWS forecast,
+  UV when available, a rough beach-day rating, fishing windows based on tide
+  changes, and rip-current links (NWS Wilmington beach forecast). Cached in
+  the browser for about 30 minutes.
+- Street-name labels on the illustrated map are scaled down at zooms 15–17
+  so they stay readable without dominating the Bridge Area view.
+- The site is an installable web app (Add to Home Screen). Android shows an
+  install prompt; iPhone users can use Share, then Add to Home Screen. A
+  service worker caches the app shell and visited map tiles for offline use.

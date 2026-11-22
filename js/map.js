@@ -930,7 +930,8 @@
     state.tiles.illSupply = illLayer(false, ILL_SUPPLY);
     state.tiles.ill18 = illLayer(true, ILL_Z18);
     state.tiles.names = L.tileLayer("tiles/names/{z}/{x}/{y}.png", {
-      minZoom: MIN_ZOOM, maxZoom: 16, maxNativeZoom: 16, bounds: TILE_BOUNDS, noWrap: true, errorTileUrl: "tiles/clear.png", zIndex: 4
+      minZoom: MIN_ZOOM, maxZoom: MAX_ZOOM, maxNativeZoom: 17,
+      bounds: TILE_BOUNDS, noWrap: true, errorTileUrl: "tiles/clear.png", zIndex: 4, className: "hb-names"
     });
     function zoomClass() { map.getContainer().classList.toggle("z-low", map.getZoom() < 14); }
     map.on("zoomend", zoomClass); zoomClass();
