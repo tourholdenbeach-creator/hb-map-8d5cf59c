@@ -46,3 +46,17 @@ There is no distance readout or measuring tool.
 
 Map data © OpenStreetMap contributors (ODbL). Addresses: Town of Holden
 Beach, Brunswick County GIS, and NC DCM. Decisions confirmed 15 Nov 2026.
+
+Business contacts, paid listings and "Claim your listing" (added 21 Nov 2026)
+------------------
+- sources/business-contacts.csv: phone + website for all 106 businesses, with the
+  source of each field (researched 21 Nov 2026; blank = not found confidently).
+  Columns paid / photo_url / deal_text / deal_url control paid-advertiser extras.
+- Rebuild data/businesses.geojson after editing the CSV:
+  python3 build_web_data.py   (in the print project folder)
+- Popups: Call (when a phone exists) and Directions for every business.
+  Website, photo and Deal show only when paid=true. Unpaid listings show a
+  "Claim your listing" button.
+- js/config.js -> claimUrl: where the Claim buttons go (now claim.html, a
+  coming-soon page with a mailto link). Change this one value to repoint to a
+  HubSpot form or sales page; ?business=&pin=&id= are appended.

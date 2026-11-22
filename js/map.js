@@ -363,24 +363,52 @@
     });
   }
 
+  var CFG = window.HB_CONFIG || {};
+  function claimHref(p) {
+    var base = CFG.claimUrl || "claim.html";
+    if (!p) return base;
+    var q = "business=" + encodeURIComponent(p.name) + "&pin=" + encodeURIComponent(p.pin) + "&id=" + encodeURIComponent(p.id);
+    return base + (base.indexOf("?") === -1 ? "?" : "&") + q;
+  }
+  function telHref(phone) {
+    var d = String(phone || "").replace(/[^0-9]/g, "");
+    if (d.length === 10) d = "1" + d;
+    return "tel:+" + d;
+  }
+  function photoUrl(u) { return /^(https?:\/\/|[\w][\w.\/-]*$)/i.test(u || "") ? u : ""; }
+  function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : ""; }
+  function bizDirUrl(p, fallback) {
+    var tp = p.true_point || [fallback.lng, fallback.lat];
+    var url = "https://www.google.com/maps/dir/?api=1&destination=" + encodeURIComponent(tp[1] + "," + tp[0]);
+    if (state.userLatLng) url += "&origin=" + encodeURIComponent(state.userLatLng.lat + "," + state.userLatLng.lng);
+    return url;
+  }
+
+  function bizCardHtml(p, pin) {
+    var ext = ' target="_blank" rel="noopener noreferrer"';
+    var h = '<li class="biz-card' + (p.paid ? " paid" : "") + '">';
+    if (p.paid && photoUrl(p.photo)) h += '<img class="biz-photo" src="' + escapeHtml(photoUrl(p.photo)) + '" alt="' + escapeHtml(p.name) + '" loading="lazy">';
+    h += "<b>" + escapeHtml(p.name) + "</b><span>" + escapeHtml(p.category) + (p.address ? " • " + escapeHtml(p.address) : "") + "</span>";
+    if (p.paid && p.deal) {
+      h += safeUrl(p.deal_url) ? '<a class="biz-deal" href="' + escapeHtml(p.deal_url) + '"' + ext + ">Deal: " + escapeHtml(p.deal) + "</a>"
+                               : '<div class="biz-deal">Deal: ' + escapeHtml(p.deal) + "</div>";
+    }
+    h += '<div class="biz-actions">';
+    if (p.phone) h += '<a class="biz-btn call" href="' + telHref(p.phone) + '" aria-label="Call ' + escapeHtml(p.name) + '">Call ' + escapeHtml(p.phone) + "</a>";
+    h += '<a class="biz-btn dirs" href="' + bizDirUrl(p, pin.latlng) + '"' + ext + ' aria-label="Directions to ' + escapeHtml(p.name) + '">Directions</a>';
+    if (p.paid && safeUrl(p.website)) h += '<a class="biz-btn web" href="' + escapeHtml(p.website) + '"' + ext + ">Website</a>";
+    h += "</div>";
+    if (!p.paid) h += '<a class="biz-claim" href="' + escapeHtml(claimHref(p)) + '">Claim your listing</a>';
+    return h + "</li>";
+  }
+
   function bizPopupHtml(pin) {
     var first = pin.items[0].props;
-    var ll = pin.latlng;
-    var walk = mapsDirUrl(ll.lat, ll.lng, "walking");
-    var bike = mapsDirUrl(ll.lat, ll.lng, "bicycling");
     var area = (AREA_TITLE[first.area] || [first.area])[0];
-    var lis = pin.items.map(function (it) {
-      var p = it.props;
-      return "<li><b>" + escapeHtml(p.name) + "</b><span>" + escapeHtml(p.category)
-        + (p.address ? " • " + escapeHtml(p.address) : "") + "</span></li>";
-    }).join("");
+    var lis = pin.items.map(function (it) { return bizCardHtml(it.props, pin); }).join("");
     return '<div class="popup">'
       + '<div class="popup-kicker">Pin ' + pin.num + " • " + escapeHtml(area) + "</div>"
-      + '<ul class="popup-biz">' + lis + "</ul>"
-      + '<div class="popup-dirs">'
-      + '<a class="dir-btn walk" href="' + walk + '" target="_blank" rel="noopener noreferrer">Walking directions</a>'
-      + '<a class="dir-btn bike" href="' + bike + '" target="_blank" rel="noopener noreferrer">Biking directions</a>'
-      + "</div></div>";
+      + '<ul class="popup-biz">' + lis + "</ul></div>";
   }
 
   function addBusinesses(fc) {
@@ -397,7 +425,7 @@
       var pin = pins[k];
       var names = pin.items.map(function (i) { return i.props.name; });
       var m = L.marker(pin.latlng, { icon: pinIcon(pin.num), title: pin.num + " " + names.join(" • "), keyboard: true, riseOnHover: true, zIndexOffset: 400 });
-      m.bindPopup(function () { return bizPopupHtml(pin); }, { maxWidth: 340 });
+      m.bindPopup(function () { return bizPopupHtml(pin); }, { maxWidth: 340, autoPanPaddingTopLeft: L.point(12, 136), autoPanPaddingBottomRight: L.point(12, 24) });
       m.bindTooltip(pin.num + " • " + names.join(" • "), { className: "hb-tip", direction: "top", offset: [0, -14], opacity: 0.95 });
       m.addTo(group);
       pin.marker = m;
@@ -441,6 +469,7 @@
   /* ----------------------------- directory panel ----------------------------- */
   function setupDirectory(fc) {
     var panel = $("dir-panel"), list = $("dir-list"), filter = $("dir-filter");
+    if ($("dir-claim-link")) $("dir-claim-link").href = claimHref(null);
     var rows = fc.features.map(function (f) { return f.properties; });
     function render(q) {
       q = (q || "").trim().toLowerCase().replace(/^#/, "");
