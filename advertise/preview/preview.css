@@ -109,17 +109,89 @@
   .ad.premium .ph { grid-column: 1 / -1; height: 90px; }
 }
 
-/* Realty Partner — Compliments of */
-.ad.realty { width: min(100%, 100%); aspect-ratio: 5.2 / 2.35; display: flex; flex-direction: column; padding: 12px 16px 14px; border: 3px solid #c19865; border-radius: 12px; background: linear-gradient(#0d273f, #12304b); color: #f7f0e1; }
-.ad.realty .eyebrow { font-family: "Lilita One", serif; letter-spacing: .14em; text-transform: uppercase; color: #f2d390; font-size: .72rem; }
-.ad.realty .wordmark { color: #fff; font-size: clamp(1.2rem, 3.4vw, 2rem); }
-.ad.realty .row { display: flex; gap: 12px; align-items: flex-end; margin-top: auto; }
-.ad.realty .meta { color: #c2e4e3; font-size: .82rem; }
-.ad.realty .qr { margin-left: auto; background: transparent; }
-.ad.realty .qr img { width: 72px; height: 72px; }
-.ad.realty .qr figcaption { color: #f2d390; max-width: 84px; }
-.ad.realty .wm { color: rgba(242,211,144,.22); }
-.ad.realty .pin { color: #e88a52; }
+/* Realty Partner — folded-cover layout (logo in the top spot) */
+.ad.realty-cover {
+  width: min(100%, 360px);
+  aspect-ratio: 1500 / 2318;
+  display: flex; flex-direction: column; align-items: center;
+  padding: 0 0 14px; border: 0; border-radius: 4px; overflow: hidden;
+  background: linear-gradient(#80c6ed 0%, #9ed6f2 54%, #f2e3b8 56%, #edc89e 100%);
+  color: #0d273f; text-align: center;
+  box-shadow: 0 6px 18px rgba(13,39,63,.18);
+}
+.ad.realty-cover .rc-head {
+  width: 100%; background: #0d273f; color: #f2d390;
+  font-family: "Lilita One", "Bree Serif", serif;
+  letter-spacing: .16em; font-size: .72rem; padding: 10px 8px 8px;
+  border-bottom: 3px solid #c4622c;
+}
+.ad.realty-cover .rc-eye {
+  font-family: "Lilita One", "Bree Serif", serif;
+  letter-spacing: .16em; text-transform: uppercase;
+  font-size: .62rem; color: #0d273f; margin: 8px 0 6px;
+}
+.ad.realty-cover .rc-logo-slot {
+  position: relative;
+  width: calc(100% - 28px);
+  background: #fff; border: 3px solid #f2d390; outline: 2px solid #0d273f;
+  outline-offset: 3px; border-radius: 8px;
+  padding: 14px 12px 10px; margin: 0 14px 8px;
+  min-height: 118px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.ad.realty-cover .rc-logo-slot img {
+  max-width: 86%; max-height: 88px; object-fit: contain; display: block;
+}
+.ad.realty-cover .rc-name {
+  font-family: "Alfa Slab One", "Bree Serif", serif;
+  font-size: .78rem; letter-spacing: .04em; color: #0d273f;
+  margin-top: 6px; line-height: 1.15;
+}
+.ad.realty-cover .rc-ph {
+  font-family: "Alfa Slab One", "Bree Serif", serif;
+  font-size: .78rem; letter-spacing: .04em; color: #0d273f;
+  line-height: 1.2; padding: 16px 8px;
+  border: 1px dashed #0d273f; border-radius: 6px; width: 100%;
+  background: rgba(242,223,190,.45);
+}
+.ad.realty-cover .rc-flag {
+  position: absolute; top: 6px; right: 6px;
+  background: #c4622c; color: #fff;
+  font-family: "Lilita One", "Bree Serif", serif;
+  font-size: .52rem; letter-spacing: .1em;
+  padding: 2px 6px; border-radius: 4px;
+}
+.ad.realty-cover .rc-brand {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; width: calc(100% - 24px); margin: 2px 0 6px;
+}
+.ad.realty-cover .rc-family { height: 86px; width: auto; object-fit: contain; }
+.ad.realty-cover .rc-insider { height: 78px; width: auto; object-fit: contain; }
+.ad.realty-cover .rc-tag {
+  font-family: "Lilita One", "Bree Serif", serif;
+  font-size: .62rem; color: #0d273f; margin: 0 10px 6px; line-height: 1.2;
+}
+.ad.realty-cover .rc-ribbon {
+  background: #398184; color: #fff;
+  font-family: "Lilita One", "Bree Serif", serif;
+  font-size: .52rem; letter-spacing: .02em;
+  padding: 4px 10px; margin: 0 18px 8px; width: calc(100% - 48px);
+  border-radius: 2px;
+}
+.ad.realty-cover .rc-season {
+  background: #c4622c; color: #fff;
+  font-family: "Lilita One", "Bree Serif", serif;
+  font-size: .62rem; letter-spacing: .12em;
+  padding: 4px 14px; border-radius: 999px; margin: 0 0 6px;
+}
+.ad.realty-cover .rc-url {
+  font-family: "Nunito", sans-serif; font-weight: 800;
+  font-size: .62rem; color: #0d273f; margin: 0;
+}
+.ad.realty-cover .wm { color: rgba(196,98,44,.18); font-size: clamp(1.6rem, 10vw, 2.8rem); }
+.place.cover-proof { margin: 0 0 14px; }
+.place.cover-proof .map-wrap.cover img { width: 100%; height: auto; display: block; border-radius: 6px; }
+.place.cover-proof figcaption { margin-top: 6px; }
 
 /* Online listing cards (as on the map) */
 .online-card { width: min(100%, 340px); background: #fff; border: 1px solid rgba(8,21,40,.14); border-radius: 12px; padding: 12px; position: relative; overflow: hidden; font-family: "Nunito", sans-serif; }
