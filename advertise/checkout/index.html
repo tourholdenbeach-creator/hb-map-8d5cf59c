@@ -62,7 +62,7 @@
     var it = document.getElementById("item");
     it.hidden = false;
     it.innerHTML = "<b>" + HB.esc(pname) + "</b><br>" + HB.esc(plan === "deposit" ? "50% deposit: " + HB.money(deposit) + " (season rate " + HB.money(season) + ")" : "Pay in full: " + HB.money(prepaid) + " prepaid")
-      + "<br><span class=\"fine\">" + (isDouble ? "Priced as two standard spaces. " : "") + HB.left(p) + " of " + p.total + " standard spaces available · first come, first served</span>";
+      + "<br><span class=\"fine\">" + (isDouble || p.id === "double" ? "Priced as two standard spaces. " : "") + (p.total != null ? HB.left(p) + " of " + p.total + " available · first come, first served" : "") + "</span>";
     upd();
   });
 })();

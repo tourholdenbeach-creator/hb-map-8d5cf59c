@@ -1,0 +1,624 @@
+{
+  "layout": {
+    "W": 6000,
+    "H": 4636,
+    "scale": 1.1,
+    "bleed": 37.5,
+    "out": [
+      6675,
+      5175
+    ],
+    "dpi": 300,
+    "cell": [
+      702.0,
+      704.0
+    ],
+    "cell_in": [
+      2.5740000000000003,
+      2.5813333333333337
+    ],
+    "double_in": [
+      5.221333333333334,
+      2.5813333333333337
+    ]
+  },
+  "cat_to_zone": {
+    "Restaurants": "eat",
+    "Seafood Markets": "eat",
+    "Coffee, Sweets & Treats": "eat",
+    "Shopping & Groceries": "shop",
+    "Rentals & Water Sports": "play",
+    "Fun & Attractions": "play",
+    "Realty & Vacation Rentals": "stay",
+    "Services & Lodging": "services"
+  },
+  "zones": {
+    "eat": {
+      "name": "Eat & Drink",
+      "sub": "Restaurants  \u00b7  Seafood Markets  \u00b7  Coffee, Sweets & Treats",
+      "panels": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    "shop": {
+      "name": "Shop",
+      "sub": "Shopping & Groceries",
+      "panels": [
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "play": {
+      "name": "Play & Rentals",
+      "sub": "Rentals & Water Sports  \u00b7  Fun & Attractions",
+      "panels": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "stay": {
+      "name": "Stay & Realty",
+      "sub": "Realty & Vacation Rentals",
+      "panels": [
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    "services": {
+      "name": "Services",
+      "sub": "Services & Lodging",
+      "panels": [
+        [
+          2,
+          1
+        ]
+      ]
+    }
+  },
+  "inventory": {
+    "standard": 20,
+    "double": 8,
+    "equivalents": 36,
+    "slots": 28,
+    "by_zone": {
+      "eat": {
+        "standard": 6,
+        "double": 3,
+        "equivalents": 12
+      },
+      "shop": {
+        "standard": 4,
+        "double": 1,
+        "equivalents": 6
+      },
+      "stay": {
+        "standard": 2,
+        "double": 2,
+        "equivalents": 6
+      },
+      "play": {
+        "standard": 4,
+        "double": 1,
+        "equivalents": 6
+      },
+      "services": {
+        "standard": 4,
+        "double": 1,
+        "equivalents": 6
+      }
+    },
+    "front_unchanged": {
+      "standard": 12,
+      "premium_corner": 4,
+      "half": 6
+    },
+    "realty_partner": 4
+  },
+  "slots": [
+    {
+      "id": "B23",
+      "num": 23,
+      "tier": "double",
+      "zone": "eat",
+      "x": 38.0,
+      "y": 132.0,
+      "w": 1424.0,
+      "h": 704.0,
+      "panel": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "B24",
+      "num": 24,
+      "tier": "standard",
+      "zone": "eat",
+      "x": 38.0,
+      "y": 856.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "B25",
+      "num": 25,
+      "tier": "standard",
+      "zone": "eat",
+      "x": 760.0,
+      "y": 856.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "B26",
+      "num": 26,
+      "tier": "double",
+      "zone": "eat",
+      "x": 38.0,
+      "y": 1580.0,
+      "w": 1424.0,
+      "h": 704.0,
+      "panel": [
+        0,
+        0
+      ]
+    },
+    {
+      "id": "B27",
+      "num": 27,
+      "tier": "double",
+      "zone": "shop",
+      "x": 1538.0,
+      "y": 132.0,
+      "w": 1424.0,
+      "h": 704.0,
+      "panel": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "B28",
+      "num": 28,
+      "tier": "standard",
+      "zone": "shop",
+      "x": 1538.0,
+      "y": 856.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "B29",
+      "num": 29,
+      "tier": "standard",
+      "zone": "shop",
+      "x": 2260.0,
+      "y": 856.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "B30",
+      "num": 30,
+      "tier": "standard",
+      "zone": "shop",
+      "x": 1538.0,
+      "y": 1580.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "B31",
+      "num": 31,
+      "tier": "standard",
+      "zone": "shop",
+      "x": 2260.0,
+      "y": 1580.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        1,
+        0
+      ]
+    },
+    {
+      "id": "B32",
+      "num": 32,
+      "tier": "double",
+      "zone": "stay",
+      "x": 3038.0,
+      "y": 132.0,
+      "w": 1424.0,
+      "h": 704.0,
+      "panel": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "B33",
+      "num": 33,
+      "tier": "standard",
+      "zone": "stay",
+      "x": 3038.0,
+      "y": 856.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "B34",
+      "num": 34,
+      "tier": "standard",
+      "zone": "stay",
+      "x": 3760.0,
+      "y": 856.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "B35",
+      "num": 35,
+      "tier": "double",
+      "zone": "stay",
+      "x": 3038.0,
+      "y": 1580.0,
+      "w": 1424.0,
+      "h": 704.0,
+      "panel": [
+        2,
+        0
+      ]
+    },
+    {
+      "id": "B36",
+      "num": 36,
+      "tier": "standard",
+      "zone": "eat",
+      "x": 38.0,
+      "y": 2450.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "B37",
+      "num": 37,
+      "tier": "standard",
+      "zone": "eat",
+      "x": 760.0,
+      "y": 2450.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "B38",
+      "num": 38,
+      "tier": "double",
+      "zone": "eat",
+      "x": 38.0,
+      "y": 3174.0,
+      "w": 1424.0,
+      "h": 704.0,
+      "panel": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "B39",
+      "num": 39,
+      "tier": "standard",
+      "zone": "eat",
+      "x": 38.0,
+      "y": 3898.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "B40",
+      "num": 40,
+      "tier": "standard",
+      "zone": "eat",
+      "x": 760.0,
+      "y": 3898.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "B41",
+      "num": 41,
+      "tier": "standard",
+      "zone": "play",
+      "x": 1538.0,
+      "y": 2450.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "B42",
+      "num": 42,
+      "tier": "standard",
+      "zone": "play",
+      "x": 2260.0,
+      "y": 2450.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "B43",
+      "num": 43,
+      "tier": "standard",
+      "zone": "play",
+      "x": 1538.0,
+      "y": 3174.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "B44",
+      "num": 44,
+      "tier": "standard",
+      "zone": "play",
+      "x": 2260.0,
+      "y": 3174.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "B45",
+      "num": 45,
+      "tier": "double",
+      "zone": "play",
+      "x": 1538.0,
+      "y": 3898.0,
+      "w": 1424.0,
+      "h": 704.0,
+      "panel": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "B46",
+      "num": 46,
+      "tier": "standard",
+      "zone": "services",
+      "x": 3038.0,
+      "y": 2450.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "B47",
+      "num": 47,
+      "tier": "standard",
+      "zone": "services",
+      "x": 3760.0,
+      "y": 2450.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "B48",
+      "num": 48,
+      "tier": "double",
+      "zone": "services",
+      "x": 3038.0,
+      "y": 3174.0,
+      "w": 1424.0,
+      "h": 704.0,
+      "panel": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "B49",
+      "num": 49,
+      "tier": "standard",
+      "zone": "services",
+      "x": 3038.0,
+      "y": 3898.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        2,
+        1
+      ]
+    },
+    {
+      "id": "B50",
+      "num": 50,
+      "tier": "standard",
+      "zone": "services",
+      "x": 3760.0,
+      "y": 3898.0,
+      "w": 702.0,
+      "h": 704.0,
+      "panel": [
+        2,
+        1
+      ]
+    }
+  ],
+  "examples": {
+    "standard_by_zone": {
+      "eat": {
+        "x": 38.0,
+        "y": 856.0,
+        "w": 702.0,
+        "h": 704.0,
+        "id": "B24",
+        "side": "back"
+      },
+      "shop": {
+        "x": 1538.0,
+        "y": 856.0,
+        "w": 702.0,
+        "h": 704.0,
+        "id": "B28",
+        "side": "back"
+      },
+      "stay": {
+        "x": 3038.0,
+        "y": 856.0,
+        "w": 702.0,
+        "h": 704.0,
+        "id": "B33",
+        "side": "back"
+      },
+      "play": {
+        "x": 1538.0,
+        "y": 2450.0,
+        "w": 702.0,
+        "h": 704.0,
+        "id": "B41",
+        "side": "back"
+      },
+      "services": {
+        "x": 3038.0,
+        "y": 2450.0,
+        "w": 702.0,
+        "h": 704.0,
+        "id": "B46",
+        "side": "back"
+      }
+    },
+    "double_by_zone": {
+      "eat": {
+        "x": 38.0,
+        "y": 132.0,
+        "w": 1424.0,
+        "h": 704.0,
+        "id": "B23",
+        "side": "back"
+      },
+      "shop": {
+        "x": 1538.0,
+        "y": 132.0,
+        "w": 1424.0,
+        "h": 704.0,
+        "id": "B27",
+        "side": "back"
+      },
+      "stay": {
+        "x": 3038.0,
+        "y": 132.0,
+        "w": 1424.0,
+        "h": 704.0,
+        "id": "B32",
+        "side": "back"
+      },
+      "play": {
+        "x": 1538.0,
+        "y": 3898.0,
+        "w": 1424.0,
+        "h": 704.0,
+        "id": "B45",
+        "side": "back"
+      },
+      "services": {
+        "x": 3038.0,
+        "y": 3174.0,
+        "w": 1424.0,
+        "h": 704.0,
+        "id": "B48",
+        "side": "back"
+      }
+    },
+    "realty": {
+      "x": 4500,
+      "y": 0,
+      "w": 1500,
+      "h": 2318,
+      "side": "back"
+    },
+    "premium": {
+      "x": 36,
+      "y": 36,
+      "w": 1150,
+      "h": 410,
+      "side": "front"
+    }
+  }
+}

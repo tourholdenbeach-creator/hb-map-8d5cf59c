@@ -20,14 +20,64 @@
       height: (h * SCALE / BLEED_H * 100).toFixed(3) + "%"
     };
   }
-  /* First standard cell on the back grid, and the two-cell pair beside it.
-     Premium = front top-left corner. Realty Partner = folded cover panel (top-right of the back). */
-  var SLOTS = {
-    standard: { img: "back", box: slotPct(46, 46, 689, 722), cap: "A standard space on the back of the map (one cell in the ad grid)." },
-    double: { img: "back", box: slotPct(46, 46, 1408, 722), cap: "A double space: two adjacent standard cells on the back of the map." },
+  /* Fallback coordinates if ad-slots.json has not loaded. The live overlay uses
+     advertise/data/ad-slots.json so a business is shown in its category zone. */
+  var FALLBACK_SLOTS = {
+    standard: { img: "back", box: slotPct(38, 856, 702, 704), cap: "A standard space in a category zone on the back of the map." },
+    double: { img: "back", box: slotPct(38, 132, 1424, 704), cap: "A double space: two adjacent standard cells in a category zone on the back of the map." },
     premium: { img: "front", box: slotPct(36, 36, 1150, 410), cap: "A premium corner on the front map border (highest-visibility corner)." },
     realty: { img: "back", box: slotPct(4500, 0, 1500, 2318), cap: "Realty Partner: a “Compliments of” co-brand on the folded cover of the maps you hand out." }
   };
+
+  var CAT_TO_ZONE = {
+    "Restaurants": "eat",
+    "Seafood Markets": "eat",
+    "Coffee, Sweets & Treats": "eat",
+    "Shopping & Groceries": "shop",
+    "Rentals & Water Sports": "play",
+    "Fun & Attractions": "play",
+    "Realty & Vacation Rentals": "stay",
+    "Services & Lodging": "services"
+  };
+  var ZONE_NAME = {
+    eat: "Eat & Drink",
+    shop: "Shop",
+    play: "Play & Rentals",
+    stay: "Stay & Realty",
+    services: "Services"
+  };
+  var SLOTS_DATA = null;
+
+  function zoneOf(biz) {
+    return CAT_TO_ZONE[(biz && biz.category) || ""] || "eat";
+  }
+
+  function slotFor(kind, biz) {
+    var zone = zoneOf(biz);
+    var zname = ZONE_NAME[zone] || "this";
+    var caps = {
+      standard: "A standard space in the " + zname + " section on the back of the map (about 2.6 × 2.6 inches).",
+      double: "A double space in the " + zname + " section on the back of the map: two adjacent standard cells (about 5.2 × 2.6 inches).",
+      premium: FALLBACK_SLOTS.premium.cap,
+      realty: FALLBACK_SLOTS.realty.cap
+    };
+    var rec = null;
+    if (SLOTS_DATA && SLOTS_DATA.examples) {
+      var ex = SLOTS_DATA.examples;
+      if (kind === "premium") rec = ex.premium;
+      else if (kind === "realty") rec = ex.realty;
+      else rec = (ex[kind + "_by_zone"] || {})[zone] || (ex[kind + "_by_zone"] || {}).eat;
+    }
+    if (rec) {
+      return {
+        img: rec.side || (kind === "premium" ? "front" : "back"),
+        box: slotPct(rec.x, rec.y, rec.w, rec.h),
+        cap: caps[kind] || FALLBACK_SLOTS[kind].cap
+      };
+    }
+    var fb = FALLBACK_SLOTS[kind];
+    return { img: fb.img, box: fb.box, cap: caps[kind] || fb.cap };
+  }
 
   var ICONS = {
     "Restaurants": "fork",
@@ -150,8 +200,8 @@
     return h;
   }
 
-  function placementFig(kind) {
-    var s = SLOTS[kind];
+  function placementFig(kind, biz) {
+    var s = slotFor(kind, biz);
     if (!s) return "";
     var src = s.img === "front" ? "../assets/map-front.jpg" : "../assets/map-back.jpg";
     var alt = s.img === "front" ? "Front of the printed map, with this ad space highlighted" : "Back of the printed map, with this ad space highlighted";
@@ -218,12 +268,14 @@
       + "&id=" + encodeURIComponent(biz.id || "");
 
     var parts = [];
+    var dbl = HB.product("double") || {};
+    var zname = ZONE_NAME[zoneOf(biz)] || "its category";
     parts.push(section({
       id: "fmt-standard",
       title: "Small / standard print ad",
-      summary: "One standard space on the front map border or the back-side ad grid. About 2.8 × 2.9 inches on the back.",
+      summary: "One standard space in the " + zname + " section on the back of the map, or on the front map border. About 2.6 × 2.6 inches on the back.",
       ad: renderStandard(biz),
-      place: placementFig("standard"),
+      place: placementFig("standard", biz),
       price: moneyPair(st.season_price, st.prepaid_price),
       btn: chooseBtn(HB.buyUrl("../", "standard", "prepaid", name), "Choose this ad"),
       fine: "Choose this ad continues to checkout for a Standard ad space (Stripe links are not connected yet)."
@@ -231,20 +283,24 @@
     parts.push(section({
       id: "fmt-double",
       title: "Medium / double print ad",
-      summary: "Two adjacent standard spaces on the back of the map. Priced as two standard spaces.",
+      summary: "Two adjacent standard spaces in the " + zname + " section on the back of the map. About 5.2 × 2.6 inches. Priced as two standard spaces.",
       ad: renderDouble(biz),
-      place: placementFig("double"),
-      price: moneyPair(typeof st.season_price === "number" ? st.season_price * 2 : null,
-                       typeof st.prepaid_price === "number" ? st.prepaid_price * 2 : null),
-      btn: chooseBtn("../checkout/?product=standard&plan=prepaid&biz=" + encodeURIComponent(name) + "&unit=double", "Choose this ad"),
-      fine: "A double space is not a separate line on the rate card yet; it is shown here as two standard spaces."
+      place: placementFig("double", biz),
+      price: moneyPair(
+        typeof dbl.season_price === "number" ? dbl.season_price : (typeof st.season_price === "number" ? st.season_price * 2 : null),
+        typeof dbl.prepaid_price === "number" ? dbl.prepaid_price : (typeof st.prepaid_price === "number" ? st.prepaid_price * 2 : null)
+      ),
+      btn: chooseBtn(dbl.id ? HB.buyUrl("../", "double", "prepaid", name)
+                            : "../checkout/?product=standard&plan=prepaid&biz=" + encodeURIComponent(name) + "&unit=double",
+                     "Choose this ad"),
+      fine: "A double space is its own product on the rate card, at the two-standard-space rate."
     }));
     parts.push(section({
       id: "fmt-premium",
       title: "Premium corner",
       summary: "One of the four corners of the front map border, priced as two standard spaces.",
       ad: renderPremium(biz),
-      place: placementFig("premium"),
+      place: placementFig("premium", biz),
       price: moneyPair(pr.season_price, pr.prepaid_price),
       btn: chooseBtn(HB.buyUrl("../", "premium", "prepaid", name), "Choose this ad"),
       fine: ""
@@ -255,7 +311,7 @@
         title: "Realty Partner",
         summary: "“Compliments of” your agency on the maps you hand out, 500 copies, a featured pin, and an online listing.",
         ad: renderRealty(biz),
-        place: placementFig("realty"),
+        place: placementFig("realty", biz),
         price: moneyPair(ry.season_price, ry.prepaid_price),
         btn: chooseBtn(HB.buyUrl("../", "realty", "prepaid", name), "Choose this ad"),
         fine: "Shown only for realty and vacation-rental companies. Four Realty Partner slots are available."
@@ -312,9 +368,14 @@
     fetch("../../data/businesses.geojson", { cache: "no-store" }).then(function (r) {
       if (!r.ok) throw new Error("listings");
       return r.json();
-    })
+    }),
+    fetch("../data/ad-slots.json", { cache: "no-store" }).then(function (r) {
+      if (!r.ok) throw new Error("slots");
+      return r.json();
+    }).catch(function () { return null; })
   ]).then(function (pair) {
     var fc = pair[1];
+    SLOTS_DATA = pair[2];
     if (!id) {
       fail("Open this page from a business pin, using See your sample ad, so we know which listing to show.");
       return;
