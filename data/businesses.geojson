@@ -388,37 +388,6 @@
    "geometry": {
     "type": "Point",
     "coordinates": [
-     -78.2668553,
-     33.9163658
-    ]
-   },
-   "properties": {
-    "id": "biz-11-captain-pete-s-seafood-market",
-    "pin": 11,
-    "name": "Captain Pete's Seafood Market",
-    "category": "Seafood Markets",
-    "area": "island",
-    "address": "101 South Shore Drive",
-    "shared_with": [],
-    "layer": "businesses",
-    "true_point": [
-     -78.2668553,
-     33.9163658
-    ],
-    "source": "Keith's sheet",
-    "phone": "(910) 842-6675",
-    "website": "https://www.facebook.com/captnpetesseafood/",
-    "paid": false,
-    "photo": "",
-    "deal": "",
-    "deal_url": ""
-   }
-  },
-  {
-   "type": "Feature",
-   "geometry": {
-    "type": "Point",
-    "coordinates": [
      -78.2667967,
      33.9165116
     ]
