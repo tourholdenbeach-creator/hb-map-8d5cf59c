@@ -19,6 +19,12 @@ block the map tiles and data files.
 On a phone, add the page to the home screen or open it in Chrome. The layout
 is built for a phone-sized screen first.
 
+The map opens centered on the Bridge Area (Holden Beach Bridge, the causeway
+landing and Jordan Blvd) at zoom 16. Use the "Whole island" button, or open
+?view=full, to fit the whole island. Empty space around the art is ocean-
+colored. Business pins cluster when zoomed out; beach accesses and restrooms
+show from zoom 15 up. Supply art appears when you open a Supply listing.
+
 What is on the map (updated 21 Nov 2026)
 ------------------
 - Illustrated base map (default): the final Holden Beach Insider print art,

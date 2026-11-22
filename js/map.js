@@ -11,8 +11,16 @@
   var ILL_BOUNDS = L.latLngBounds(ILL_MAIN.getSouthWest(), ILL_MAIN.getNorthEast()).extend(ILL_SUPPLY);
   // everything with a pin (Supply pins and Oak & Anchor sit outside the plain tiles)
   var VIEW_BOUNDS = L.latLngBounds(TILE_BOUNDS.getSouthWest(), TILE_BOUNDS.getNorthEast()).extend(ILL_SUPPLY).extend([33.93, -78.2150]);
-  var MIN_ZOOM = 11;
+  // Default opening view: Holden Beach Bridge / causeway landing / Jordan Blvd (sharp to z18)
+  var BRIDGE_CENTER = L.latLng(33.91600, -78.26800);
+  var BRIDGE_BOUNDS = L.latLngBounds([[33.9125, -78.2735], [33.9200, -78.2625]]);
+  var MAIN_MAX_BOUNDS = ILL_MAIN.pad(0.02);
+  var MIN_ZOOM = 11;          // floor when showing the whole island or Supply
+  var DEFAULT_MIN_ZOOM = 14;  // everyday use: no zooming out into empty paper
+  var DEFAULT_ZOOM = 16;
   var MAX_ZOOM = 18;
+  var CLUSTER_DISABLE_ZOOM = 16;
+  var MINOR_LAYER_MIN_ZOOM = 15; // hide accesses / restrooms / parking markers below this
 
   var COLORS = {
     park: "#1a4e2c",
@@ -37,7 +45,9 @@
     locCircle: null,
     locWatch: null,
     features: [], // searchable
-    ready: false
+    ready: false,
+    includeSupply: false,
+    viewMode: "bridge" // "bridge" | "full"
   };
 
   function $(id) { return document.getElementById(id); }
@@ -412,7 +422,25 @@
   }
 
   function addBusinesses(fc) {
-    var group = L.layerGroup();
+    var group = L.markerClusterGroup({
+      showCoverageOnHover: false,
+      zoomToBoundsOnClick: true,
+      spiderfyOnMaxZoom: true,
+      disableClusteringAtZoom: CLUSTER_DISABLE_ZOOM,
+      maxClusterRadius: 48,
+      animate: false,
+      iconCreateFunction: function (cluster) {
+        var n = cluster.getChildCount();
+        var size = n >= 20 ? "lg" : n >= 8 ? "md" : "sm";
+        var px = size === "lg" ? 50 : size === "md" ? 42 : 36;
+        return L.divIcon({
+          className: "hb-divicon",
+          html: '<div class="hb-cluster ' + size + '">' + n + "</div>",
+          iconSize: [px, px],
+          iconAnchor: [px / 2, px / 2]
+        });
+      }
+    });
     var pins = {};
     fc.features.forEach(function (f) {
       var p = f.properties || {};
@@ -466,6 +494,52 @@
     return n;
   }
 
+  /* ----------------------------- navigate to a pin / place ----------------------------- */
+  function isSupplyLatLng(ll) {
+    return ILL_SUPPLY.pad(0.25).contains(ll);
+  }
+
+  function setIncludeSupply(on) {
+    state.includeSupply = !!on;
+    applyBase();
+    if (state.map) {
+      state.map.setMaxBounds(on ? VIEW_BOUNDS.pad(0.12) : MAIN_MAX_BOUNDS);
+      if (on && state.map.getMinZoom() > MIN_ZOOM) state.map.setMinZoom(MIN_ZOOM);
+    }
+  }
+
+  function prepareForTarget(ll) {
+    if (isSupplyLatLng(ll)) setIncludeSupply(true);
+  }
+
+  function topbarPad() {
+    var bar = document.querySelector(".topbar");
+    var h = bar ? Math.ceil(bar.getBoundingClientRect().height) + 8 : 136;
+    return L.point(16, h);
+  }
+
+  function goTo(latlng, zoom, marker, openPopup) {
+    prepareForTarget(latlng);
+    var z = Math.max(zoom || DEFAULT_ZOOM, MINOR_LAYER_MIN_ZOOM);
+    function after() {
+      applyOverlayVisibility();
+      if (openPopup && marker && marker.openPopup) marker.openPopup(latlng);
+    }
+    var group = state.layers.business;
+    var inCluster = marker && group && group.hasLayer && group.hasLayer(marker) && group.zoomToShowLayer;
+    if (inCluster) {
+      if (!state.map.hasLayer(group) && $("ly-business").checked) group.addTo(state.map);
+      group.zoomToShowLayer(marker, after);
+    } else {
+      state.map.setView(latlng, Math.max(state.map.getZoom(), z), { animate: true });
+      state.map.once("moveend", after);
+      // If already on target, moveend may not fire.
+      setTimeout(function () {
+        if (state.map.getBounds().contains(latlng)) after();
+      }, 900);
+    }
+  }
+
   /* ----------------------------- directory panel ----------------------------- */
   function setupDirectory(fc) {
     var panel = $("dir-panel"), list = $("dir-list"), filter = $("dir-filter");
@@ -510,9 +584,8 @@
       var pin = state.pins[b.getAttribute("data-pin")];
       if (!pin) return;
       close_();
-      if (!state.map.hasLayer(state.layers.business)) { state.map.addLayer(state.layers.business); $("ly-business").checked = true; }
-      state.map.flyTo(pin.latlng, Math.max(state.map.getZoom(), 17), { duration: 0.8 });
-      state.map.once("moveend", function () { pin.marker.openPopup(); });
+      if (!state.map.hasLayer(state.layers.business)) { $("ly-business").checked = true; }
+      goTo(pin.latlng, 17, pin.marker, true);
     });
     window.HBDirectory = { render: render, count: rows.length };
   }
@@ -593,13 +666,11 @@
         park: "parks", trail: "parks", landmark: "landmarks",
         access: "accesses", restroom: "restrooms", porta_john: "restrooms", business: "business"
       }[item.kind];
-      if (layerId && state.layers[layerId] && !state.map.hasLayer(state.layers[layerId])) {
-        state.map.addLayer(state.layers[layerId]);
+      if (layerId) {
         var cb = { parks: "ly-parks", landmarks: "ly-landmarks", accesses: "ly-accesses", restrooms: "ly-restrooms", business: "ly-business" }[layerId];
         if (cb) $(cb).checked = true;
       }
-      state.map.setView(item.latlng, Math.max(state.map.getZoom(), item.kind === "business" ? 17 : 16), { animate: true });
-      if (item.layer && item.layer.openPopup) item.layer.openPopup(item.latlng);
+      goTo(item.latlng, item.kind === "business" ? 17 : 16, item.layer, true);
     }
 
     input.addEventListener("input", function () {
@@ -672,6 +743,23 @@
   }
 
   /* ----------------------------- layers panel ----------------------------- */
+  function applyOverlayVisibility() {
+    if (!state.map) return;
+    var z = state.map.getZoom();
+    function vis(layer, id, minZ) {
+      if (!layer || !$(id)) return;
+      var want = $(id).checked && (minZ == null || z >= minZ);
+      if (want && !state.map.hasLayer(layer)) layer.addTo(state.map);
+      if (!want && state.map.hasLayer(layer)) state.map.removeLayer(layer);
+    }
+    vis(state.layers.business, "ly-business", null);
+    vis(state.layers.parks, "ly-parks", null);
+    vis(state.layers.landmarks, "ly-landmarks", null);
+    vis(state.layers.accesses, "ly-accesses", MINOR_LAYER_MIN_ZOOM);
+    vis(state.layers.restrooms, "ly-restrooms", MINOR_LAYER_MIN_ZOOM);
+    vis(state.layers.parking, "ly-parking", MINOR_LAYER_MIN_ZOOM);
+  }
+
   function setupLayerPanel() {
     var panel = $("layer-panel");
     function toggle() {
@@ -682,32 +770,13 @@
     $("btn-layers").addEventListener("click", toggle);
     $("btn-layers-close").addEventListener("click", function () { panel.hidden = true; });
 
-    function bind(id, layer, tileSwap) {
-      if (!tileSwap && !layer) return;
-      $(id).addEventListener("change", function (e) {
-        if (tileSwap) {
-          if (e.target.checked) {
-            state.tiles.streets.addTo(state.map);
-            state.map.removeLayer(state.tiles.base);
-          } else {
-            state.tiles.base.addTo(state.map);
-            state.map.removeLayer(state.tiles.streets);
-          }
-          return;
-        }
-        if (e.target.checked) state.map.addLayer(layer);
-        else state.map.removeLayer(layer);
-      });
-    }
     $("ly-streets").addEventListener("change", applyBase);
     $("bm-illustrated").addEventListener("change", applyBase);
     $("bm-plain").addEventListener("change", applyBase);
-    bind("ly-business", state.layers.business);
-    bind("ly-parking", state.layers.parking);
-    bind("ly-parks", state.layers.parks);
-    bind("ly-landmarks", state.layers.landmarks);
-    bind("ly-accesses", state.layers.accesses);
-    bind("ly-restrooms", state.layers.restrooms);
+    ["ly-business", "ly-parking", "ly-parks", "ly-landmarks", "ly-accesses", "ly-restrooms"].forEach(function (id) {
+      $(id).addEventListener("change", applyOverlayVisibility);
+    });
+    state.map.on("zoomend", applyOverlayVisibility);
   }
 
   /* ----------------------------- boot ----------------------------- */
@@ -715,21 +784,24 @@
     var ill = $("bm-illustrated").checked;
     var names = $("ly-streets").checked;
     var t = state.tiles, map = state.map;
-    function on(l, yes) { if (yes && !map.hasLayer(l)) l.addTo(map); if (!yes && map.hasLayer(l)) map.removeLayer(l); }
+    function on(l, yes) { if (!l) return; if (yes && !map.hasLayer(l)) l.addTo(map); if (!yes && map.hasLayer(l)) map.removeLayer(l); }
     on(t.streets, !ill && names);
     on(t.base, !ill && !names);
     on(t.ill, ill); on(t.ill18, ill); on(t.names, ill && names);
+    // Supply art sits far north of the island; only show it when a Supply listing is opened,
+    // so the whole-island phone view is not a floating inset on empty paper.
+    on(t.illSupply, ill && state.includeSupply);
     map.getContainer().classList.toggle("illustrated", ill);
     try { localStorage.setItem("hb-basemap", ill ? "illustrated" : "plain"); } catch (e) { /* private mode */ }
   }
 
-  function illLayer(z18) {
+  function illLayer(z18, bounds) {
     return L.tileLayer("tiles/illustrated/{z}/{x}/{y}.webp", {
       minZoom: z18 ? 18 : MIN_ZOOM,
       maxZoom: MAX_ZOOM,
       minNativeZoom: z18 ? 18 : 11,
       maxNativeZoom: z18 ? 18 : 17,
-      bounds: z18 ? ILL_Z18 : ILL_BOUNDS,
+      bounds: bounds || (z18 ? ILL_Z18 : ILL_MAIN),
       noWrap: true,
       errorTileUrl: "tiles/clear.png",
       zIndex: z18 ? 3 : 2,
@@ -753,13 +825,97 @@
     if (state.map) state.map.invalidateSize();
   }
 
+  function queryView() {
+    try {
+      return (new URLSearchParams(location.search).get("view") || "").toLowerCase();
+    } catch (e) { return ""; }
+  }
+
+  function updateViewButton() {
+    var btn = $("btn-island");
+    if (!btn) return;
+    var full = state.viewMode === "full";
+    btn.textContent = full ? "Bridge Area" : "Whole island";
+    btn.title = full ? "Open on the Bridge Area" : "Show the whole island";
+    btn.setAttribute("aria-pressed", full ? "true" : "false");
+  }
+
+  function showBridgeArea(opts) {
+    opts = opts || {};
+    setIncludeSupply(false);
+    state.viewMode = "bridge";
+    state.map.setMinZoom(DEFAULT_MIN_ZOOM);
+    state.map.setMaxBounds(MAIN_MAX_BOUNDS);
+    // z16 is the target; fitBounds of the Bridge Area with topbar padding
+    // keeps the landing on-screen under the header on a phone.
+    var z = DEFAULT_ZOOM;
+    try {
+      z = state.map.getBoundsZoom(BRIDGE_BOUNDS, false, topbarPad());
+    } catch (e) { z = DEFAULT_ZOOM; }
+    if (!isFinite(z) || z < 1) z = DEFAULT_ZOOM;
+    // Default is z16; only go a little lower if a narrow phone can't frame the landing at 16.
+    z = Math.min(DEFAULT_ZOOM, Math.max(DEFAULT_MIN_ZOOM, z));
+    if (Math.abs(z - DEFAULT_ZOOM) < 0.6) z = DEFAULT_ZOOM;
+    state.map.setView(BRIDGE_CENTER, z, { animate: !!opts.animate });
+    updateViewButton();
+  }
+
+  function showWholeIsland(opts) {
+    opts = opts || {};
+    setIncludeSupply(false);
+    state.viewMode = "full";
+    state.map.setMinZoom(MIN_ZOOM);
+    state.map.setMaxBounds(MAIN_MAX_BOUNDS);
+    var pad = topbarPad();
+    var z = state.map.getBoundsZoom(ISLAND_BOUNDS, false, pad);
+    if (!isFinite(z)) z = MIN_ZOOM;
+    state.map.setMinZoom(Math.max(MIN_ZOOM, z));
+    state.map.fitBounds(ISLAND_BOUNDS, {
+      paddingTopLeft: pad,
+      paddingBottomRight: L.point(16, 24),
+      maxZoom: 15,
+      animate: !!opts.animate
+    });
+    updateViewButton();
+  }
+
+  function applyInitialView() {
+    var hm = /^#(\d{1,2})\/(-?\d+\.\d+)\/(-?\d+\.\d+)$/.exec(location.hash || "");
+    if (hm) {
+      var ll = L.latLng(Number(hm[2]), Number(hm[3]));
+      if (isSupplyLatLng(ll)) setIncludeSupply(true);
+      else {
+        state.map.setMinZoom(DEFAULT_MIN_ZOOM);
+        state.map.setMaxBounds(MAIN_MAX_BOUNDS);
+      }
+      state.map.setView(ll, Number(hm[1]));
+      state.viewMode = "bridge";
+      updateViewButton();
+      return;
+    }
+    if (queryView() === "full") showWholeIsland({ animate: false });
+    else showBridgeArea({ animate: false });
+  }
+
+  function setupViewButton() {
+    var btn = $("btn-island");
+    if (!btn) return;
+    btn.addEventListener("click", function () {
+      if (state.viewMode === "full") showBridgeArea({ animate: true });
+      else showWholeIsland({ animate: true });
+    });
+    updateViewButton();
+  }
+
   function init() {
     var map = L.map("map", {
       zoomControl: false,
       attributionControl: true,
-      minZoom: MIN_ZOOM,
+      minZoom: DEFAULT_MIN_ZOOM,
       maxZoom: MAX_ZOOM,
-      maxBounds: VIEW_BOUNDS.pad(0.12),
+      zoomSnap: 0.25,
+      zoomDelta: 1,
+      maxBounds: MAIN_MAX_BOUNDS,
       maxBoundsViscosity: 0.85,
       bounceAtZoomLimits: true
     });
@@ -770,8 +926,9 @@
     state.tiles.streets = tileLayer("streets");
     state.tiles.base = tileLayer("base");
     state.tiles.base.options.zIndex = 1; state.tiles.streets.options.zIndex = 1;
-    state.tiles.ill = illLayer(false);
-    state.tiles.ill18 = illLayer(true);
+    state.tiles.ill = illLayer(false, ILL_MAIN);
+    state.tiles.illSupply = illLayer(false, ILL_SUPPLY);
+    state.tiles.ill18 = illLayer(true, ILL_Z18);
     state.tiles.names = L.tileLayer("tiles/names/{z}/{x}/{y}.png", {
       minZoom: MIN_ZOOM, maxZoom: 16, maxNativeZoom: 16, bounds: TILE_BOUNDS, noWrap: true, errorTileUrl: "tiles/clear.png", zIndex: 4
     });
@@ -782,7 +939,8 @@
     if (saved === "plain") $("bm-plain").checked = true;
     applyBase();
 
-    map.fitBounds(ISLAND_BOUNDS, { padding: [40, 40], maxZoom: 15 });
+    applyInitialView();
+    setupViewButton();
     positionZoom();
     window.addEventListener("resize", positionZoom);
 
@@ -806,9 +964,8 @@
       setupLayerPanel();
       positionZoom();
       state.map.invalidateSize();
-      var hm = /^#(\d{1,2})\/(-?\d+\.\d+)\/(-?\d+\.\d+)$/.exec(location.hash || "");
-      if (hm) state.map.setView([Number(hm[2]), Number(hm[3])], Number(hm[1]));
-      else state.map.fitBounds(ISLAND_BOUNDS, { padding: [48, 48], maxZoom: 15 });
+      applyInitialView();
+      applyOverlayVisibility();
       state.ready = true;
       var counts = {
         parks: parks,

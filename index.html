@@ -13,6 +13,7 @@
   <link rel="icon" href="favicon.ico">
   <title>Holden Beach Map</title>
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="vendor/leaflet.markercluster/MarkerCluster.css">
   <link rel="stylesheet" href="css/map.css">
 </head>
 <body>
@@ -83,6 +84,8 @@
       <p class="dir-claim">Own a business here? <a id="dir-claim-link" href="claim.html">Claim your listing</a></p>
     </aside>
 
+    <button type="button" class="view-btn" id="btn-island" title="Show the whole island">Whole island</button>
+
     <button type="button" class="locate-btn" id="btn-locate" title="Show my location" aria-label="Show my location">
       <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
         <path fill="currentColor" d="M12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8zm0-6.5a.9.9 0 0 1 .9.9V4.1a8 8 0 0 1 7 7h1.7a.9.9 0 0 1 0 1.8H19.9a8 8 0 0 1-7 7v1.7a.9.9 0 0 1-1.8 0V19.9a8 8 0 0 1-7-7H1.4a.9.9 0 0 1 0-1.8H4.1a8 8 0 0 1 7-7V2.4a.9.9 0 0 1 .9-.9zM12 6a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/>
@@ -92,6 +95,7 @@
     <div id="toast" class="toast" hidden role="status"></div>
   </div>
   <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="vendor/leaflet.markercluster/leaflet.markercluster.js"></script>
   <script src="js/config.js"></script>
   <script src="js/map.js"></script>
 </body>
