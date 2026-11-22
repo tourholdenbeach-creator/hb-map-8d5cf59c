@@ -1,6 +1,6 @@
 /* Holden Beach Map service worker.
    Bump CACHE_VERSION whenever the app shell changes so updates deploy. */
-var CACHE_VERSION = "20261122b";
+var CACHE_VERSION = "20261122c";
 var SHELL = "hb-shell-" + CACHE_VERSION;
 var TILES = "hb-tiles-" + CACHE_VERSION;
 

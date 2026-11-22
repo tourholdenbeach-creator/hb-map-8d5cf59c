@@ -12,6 +12,8 @@
   var SV_ATTR = "Street View © Google";
   var LOGOS = {};
   var SV = {};
+  var SHORTLINKS = {};
+  var QR_LABEL = "Sample tracked QR – scans counted for you.";
 
   function logoSrc(biz) {
     var rel = (biz && biz.logo) || LOGOS[biz && biz.id] || "";
@@ -196,6 +198,21 @@
     try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; }
   }
 
+  function qrSrc(biz) {
+    return biz && biz.id ? "../assets/qr/" + encodeURIComponent(biz.id) + ".png" : "";
+  }
+  function qrMarkup(biz) {
+    var src = qrSrc(biz);
+    if (!src) return '<div class="qr" aria-hidden="true">QR</div>';
+    var rec = SHORTLINKS[biz.id] || {};
+    var shortUrl = rec.shortURL || rec.short_url || "";
+    var img = '<img src="' + src + '" width="86" height="86" alt="Sample tracked QR code for ' + HB.esc(biz.name) + '">';
+    if (shortUrl && /^https?:\/\//i.test(shortUrl)) {
+      img = '<a href="' + HB.esc(shortUrl) + '" target="_blank" rel="noopener noreferrer">' + img + "</a>";
+    }
+    return '<figure class="qr">' + img + "<figcaption>" + HB.esc(QR_LABEL) + "</figcaption></figure>";
+  }
+
   function contactLines(biz) {
     var lines = [];
     if (biz.phone) lines.push(HB.esc(biz.phone));
@@ -222,7 +239,7 @@
       + (biz.pin ? '<div class="pin">Pin ' + HB.esc(String(biz.pin)) + "</div>" : "")
       + '<p class="blurb">' + HB.esc(GENERIC_VISIT) + "</p>"
       + '<p class="offer">' + HB.esc(GENERIC_OFFER) + "</p>"
-      + '<div class="row"><div class="meta">' + contactLines(biz) + '</div><div class="qr" aria-hidden="true">QR</div></div>'
+      + '<div class="row"><div class="meta">' + contactLines(biz) + "</div>" + qrMarkup(biz) + "</div>"
       + "</article>";
   }
   function renderDouble(biz) {
@@ -235,7 +252,7 @@
       + '<p class="blurb">' + HB.esc(GENERIC_VISIT) + "</p>"
       + '<p class="offer">' + HB.esc(GENERIC_OFFER) + "</p>"
       + '<div class="meta">' + contactLines(biz) + "</div></div>"
-      + '<div class="qr" aria-hidden="true">QR</div>'
+      + qrMarkup(biz)
       + "</article>";
   }
   function renderPremium(biz) {
@@ -247,7 +264,7 @@
       + (biz.pin ? '<div class="pin">Pin ' + HB.esc(String(biz.pin)) + "</div>" : "")
       + '<p class="blurb">' + HB.esc(GENERIC_VISIT) + " " + HB.esc(GENERIC_OFFER) + "</p>"
       + '<div class="meta">' + contactLines(biz) + "</div></div>"
-      + '<div class="qr" aria-hidden="true">QR</div>'
+      + qrMarkup(biz)
       + "</article>";
   }
   function renderRealty(biz) {
@@ -259,7 +276,7 @@
       + '<div class="row"><div class="meta">' + contactLines(biz)
       + "<br>" + HB.esc(GENERIC_VISIT) + "</div>"
       + mediaBox(biz, "", "realty")
-      + '<div class="qr" aria-hidden="true">QR</div></div>'
+      + qrMarkup(biz) + "</div>"
       + "</article>";
   }
   function renderOnline(biz, tier) {
@@ -344,6 +361,7 @@
     } else {
       intro += "These use only your name, category, pin and the contact details we already have. Logo, photo and offer are placeholders. Each proof is marked SAMPLE.";
     }
+    intro += " Each print ad includes a sample tracked QR code — scans are counted for you.";
     document.getElementById("intro").textContent = intro;
 
     var st = HB.product("standard") || {};
@@ -469,12 +487,14 @@
       return r.json();
     }).catch(function () { return null; }),
     optJson("../data/logos.json"),
-    optJson("../data/streetview.json")
+    optJson("../data/streetview.json"),
+    optJson("../data/shortlinks.json")
   ]).then(function (pair) {
     var fc = pair[1];
     SLOTS_DATA = pair[2];
     LOGOS = pair[3] || {};
     SV = pair[4] || {};
+    SHORTLINKS = pair[5] || {};
     if (!id) {
       fail("Open this page from a business pin, using See your sample ad, so we know which listing to show.");
       return;

@@ -840,6 +840,29 @@
     } catch (e) { return ""; }
   }
 
+  function queryParam(name) {
+    try {
+      return (new URLSearchParams(location.search).get(name) || "").trim();
+    } catch (e) { return ""; }
+  }
+
+  /* ?biz=<id> opens that listing's pin popup (used by sample tracked QR codes
+     when a business has no verified website of its own). */
+  function openBizFromQuery() {
+    var id = queryParam("biz");
+    if (!id) return false;
+    var item = null;
+    for (var i = 0; i < state.features.length; i++) {
+      var it = state.features[i];
+      if (it.kind === "business" && it.props && it.props.id === id) { item = it; break; }
+    }
+    if (!item || !item.latlng) return false;
+    var pin = state.pins && item.props.pin != null ? state.pins[item.props.pin] : null;
+    var marker = (pin && pin.marker) || item.layer;
+    goTo(item.latlng, DEFAULT_ZOOM, marker, true);
+    return true;
+  }
+
   function updateViewButton() {
     var btn = $("btn-island");
     if (!btn) return;
@@ -976,6 +999,7 @@
       state.map.invalidateSize();
       applyInitialView();
       applyOverlayVisibility();
+      openBizFromQuery();
       state.ready = true;
       var counts = {
         parks: parks,

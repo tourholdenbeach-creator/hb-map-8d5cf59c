@@ -5,7 +5,7 @@ Live (unlisted, noindex): https://tourholdenbeach-creator.github.io/hb-map-8d5cf
 | Page | What it is |
 |---|---|
 | `advertise/` | Pitch, what you get, map preview, prices with Buy buttons, how it works, Host Partner + $99 drone interest form, FAQ, terms, contact |
-| `advertise/preview/?id=<business id>` | "See your sample ad" page. Builds sample print and online ads in the browser from `data/businesses.geojson`. Linked from each unpaid pin popup next to Claim your listing. Realty Partner is shown only for realty and vacation-rental companies. |
+| `advertise/preview/?id=<business id>` | "See your sample ad" page. Builds sample print and online ads in the browser from `data/businesses.geojson`. Linked from each unpaid pin popup next to Claim your listing. Realty Partner is shown only for realty and vacation-rental companies. Print ads include a sample tracked QR (short.io) that goes to the business website, or to `/?biz=<id>` on the map when no verified website is on file. |
 | `advertise/claim/?biz=Name` | "Claim your listing" page. Shows the business name and preselects the name listing. `&plan=standard` preselects the standard ad. Also accepts the map's `?business=…&pin=…&id=…` |
 | `advertise/checkout/?product=…&plan=…` | "Checkout coming soon" page, used while a product has no Stripe link. Builds a reservation email |
 | `advertise/thanks/` | Page to send buyers to after Stripe payment: asks for logo, artwork and details by email |
@@ -63,3 +63,7 @@ When a buyer comes from the "Claim your listing" page, the site adds `?client_re
 ## Changing the map's claim button
 
 The online map's "Claim your listing" buttons use `claimUrl` in `/js/config.js` (currently `advertise/claim/`). The map adds `?business=…&pin=…&id=…`.
+
+## Sample tracked QR codes
+
+Each unpaid listing's preview shows a sample QR in every print ad format. The codes are generated from short.io links on the current short domain (today `4x3RGF.s.gy`; later a branded domain such as `go.holdenbeachinsider.com`). Scans are counted in short.io. Mapping: `data/shortlinks.json`. Images: `assets/qr/<business-id>.png` (and `.svg`). Rebuild with `create_shortlinks.py` (alongside the other ad generators). It is safe to rerun and can target a new domain.
